@@ -1,0 +1,5 @@
+build/*.js
+config/*.js
+src/components/element-ui/*
+static/locale.js
+static/localeDefault.js

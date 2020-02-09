@@ -1,0 +1,31 @@
+{
+    "presets": [
+        ["env", { "loose": true, "modules": false, "useBuiltIns": "usage " }],
+        "stage-2"
+    ],
+    "plugins": [
+        // "transform-runtime",
+        "syntax-jsx",
+        "transform-vue-jsx",
+        [
+            "import",
+            {
+                "libraryName": "vant",
+                "libraryDirectory": "es",
+                "style": true
+            },
+            "vant"
+        ],
+        // "add-module-exports"
+    ],
+    "comments": false,
+    "env": {
+        "test": {
+            "presets": ["env", "stage-2"],
+            "plugins": ["istanbul"]
+        },
+        "production": {
+            "plugins": ["transform-remove-console"]
+        }
+    }
+}

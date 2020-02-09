@@ -1,0 +1,543 @@
+
+// ************************************************************
+// index
+// ************************************************************
+$scale: 0.392; // banner 宽高比
+
+// banner
+.gy_slider {
+	& .swiper-container {
+		// @include size(100%, calc((100vw - 260px) * #{$scale}));
+		// border-radius: border__radius(large);
+		// margin: 17px 0 12px;
+		// max-height: 428px;
+		// max-width: 1223px;
+		min-height: calc(100vw * #{$scale});
+		overflow: hidden;
+		& img {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+	&:hover {
+		& .swiper-button-prev,
+		& .swiper-container-rtl .swiper-button-next,
+		& .swiper-button-next,
+		& .swiper-container-rtl .swiper-button-prev {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	// 上一张下一张
+	& .swiper-button-prev,
+	& .swiper-container-rtl .swiper-button-next,
+	& .swiper-button-next,
+	& .swiper-container-rtl .swiper-button-prev {
+		@include size(35px, 31px);
+		background: none;
+		opacity: 0;
+		visibility: hidden;
+		&::before,
+		&::after {
+			@include pseudo;
+			@include size(40px, 10px);
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+	}
+	& .swiper-button-prev,
+	& .swiper-container-rtl .swiper-button-next {
+		&::before {
+			transform: rotate(-45deg);
+		}
+		&::after {
+			transform: rotate(45deg);
+		}
+	}
+	& .swiper-button-next,
+	& .swiper-container-rtl .swiper-button-prev {
+		&::before {
+			transform: rotate(45deg);
+		}
+		&::after {
+			transform: rotate(-45deg);
+		}
+	}
+	// 小圆点
+	& /*span*/.swiper-pagination-bullet {
+		opacity: 1;
+	}
+	//
+	& .swiper-container-horizontal > .swiper-scrollbar {
+		display: none;
+	}
+}
+
+.gy_Announcement {
+	& .swiper-container-horizontal {
+		& > .swiper-pagination-bullets {
+			bottom: 0px;
+		}
+	}
+	// 上一张下一张
+	& .swiper-button-prev,
+	& .swiper-container-rtl .swiper-button-next,
+	& .swiper-button-next,
+	& .swiper-container-rtl .swiper-button-prev {
+		@include size(17px, 20px);
+		background: none;
+		transform: translateY(50%);
+		&::before,
+		&::after {
+			@include pseudo;
+			@include size(25px, 7px);
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+	}
+	& .swiper-button-prev,
+	& .swiper-container-rtl .swiper-button-next {
+		left: 2px;
+		&::before {
+			transform: rotate(-45deg);
+		}
+		&::after {
+			transform: rotate(45deg);
+		}
+	}
+	& .swiper-button-next,
+	& .swiper-container-rtl .swiper-button-prev {
+		&::before {
+			transform: rotate(45deg);
+		}
+		&::after {
+			transform: rotate(-45deg);
+		}
+	}
+	// 小圆点
+	& /*span*/.swiper-pagination-bullet {
+		@include j_br();
+		opacity: 1;
+	}
+}
+
+.gy_Announcement--dialog {
+	width: 414px;
+	padding: 20px;
+	position: relative;
+	margin: auto;
+	& .gy_ann--dialog_title {
+		@include j_br(bottom);
+		color: text__color(base);
+		padding: 10px;
+		font-size: font__size(large);
+		width: 100%;
+		display: block;
+		background: background__color(base_invert);
+		z-index: 100;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		& p {
+			font-size: font__size(small);
+			color: text__color(weak);
+			margin-top: 10px;
+		}
+	}
+	& .gy_ann--dialog_content {
+		padding: 10px 10px 30px 10px;
+		background: background__color(base_invert);
+	}
+}
+
+
+// 期數区
+.gy_issue {
+	padding: 3vw 2vw;
+	// height: 14vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+	.gy_issue__group {
+		// width: calc(100% / 4);
+		flex: 1;
+		.gy_issue__item {
+			p {
+				margin-top: 1px;
+			}
+		}
+	}
+}
+
+.gy_lobby_section {
+	min-height: 50vh;
+	&.loading_mask {
+		background-color: background__color(weak);
+	}
+}
+
+[class*="gy_icon--"] {
+	display: block;
+	width: 46px;
+	height: 46px;
+	margin: auto;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+// 快速連結圖示 svg
+$issue_icon: (
+	'default','Recharge','freePlay','register','TakeCash','Activity','chat','addProxy','announcement','transfer'
+);
+
+@each $i in $issue_icon {
+	.gy_icon--#{$i} {
+		background-image: url("../image/gy_icon/gy_icon_platform-#{$i}.svg");
+	}
+}
+
+// 快速連結圖示 png
+$issue_icon_png: (
+	'home_transfer', 'deposit', 'widthdraw'
+);
+
+@each $i in $issue_icon_png {
+	.gy_icon--#{$i} {
+		background-image: url("../image/gy_icon/gy_icon_platform-#{$i}.png");
+	}
+}
+
+
+// 彩票区
+.gy_lottery_title {
+	display: flex;
+	span {
+		display: inline-block;
+		padding: 10px 0;
+		flex: 1;
+		line-height: 20px;
+		text-align: center;
+		font-size: font__size(large);
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+}
+
+
+// 熱門彩種icon
+[class*="lottery_ribbon--"] {
+	width: 32px;
+	height: 32px;
+	background-size: cover;
+	position: absolute;
+	bottom: -2px;
+    right: -15px;
+	z-index: 9;
+}
+.lottery_ribbon--hot {
+	background: url("../image/gy_icon/gy_icon_hot.svg") no-repeat center center;
+}
+
+// 最新彩種icon
+.lottery_ribbon--new {
+    background-color: #ff9a1a;
+    background-image: linear-gradient(75deg, #ffe935, #ff9a1a);
+    color: text__color(base_invert);
+}
+
+//箭頭
+.gy__icon_arrow {
+	width: 13px;
+	position: relative;
+    top: 2px;
+}
+
+/*a*/.gy_lottery__group--link {
+	width: calc(100% / 3);
+	float: left;
+	position: relative;
+	text-align: center;
+}
+
+.gy_lottery__item {
+	position: relative;
+	// display: flex;
+	// justify-content: flex-start;
+	// align-items: center;
+	padding: 10px 0;
+	// @include size(100%, 85px);
+	width: 100%;
+	.lottery_logo {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		@include size(65px, 65px);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: contain;
+		border-radius: border__radius(rounded);
+		margin: 0 12px;
+		// border-width: 5px;
+		// border-style: solid;
+	}
+	.lottery_span {
+		margin-top: 2px;
+	}
+}
+
+.gy_lottery__none {
+	text-align: center;
+	margin-top: 30%;
+}
+
+%index_box {
+	& [class*="__inner"] {
+		@include j_br();
+		border-radius: border__radius(large);
+		overflow: hidden;
+	}
+	// header
+	& [class*="__header"] {
+		@include j_br(bottom);
+		font-size: font__size(huge);
+		padding: 10px 17px;
+		position: relative;
+	}
+	& /*svg*/.gy_header__icon {
+		@include size(26px);
+		display: inline-block;
+		margin-right: 17px;
+		vertical-align: middle;
+	}
+	& /*span*/.gy_header__text {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	& /*a*/.gy_header__link {
+		position: absolute;
+		top: 10px;
+		right: 20px;
+	}
+	// content
+	& [class*="__content"] {
+		padding: 10px 10px 10px 0;
+	}
+	& /*svg*/.gy_item__icon {
+		display: inline-block;
+		margin-right: 17px;
+		vertical-align: middle;
+	}
+	& /*span*/.gy_item__title {
+		@include singleline_ellipsis;		
+		display: inline-block;
+		max-width: calc(100% - 160px);
+		vertical-align: middle;
+	}
+	& /*span*/.gy_item__date {
+		float: right;
+		margin-top: 3px;
+		opacity: 0.5;
+		width: 100px;
+	}
+}
+
+
+
+// 平台公告
+.gy_news {
+	@extend %index_box;
+	float: right;
+	width: 48%;
+	// content
+	& /*ul*/.gy_content__group {
+		height: 310px;
+		overflow-y: scroll;
+		padding: 0 0 0 10px;
+	}
+	& /*li*/.gy_group__item {
+		@include j_br(bottom, dashed);
+		cursor: pointer;
+		padding: 20px 0 20px 15px;
+		&:hover {
+			& .gy_item__title {
+				text-decoration: underline;
+			}
+		}
+		& /*svg*/.gy_item__icon {
+			@include size(12px, 16px);
+		}
+	}
+}
+
+
+
+// 派奖信息
+.gy_award {
+	@extend %index_box;
+	float: left;
+	margin-top: 1em;
+	width: 51%;
+	// content
+	& .gy_award__content {
+		height: 202px;
+		overflow: hidden;		
+	}
+	& /*ul*/.gy_content__group{
+		overflow: hidden;
+		height: 100%;
+	}
+	& /*li*/.gy_group__item {
+		padding-left: 28px;
+		height: calc(100% / 6);
+		line-height: 200%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		& /*svg*/.gy_item__icon {
+			@include size(4px);
+		}
+	}
+}
+
+/* 圖片廣告蓋台 */
+.gy_cover__dialog {
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: auto;
+	z-index: 10000;
+	& .gy_cover__dialog--mask {
+		position: fixed;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        top: 0;
+        margin: auto;
+        z-index: 90;
+	}
+	& .gy_cover__dialog--content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 414px;
+		z-index: 100;
+		& .gy_cover__dialog--close {
+			position: absolute;
+			top: -5px;
+    		right: 20px;
+			height: 20px;
+			background: background__color(base_invert);
+			border-radius: border__radius(rounded);
+			box-shadow: 1px 1px 1px background__color(base);
+			cursor: pointer;
+			z-index: 1000;
+			& svg {
+				width: 20px;
+				height: 20px;
+			}
+		}
+		& .gy_cover__dialog--footer {
+			position: absolute;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			right: 20px;
+			width: 100%;
+			bottom: -48px;
+			max-width: 374px;
+			padding: 30px 8px 8px 8px;
+			background: background__color(base_invert);
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+			z-index: 0;
+			& span {
+				&:first-child {
+					flex: 1;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width:414px) {
+	.gy_Announcement--dialog {
+		width: 310px;
+	}
+	.gy_cover__dialog {
+		.gy_cover__dialog--content {
+			max-width: 310px;
+			& .gy_cover__dialog--footer {
+				right: 0;
+				left: 20px;
+				width: 100%;
+				max-width: 270px;
+			}
+		}
+	}
+	
+}
+
+@media screen and (max-width:320px) {
+	.gy_lottery__item {
+		.lottery_logo {
+			margin: 0;
+		}
+	}
+}
+// @media screen and (min-width:1480px) {
+// 	.gy_slider {
+// 		& .swiper-container {
+// 			height: calc((100vw - 260px) * 0.75 * #{$scale});
+// 			min-height: auto;
+// 		}
+// 	}
+// 	.gy_lottery {
+// 		float: right;
+// 		margin: 17px 0 12px;
+// 		width: 25%;
+// 		& /*a*/.gy_lottery__group--link {
+// 			height: calc(((100vw - 260px) * 0.75 * #{$scale} - 11px) / 2);
+// 			margin-bottom: 10px;
+// 			max-height: 209px;
+// 			width: calc((100% - 11px) / 2);
+// 			& + /*a*/.gy_lottery__group--link {
+// 				margin-left: 0
+// 			}
+// 			&:nth-child(2n) {
+// 				margin-left: 10px;
+// 			}
+// 			&:nth-child(3),
+// 			&:nth-child(4) {
+// 				margin-bottom: 0;
+// 			}
+// 		}
+// 		& .gy_lottery__item {
+// 			& img {
+// 				@include size(100%);
+// 			}
+// 		}
+// 	}
+// 	.gy_award {
+// 		margin-top: 0;
+// 		& .gy_award__content {
+// 			height: 332px;
+// 		}
+// 		& /*li*/.gy_group__item {
+// 			height: calc(100% / 10);
+// 		}
+// 	}
+// }

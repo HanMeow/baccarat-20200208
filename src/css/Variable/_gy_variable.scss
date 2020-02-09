@@ -1,0 +1,32 @@
+// ************************************************************
+// variable
+// ************************************************************
+
+$font__family: arial,'Microsoft Yahei','Microsoft JhengHei',tahoma,Srial,helvetica,sans-serif;
+
+
+
+$font__size: (
+    default : 14px,
+    large   : 16px,
+    huge    : 18px,
+    small   : 12px,
+    title   : 22px
+);
+@function font__size($name) {
+    @return map-get($font__size, $name);
+}
+
+
+
+$border__radius: (
+    default : 4px,
+    large   : 10px,
+    huge    : 18px,
+    rounded : 50%
+);
+@function border__radius($name) {
+    @return map-get($border__radius, $name);
+}
+
+

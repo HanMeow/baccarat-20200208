@@ -1,0 +1,233 @@
+// ************************************************************
+// gy_Mine
+// ************************************************************
+
+/*Mine*/
+
+// js_text__color(base);
+// base             : $color__base,
+// base_invert      : $color__base__invert,
+// title            : lighten($color__base, 15%),
+// body             : lighten($color__base, 15%),
+// accent           : $color__primary,
+// modify           : $color__hover,
+// modifys          : $color__modify
+
+// font__size(title);
+// default : 14px,
+// large   : 16px,
+// huge    : 18px,
+// small   : 12px,
+// title   : 22px,
+
+//我的 分類icon
+$center_icons: ('information',
+    'bank',
+    'report',
+    'record',
+    'manager',
+    'download',
+    'setting',
+    'share',
+    'report-alpha',
+    'report-beta'
+);
+
+@each $icon in $center_icons {
+    .Mine__icon-#{$icon} {
+        background-image: url("../image/personal_center/center-group_icon_#{$icon}.svg");
+    }
+}
+
+$gy_Mine__info__height: 180px;
+// padding & margin
+
+.gy_Mine {
+    // position: relative;
+    min-height: calc(100vh - #{$footer_height});
+    width: 100vw;
+    // background-color: js_background__color(secondary);
+    padding: $basic_gap $basic_gap $footer_height+$basic_gap $basic_gap;
+    // margin-bottom: 2*$footer_height;
+    margin-bottom: $footer_height;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+
+    .gy_Mine__content {
+        &:not(.van-button) {
+            padding: 0 2*$basic_gap;
+            border-style: solid;
+            border-width: 1px;
+            border-radius: $basic_gap/2;
+        }
+
+        &:not(.announcement) {
+            margin: $basic_gap 0;
+        }
+
+        &.announcement {
+            text-align: right;
+            padding: 0;
+        }
+
+        &.gy_Mine__info {
+            // flex: 1;
+            height: $gy_Mine__info__height;
+            // background-color: js_background__color(day);
+            display: flex;
+            flex-direction: column;
+
+            .gy_Mine__info__profile {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                margin: $basic_gap 0;
+                position: relative;
+
+                .image {
+                    width: 80px;
+                }
+
+                .text {
+                    position: absolute;
+                    left: 11px;
+                    bottom: 11px;
+                    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+                }
+
+                .gy_Mine__info__name {
+                    font-size: font__size(title);
+                    margin-left: $basic_gap;
+                }
+            }
+
+            .gy_Mine__info__function {
+                flex: 1;
+                display: flex;
+                text-align: center;
+                padding: 0 2*$basic_gap;
+                justify-content: space-between;
+
+                .gy_Mine__info__wallet {
+                    width: 30%;
+                    line-height: font__size(title);
+                    padding: $basic_gap 0 0 0;
+                }
+            }
+        }
+
+        &.gy_Mine__list__container {
+            // flex: 2;
+            // min-height: calc(100vh - 10*#{$basic_gap} - #{$gy_Mine__info__height} - #{$footer_height});
+            // 100% - margin - info - footer
+            padding: $basic_gap 0;
+
+            // background-color: js_background__color(day);
+            .gy_Mine__list__content {
+                width: 100%;
+                // height: calc(2*#{$basic_gap} + #{font__size(title)});
+                height: 3*$basic_gap + font__size(default);
+                font-size: font__size(default);
+                padding: 0 $basic_gap;
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &:not(:last-of-type)::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    right: 25px;
+                    width: calc(100% - 50px);
+                    border-bottom-style: solid;
+                    border-bottom-width: 1px;
+                    // border-color: #b0a2a4;;
+                    border-color: rgba(0, 0, 0, 0.15);
+                }
+
+                .gy_Mine__list__icon {
+                    display: block;
+                    width: 2*$basic_gap + font__size(title);
+                    height: 2*$basic_gap + font__size(title);
+                    margin-right: $basic_gap;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: cover;
+                    // background-image: url("../image/team/team_team_overview.svg");
+                }
+
+                .gy_Mine__list__text {
+                    text-align: left;
+                    flex: 1;
+                }
+
+                .gy_Mine__list__arrow {
+                    height: font__size(title)/2;
+                    width: font__size(title)/2;
+                    margin-right: $basic_gap;
+                    border-style: solid;
+                    // border-color: js_border__color(invert);
+                    border-color: rgba(0, 0, 0, 0.15);
+                    border-width: 1px 1px 0 0;
+                    transform: rotateZ(45deg);
+                }
+            }
+        }
+
+        &.gy_Mine__button {
+            // position: absolute;
+            position: fixed;
+            width: calc(100% - 2*#{$basic_gap});
+            bottom: $footer_height;
+
+            &:not(.van-button) {
+                height: 40px;
+                // background-color: js_background__color(day);
+                font-size: font__size(title);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+// 交易記錄三個頁面
+.report_main {
+    overflow: hidden;
+}
+
+// 彈出按鈕
+.gy_Mine-popup {
+    // .van-cell--large {
+    padding: $basic_gap 0 0 0;
+    .gy_Mine-popup-container {
+        padding: 0 $basic_gap $basic_gap $basic_gap;
+        .gy_Mine-popup-item {
+            padding: $basic_gap/2;
+            width: fit-content;
+            border-radius: $basic_gap;
+            &:active {
+                filter: grayscale(.3);
+                background-color: #e9e9e9;
+            }
+        }
+        border-bottom-style: solid;
+        border-bottom-width: $basic_gap/2;
+    }
+    .van-cell {
+        padding: 0;
+    }
+    // }
+    .gy_Mine-popup-button {
+        width: 100%;
+        height: 50px;
+        line-height: 48px;
+        font-size: 16px;
+        &:active {
+            background-color: #e9e9e9;
+        }
+    }
+}

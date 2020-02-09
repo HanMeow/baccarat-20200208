@@ -1,0 +1,324 @@
+// ************************************************************
+// gy_message
+// ************************************************************
+
+/*message*/
+
+// js_text__color(base);
+// base             : $color__base,
+// base_invert      : $color__base__invert,
+// title            : lighten($color__base, 15%),
+// body             : lighten($color__base, 15%),
+// accent           : $color__primary, 
+// modify           : $color__hover, 
+// modifys          : $color__modify 
+
+// font__size(title);
+// default : 14px,
+// large   : 16px,
+// huge    : 18px,
+// small   : 12px,
+// title   : 22px,
+
+
+.gy_message {
+    .van-checkbox-group {
+        height: 100%;
+        .van-checkbox {
+            position: absolute;
+            overflow: visible;
+            top: 11px;
+            left: 0;
+            .van-checkbox__icon {
+                .van-icon {
+                    // color: white;
+                    border-color: #b2a8a6;
+                }
+                &[class*=-checked] {
+                    .van-icon {
+                        border-color: white;
+                    }
+                }
+            }
+        }
+    }
+    .van-cell-group {
+        // &::after {
+        //     border-width: 0;
+        // }
+        height: 100%;
+        background: none;
+        user-select: none;
+        // &:not(.detail) {
+        //     margin-top: -6px;
+        // }
+        .van-icon {
+            font-size: inherit;
+            transform: translateX(5px);
+        }
+        &.mail {
+            height: calc(100% - #{$header_height});
+            .van-icon-question {
+                line-height: inherit;
+                color: red;
+            }
+        }
+        .van-skeleton:first-of-type {
+            margin-top: 15px;
+        }
+        .van-swipe-cell {
+            // transition: all .3s;
+            // animation-duration: .3s;
+            // animation-name: van-fade-in;
+            // animation-name: van-slide-left-enter;
+            &:not(:nth-last-of-type(2)) {
+                &::after {
+                    content: ' ';
+                    border-bottom: 1px solid;
+                    border-color: inherit;
+                    position: absolute;
+                    box-sizing: border-box;
+                    pointer-events: none;
+                    width: calc(100% - 45px);
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+            .list-blocker.van-button {
+                text-align: left;
+                height: 100%;
+            }
+        }
+        .van-cell {
+            position: relative;
+            // background-color: rgba(255, 255, 255, 0.5);
+            // background-color: inherit;
+            transition: padding .3s ease;
+            // border-bottom-style: solid;
+            // border-bottom-width: 1px;
+            &.checking {
+                padding-left: 35px;
+            }
+            &::after {
+                // border-width: 0;
+                border-color: inherit;
+                width: calc(100% - 45px);
+                // top: auto;
+                bottom: 0;
+                left: auto;
+                right: 0;
+                transform: scale(1);
+            }
+            &:nth-last-of-type(2) {
+                &::after {
+                    content: none;
+                }
+            }
+            // &.van-cell--clickable:active {
+            //     background-color: inherit;
+            //     border-style: solid;
+            //     border-width: 1px;
+            // }
+            .van-cell__left-icon {
+                color: rgb(23, 206, 212);
+                border-style: dashed solid solid solid;
+                border-width: 1.5px;
+                border-radius: 50%;
+                transform: rotate(45deg);
+                width: 27px;
+                height: 27px;
+                &::before {
+                    position: absolute;
+                    transform: rotate(-45deg);
+                    left: 3.5px;
+                    top: -0.5px;
+                }
+            }
+            .van-cell__right-icon {
+                // color: transparent;
+            }
+            .van-tag--danger {
+                // background-color: red;
+                border-radius: 5px 0 5px 0;
+                color: white;
+                // padding: 3px;
+                // font-size: font__size(small);
+            }
+        }
+    }
+    .van-popup {
+        // background-color: rgba(255,255,255,0.8);
+        // .van-cell {
+        //     background-color: inherit;
+        // }
+        transition: all .3s;
+        box-shadow: #6d6d6d 0 0 5px 5px;
+        .van-cell__title {
+            text-align: center;
+        }
+    }
+}
+
+.mail-chat__popup {
+    padding-top: $header_height - 5;
+    height: calc(100% - #{$header_height + 5});
+    // font-size: font__size(large);
+    .van-skeleton {
+        flex: 1;
+    }
+    .mail-chat__container {
+        // height: calc(100% - #{$footer_height});
+        // height: 100%;
+        flex: 1;
+        overflow: scroll;
+    }
+    .van-field {
+        // height: $footer_height;
+        .van-button {
+            padding: 0 $basic_gap;
+        }
+        .van-field__control {
+            font-size: font__size(large);
+        }
+    }
+}
+
+.mail-chat-box {
+    position: relative;
+    width: calc(100% - #{3*$basic_gap});
+    margin: $basic_gap auto $basic_gap $basic_gap;
+    padding: $basic_gap;
+    border-radius: 2*$basic_gap;
+    border-width: 2px;
+    border-style: solid;
+    box-sizing: border-box;
+    font-size: font__size(default);
+    word-wrap: break-word;
+    &::after {
+        content: ' ';
+        position: absolute;
+        width: 2*$basic_gap;
+        height: 2*$basic_gap;
+        right: -2px;
+        // top: 50%;
+        bottom: 3*$basic_gap;
+        box-sizing: border-box;
+        background-color: inherit;
+        border-width: inherit;
+        border-style: none solid solid none;
+        border-color: inherit;
+        transform-origin: top right;
+        transform: rotate(-45deg);
+    }
+    &.not-me {
+        margin: $basic_gap $basic_gap $basic_gap auto;
+        &::after {
+            right: auto;
+            left: 0;
+            top: 50%;
+            border-style: none none solid solid;
+            border-color: inherit;
+            transform-origin: top left;
+            transform: rotate(45deg);
+        }
+    }
+    // > p {
+    //     width: 100%;
+    // }
+}
+
+$title_width: 75px;
+$button_width: 85px;
+
+.mail-page {
+    overflow-y: scroll;
+    .mail-table {
+        // height: 100%;
+        padding: $basic_gap;
+        margin-bottom: 2*$footer_height;
+        .mail-table-row {
+            margin: $basic_gap/2 auto 0 auto;
+            width: 100%;
+            .mail-table-title {
+                padding-top: $basic_gap;
+                width: $title_width;
+                word-break: break-all;
+                font-weight: bold;
+            }
+            .mail-table-content {
+                flex: 1;
+                .van-cell.van-field {
+                    border-radius: $basic_gap;
+                    &.disabled {
+                        opacity: .4;
+                    }
+                    .van-button {
+                        margin: 1px;
+                    }
+                    .member-selector {
+                        // margin-top: 3px;
+                        .member-selector-input {
+                            height: 19px;
+                            flex: 1;
+                        }
+                        .member-selector-all {
+                            // width: $button_width;
+                            white-space: nowrap;
+                        }
+                    }
+                    .van-dropdown-menu {
+                        height: 0;
+                        .van-dropdown-menu__title {
+                            &::after {
+                                content: none;
+                            }
+                        }
+                        .van-dropdown-item .van-popup {
+                            width: calc(100% - #{2*$basic_gap + $title_width});
+                            left: auto;
+                            right: $basic_gap;
+                            border-bottom-right-radius: $basic_gap;
+                            border-bottom-left-radius: $basic_gap;
+                        }
+                    }
+                    .van-field__control {
+                        overflow: hidden;
+                    }
+                }
+            }
+            .mail-table-type {
+
+                .van-button {
+                    width: 20%;
+                    margin-bottom: $basic_gap/2;
+                    margin-right: $basic_gap/2;
+                    min-width: $title_width - $basic_gap;
+                    max-width: 2*$title_width;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    transition: all .3s;
+                    &.actived {
+                        // flex: 1;
+                        width: calc(60% - #{2*$basic_gap});
+                        // width: fit-content;
+                    }
+                    &:not(.actived) {
+                        opacity: .4;
+                    }
+                    // &:not(:last-of-type) {
+                    //     margin-right: $basic_gap;
+                    // }
+                }
+            }
+        }
+    }
+}
+
+.mail-deleting-popup {
+    width: 100vw;
+    // position: absolute;
+    font-size: font__size(huge);
+    .van-icon.van-icon-close {
+        line-height: 100%;
+    }
+}

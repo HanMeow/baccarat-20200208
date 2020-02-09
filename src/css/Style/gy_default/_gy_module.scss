@@ -1,0 +1,499 @@
+// ************************************************************
+// gy_default__theme  button
+// ************************************************************
+
+// 按鈕通用設定
+[class*="c_button"]:not(.c_button__text) {
+    &:not([class*="disabled"])::before {
+        background-color: background__color(base);       // 滑過時蓋上透明度
+    }
+    &[class*="--disabled"] {
+        color: text__color(base_invert);                        // 按鈕文字
+        text-shadow: 0 0 1px text__color(default);
+    }
+    // usage => .c_button--disabled
+    @include generate_button(disabled, lighten(background__color(default), 50%));
+}
+
+
+// ************************************************************
+// gy_default__theme  c_dropdown
+// ************************************************************
+
+.c_dropdown {
+    &::before {
+        @include triangle(shadow__color(default), up, 8px);             // 下拉选单箭头阴影
+    }
+    &::after {
+        @include triangle(background__color(base_invert), up, 6px);    // 下拉选单箭头
+    }
+}
+
+
+
+// 下拉选单内容
+.c_dropdown__box {
+    color: text__color(secondary);
+    & .c_dropdown__box__inner {
+        @include box_shadow(0px 0px 3px shadow__color(default));
+        background: background__color(base_invert);
+        & /*a*/.c_dropdown__box__link {
+            color: text__color(secondary);          // 连结颜色
+        }
+    }
+}
+
+
+
+// 内容带有 icon 的下拉选单 - icon 设定
+.c_dropdown__box.c_dropdown__box--icon-box {
+    & /*svg*/.c_link__icon--activity-icon {             // 活动公告
+        fill: icon__color(primary);
+    }
+    & /*svg*/.c_link__icon--record-icon {               // 游戏纪录
+        fill: icon__color(secondary);
+    }
+    & /*svg*/.c_link__icon--report-icon {               // 报表管理
+        fill: icon__color(accent);
+    }
+    & /*svg*/.c_link__icon--team-icon {                 // 团队管理
+        fill: icon__color(warning);
+    }
+    & /*svg*/.c_link__icon--user-icon {                 // 帐户中心
+        fill: icon__color(info);
+    }
+    & .c_dropdown__box__link:hover {
+        text-decoration: none;
+        & /*span*/.c_link__text {
+            color: text__color(primary);
+            text-decoration: none;
+        }
+    }
+}
+
+
+
+// 多栏下拉选单
+.c_dropdown__box.c_dropdown__box--list-box {
+    & .c_dropdown__box--list-box__group {
+        & /*span*/.c_dropdown__box--list-box__title {
+            color: text__color(secondary);
+            border-color: transparent;
+        }
+        & + /*ul*/.c_dropdown__box--list-box__group::after {
+            border-color: border_color(light);
+        }
+        &:hover {
+            & /*span*/.c_dropdown__box--list-box__title {
+                color: text__color(accent);
+                border-color: text__color(accent);
+            }
+        }
+    }
+}
+
+
+// ************************************************************
+// c_input
+// ************************************************************
+.c_input--icon-input {
+    background: background__color(base_invert);
+    & .c_input__icon {
+        @include size(20px);
+        fill: background__color(base_invert);
+    }
+    & .c_input__inner {
+        color: text__color(weak);
+        // box-shadow: inset 0px 6px 4px -2px rgba(background__color(base), 0.1);
+        &::placeholder,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill,
+        &:-webkit-autofill:focus input:-webkit-autofill {
+            color: darken(text__color(light), 5%);
+        }
+
+    }
+}
+
+// placeholder for old ie
+.c_input__placeholder {
+    color: text__color(default);
+}
+
+// ************************************************************
+// c_pagination
+// ************************************************************
+
+.c_pagination {
+    a{
+        background: #fbfbfb;
+        &.disabled{
+            color: #ccc;
+        }
+    }
+    .c_pagination__inner{
+        border: 1px solid #d7d6d6;
+    }
+
+}
+
+// ************************************************************
+// component.table
+// ************************************************************
+
+.c_table{
+    & thead{
+        color: text__color(weak);
+        background-color: background__color(light);
+    }
+}//基本表格
+
+
+
+.c_table--stripe, .c_table--scroll{
+    & tbody:not(.nodata){
+        & tr:nth-child(even){
+            & td{
+                // background: rgba(#000000,0.07);
+            }
+        }
+    }
+}//偶数有淡灰色
+
+
+// 追號記錄表格
+.c_table--scroll--gametracer, .c_table--scroll--gamewintracer {
+
+    & table {
+        & thead {
+            background: #dddddd;
+            border-bottom: 1px solid #ababab;
+            border-top: 1px solid #ababab;
+        }
+        & tr {
+            border-color: border__color(base);
+            & td {
+                border-bottom: 1px solid border_color(dark);
+            }
+        }
+    }
+}
+
+//页面详情
+.gy_list-detail__item {
+    & p:first-of-type {
+        background-color: background__color(light);
+        color: text__color(weak);
+        & + p {
+            border-bottom: 1px solid border__color(light);
+        }
+    }
+	&:first-of-type p + p {
+		border-top: 1px solid border__color(light);
+    }
+    & p {
+        .gy_card__icon {
+            svg {
+                fill: background__color(weak);
+            }
+        }
+    }
+}
+
+
+.gy_list-detail__frame--half .gy_list-detail__group .gy_list-detail__item {
+    &:nth-child(even) {
+        background: rgba(#000000,0.07);
+    }
+}
+
+.gy_list-detail__textarea {
+	& .gy_form__title {
+        background-color: background__color(light);
+        color: text__color(weak);
+    }
+    & .gy_form__textarea {
+        border-color: border__color(light);
+    }
+}
+
+//返點記錄详情
+.gy_list-detail__rebate {
+    .gy_list-detail__rebate-group--right {
+        border: 1px solid border__color(light);
+    }
+}
+
+
+// ************************************************************
+// elementui
+// ************************************************************
+
+// Form
+[class*="el"] {
+    &.auto {
+        &:hover .el-input__inner {
+            border-color: border__color(base);
+        }
+    }
+}
+.el-input__icon {
+    color: text__color(weak);
+}
+
+.el-input__icon.is-clickable:hover {
+	color: text__color(secondary);
+}
+
+.el-input__icon.is-clickable:hover+.el-input__inner {
+	border-color: border__color(base);
+}
+
+// Radio 单选框 => 按钮样式
+.el-radio-button__inner {
+    background: background__color(base_invert);
+    border-color: border__color(base);
+    color: text__color(base);
+    &:hover {
+        background: darken(background__color(weak), 5%);
+        color: text__color(base);
+    }
+}
+.el-radio-button:first-child .el-radio-button__inner {
+    border-left-color: border__color(base);
+}
+.el-radio-button__orig-radio:checked + .el-radio-button__inner {
+    background-color: background__color(primary);
+    border-color: border__color(base);
+    color: text__color(base_invert);
+}
+
+//Checkbox 多选框
+.el-checkbox{
+    color: inherit;
+}
+.el-checkbox__inner {
+    background: none;
+    border-color: border__color(base);
+    color: text__color(base);
+    &:hover {
+        border-color: border__color(base);
+    }
+}
+.el-checkbox__input {
+    &.is-checked .el-checkbox__inner {
+        background: text__color(primary);
+        border: border__color(base);
+    }
+    &.is-focus .el-checkbox__inner {
+        border-color: border__color(base);
+    }
+}
+
+.gy_login {
+    .el-checkbox__input {
+        &.is-checked .el-checkbox__inner {
+            background: background__color(accent);
+            border: border__color(base);
+        }
+    }
+}
+
+// Input 输入框
+.el-input__inner {
+    border-color: border__color(base);
+    color: text__color(base);
+    &::placeholder {
+        color: text__color(weak);
+    }
+    &:hover,
+    &:focus {
+        border-color: border__color(base);
+    }
+    &:focus {
+        border-color: border__color(primary);
+    }
+}
+
+// InputNumber 计数器
+.el-input-number {
+    & .el-input-number__decrease,
+    & .el-input-number__increase {
+        background: background__color(default_invert);
+        border-color: border__color(base);
+        color: text__color(base);
+        &:hover {
+            &:not(.is-disabled) ~ .el-input .el-input__inner:not(.is-disabled) {
+                border-color: border__color(base);
+            }
+        }
+    }
+    & .el-input-number__decrease {
+        border-right-color: border__color(base);
+    }
+    & .el-input-number__increase {
+        border-left-color: border__color(base);
+    }
+    & .el-input__inner {
+        background: background__color(base_invert);
+        &:hover,
+        &:focus {
+            border-color: border__color(base);
+        }
+    }
+}
+
+// 计数器 + 选择器
+.counter {
+    & .el-select {
+        & .el-input {
+            & .el-input__inner {
+                background: background__color(base_invert);
+                &:hover,
+                &:focus {
+                    border-color: border__color(base);
+                }
+            }
+        }
+    }
+}
+
+
+// Select 选择器
+.el-select {
+    .el-input__inner {
+        &:hover,
+        &:focus {
+            border-color: border__color(dark);
+        }
+        &::placeholder {
+            color: text__color(base);
+        }
+    }
+    .el-input .el-input__icon {
+        color: text__color(secondary);
+        &.is-show-close {
+            color: text__color(secondary);
+            &:hover {
+                color: text__color(secondary);
+            }
+        }
+    }
+    &:hover {
+        .el-input__inner {
+            border-color: border__color(dark);
+        }
+    }
+}
+.el-select-group__title {
+    color: text__color(secondary);
+}
+.el-select-dropdown__item {
+    color: text__color(weak);
+    &.selected,
+    &.selected.hover {
+        background: background__color(default);
+        color: text__color(base_invert);
+    }
+    &.hover,
+    &:hover {
+        background-color: background__color(weak);
+        color: text__color(default);
+    }
+    &.is-disabled {
+        color: text__color(weak);
+    }
+    &.is-disabled:hover {
+        background: none;
+        color: text__color(weak);
+    }
+}
+
+.el-input.is-disabled {
+    & .el-input__inner {
+        background: background__color(weak);
+        border-color: border__color(default);
+        color: text__color(secondary);
+        &::placeholder {
+            color: text__color(secondary);
+        }
+    }
+}
+.el-select .el-input.is-disabled {
+    & .el-input__icon {
+        color: text__color(weak);
+    }
+    & .el-input__inner:hover {
+        border-color: border__color(base);
+    }
+}
+
+
+
+// Loading 加载
+.el-loading-spinner {
+    & .el-loading-text {
+        color: text__color(default);
+    }
+    & .border {
+        stroke: background__color(default);
+    }
+    & .path_base {
+        stroke: background__color(default);
+    }
+    & .path {
+        stroke: background__color(default);
+    }
+}
+
+
+
+
+
+
+// ************************************************************
+// elementui.messagebox
+// ************************************************************
+
+
+// type = info
+.el-message-box__status.el-icon-information {
+    color: #B686C8;
+}
+// type = success
+.el-message-box__status.el-icon-circle-check {
+    color: #71D5A7;
+}
+// type = warning
+.el-message-box__status.el-icon-warning {
+    color: #FE9368;
+}
+// type = error
+.el-message-box__status.el-icon-circle-cross {
+    color: #FF7488;
+}
+
+// ************************************************************
+// el-tabs
+// ************************************************************
+
+.el-tabs {
+	& .el-tabs__item {
+		&.is-active {
+            color: text__color(base);
+            & .c_tab-nav__text {
+                border-color: border__color(primary);
+            }
+		}
+    }
+    & .c_tab-nav {
+        background: background__color(base_invert);
+    }
+	& .c_tab-nav__background--hover {
+		background: background__color(base_invert);
+	}
+	& .el-tabs__content {
+        background: background__color(base_invert);
+        border-color: border__color(base);
+	}
+}

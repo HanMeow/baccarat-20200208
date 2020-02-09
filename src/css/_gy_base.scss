@@ -1,0 +1,62 @@
+// ************************************************************
+// base
+// ************************************************************
+
+
+*, *:after, *:before {
+	-webkit-overflow-scrolling: touch;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+*,
+*:active,
+*:focus {
+	outline: none;
+	text-decoration: none;
+}
+*::-moz-focus-inner {
+	border: none;
+}
+
+body {
+    font: font__size(default) $font__family;
+	-webkit-text-size-adjust: 100%;
+	   -moz-text-size-adjust: 100%;
+	 	-ms-text-size-adjust: 100%;
+		 	text-size-adjust: 100%;
+}
+img {
+	max-height: 100%;
+	max-width: 100%;
+}
+a {
+	color: inherit;
+}
+strong {
+    font-weight: bold;
+}
+
+select {
+    -moz-appearance: menulist;
+    -webkit-appearance: menulist;
+}
+
+
+
+button,
+input,
+select,
+td,
+textarea {
+	background: none;
+	border: none;
+	font: font__size(default) $font__family;
+	outline: none;
+}
+input::-ms-clear,
+input::-ms-reveal {
+    display: none;
+}
+
+
+
+

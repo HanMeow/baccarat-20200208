@@ -1,0 +1,386 @@
+// ************************************************************
+// gy_list
+// ************************************************************
+
+.gy_list {
+	min-height: 450px;
+	.van-list {
+		// .gy_wallet, .gy_game--wallet {
+		.van-hairline--top::after {
+			border-top-width: 0;
+		}
+		.van-grid-item:nth-last-child(-n+3) {
+			.van-grid-item__content::after {
+				border-width: 0 1px 0 0;
+			}
+		}
+		// }
+		.van-grid-item .van-grid-item__content .u_fz--small {
+			text-align: center;
+		}
+		.gy_transfer {
+			.van-grid-item .van-grid-item__content::after {
+				border-width: 0;
+			}
+		}
+	}
+	.transfer_button.van-hairline--top-bottom::after {
+		border-width: 0;
+	}
+}
+.gy_list__content {
+	margin-top: 45px;
+}
+
+.gy__gap--top {
+	border-top: 10px solid border__color(light);
+}
+.gy__gap--bottom {
+	border-bottom: 10px solid border__color(light);
+}
+
+//页面标题
+.gy_list__header {
+	@include size(100vw, 45px);
+    position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	//页面返回按钮
+	.gy_game--header__back {
+		position: absolute;
+		left: 5%;
+    	top: calc(50% - 8px);
+	}
+}
+
+
+// .gy_list__header__shadow {
+// 	display: block;
+// 	width: 100%;
+// 	height: 100vh;
+// 	background-color: rgba(0,0,0,.5);
+// 	position: fixed;
+// 	z-index: 9;
+// }
+
+
+//页面选单
+.gy_list_header__inner {
+	@include size(100vw, 45px);
+	font-size: font__size(large);
+	// display: flex;
+    // justify-content: space-between;
+}
+.gy_list_header__title {
+	display: inline-block;
+    line-height: 45px;
+}
+
+.gy_list-detail__content {
+    word-break: break-all;
+    padding: 20px 6%;
+}
+
+.gy_list-entry {
+	.gy_list-entry__title {
+		list-style-type: disc;
+	}
+}
+
+.gy_list-title {
+	position: relative;
+	width: 100%;
+	height: 1px;
+	border-style: dotted;
+	border-width: 1px;
+}
+
+//列表icon
+/*span*/.gy_list__icon {
+	width: 20px;
+	height: 20px;
+}
+/*span*/.gy_list__icon--setting {
+	width: 30px;
+	height: 30px;
+}
+
+//icon圖示
+$personal_center_icon: (
+	user: 		'name',
+	money: 		'balance',
+	recharge: 	'recharge',
+	takecash:	'withdraw',
+	amount:		'chart',
+	// detail:		'detail'
+	refresh:	'refresh'
+);
+
+@each $key, $value in $personal_center_icon {
+	.gy__icon--#{$key} {
+		background-image: url("../image/personal_center/gy_icon_#{$value}.svg");
+	}
+}
+
+.gy__icon--detail {
+	background-image: url(../image/gy_icon/gy_icon_detail.svg);
+}
+
+//活动主区块
+.gy_list-main {
+	height: 100vh;
+	float: right;
+	font-size: font__size(default);
+	width: 100%;
+	// 标题
+	& /*h3*/.gy_list-main__title {
+		font-size: font__size(title);
+		padding: 4px 0 7px;
+
+	}
+	// 最新公告列表 icon
+	& /*svg*/.gy_list-news__icon {
+		display: inline-block;
+		@include size(20px);
+		margin-left: 5px;
+	}
+	// 最新公告列表标题
+	& /*span*/.gy_list-news__title {
+		@include singleline_ellipsis;
+		display: block;
+		max-width: 250px;
+		padding-left: 5px;
+	}
+	// 最新公告列表日期
+	& /*span*/.gy_list-new__data {
+		display: block;
+		font-size: font__size(small);
+		padding-left: 5px;
+		& > span {
+			border-radius: border__radius(rounded);
+			text-align: center;
+			padding: 4px;
+			margin: 5px 2px;
+			min-width: 22px;
+		}
+	}
+	//號碼球
+	& /*div*/.gy_list-new__ball {
+		white-space: normal;
+		width: 150px;
+		& > span {
+			border-radius: 50%;
+			text-align: center;
+			padding: 4px 3px 4px 2px;
+			margin: 5px 2px;
+			min-width: 24px;
+			font-size: font__size(default);
+		}
+	}
+	//
+	& .el-table {
+		margin: 10px 0;
+		& .el-table__header-wrapper {
+			@include j_br();
+			border-bottom: none;
+			& th + th {
+				.cell {
+					@include j_br(left);
+				}
+			}
+		}
+		& .el-table__body-wrapper {
+			@include j_br();
+			& table,
+			& tbody,
+			& tr {
+				& + tr td {
+					@include j_br(top);
+				}
+			}
+			& td {
+				& + td {
+					@include j_br(left);
+				}
+			}
+		}
+		& .el-table__empty-block {
+			padding: 5px 0;
+			text-align: center;
+		}
+		// el-table 自行产的的 class，出现在 th 里，使 th 无法控制文字置中
+		& .cell {
+			padding: 5px 0;
+			text-align: center;
+		}
+		// el-table 自行产的的 class
+		// 为了不影响对齐而 display: none（出现的话表格会歪掉）
+		& .gutter {
+			display: none;
+		}
+	}
+}
+
+// .gy_activity {
+// 	.gy_activity__button {
+// 		padding: 4px 6px;
+// 		color: text__color(base_invert);
+// 		background-color: background__color(primary);
+// 	}
+// }
+
+//活动详情
+// .gy_activity {
+// 	.gy_list-detail__content {
+// 		padding-left: 0;
+// 		padding-right: 0;
+// 	}
+// }
+
+// 個人報表icon圖示
+$personal_category: (
+	"profit",		//總盈利
+	"bet",			//總投注
+	"bonus",		//總中獎
+	"recharge",		//總充值
+	"withdraw",		//總提現
+	"point",		//總返點
+	"active",		//總活動獎勵
+	"retreat",		//總退水
+	"refund"		//總退傭
+);
+@for $i from 1 through length($personal_category) {
+	$value: nth($personal_category, $i); // 返回 $personal_category 中第 $i 列表项值。
+	$size: 50px;
+	.personal_#{$value} {
+		width: $size;
+		height: $size;
+		background: url(../image/personal/personal_#{$value}.svg) center no-repeat;
+		background-size: 45px;
+	}
+}
+
+//個人資訊icon
+.gy_list__icon {
+	display: inline-block;
+	vertical-align: middle;
+	background-size: contain;
+	background-position: center center;
+}
+
+//個人中心 分類icon
+$center_icons: (
+	'report',
+	'record',
+	'lobby',
+	'bank',
+	'password',
+	'security',
+	'intro',
+	'manager',
+	'information',
+	'message',
+	'activity',
+	'chat',
+	'trand',
+	'transfer',
+	'download'
+);
+
+@each $icon in $center_icons {
+	.center_icon--#{$icon} {
+		background-image: url("../image/personal_center/center-group_icon_#{$icon}.svg");
+	}
+}
+
+//團隊管理 icon
+$team_icons: (
+	'team_overview',
+	'UserList',
+	'SetRefund',
+	'SetRetreat',
+	'CreateUser',
+	'LinkedUser',
+	// 'DayWagesSetting',
+	// 'DayWagesList',
+	// 'DayShareSetting',
+	// 'DaySharesList'
+);
+
+@each $icon in $team_icons {
+	.team__icon-#{$icon} {
+		background-image: url("../image/team/team_#{$icon}.svg");
+	}
+}
+
+//銀行LOGO icon
+$bank_logo: (
+	'ABC',
+    'BCOM',
+    'BOB',
+    'BOC',
+    'BOCD',
+    'BOD',
+    'CCB',
+    'CEB',
+    'CIB',
+    'CITIC',
+    'CMB',
+    'CMBC',
+    'CZB',
+    'GDB',
+    'GLB',
+    'GRCB',
+    'GRCC',
+    'GZCB',
+    'HXB',
+    'HZB',
+    'ICBC',
+    'JLB',
+    'JSB',
+    'NBCB',
+    'NJCB',
+    'PAB',
+    'PSBC',
+    'RCC',
+    'SHB',
+    'SPDB',
+    'SRCB',
+    'TCCB',
+    'WZB',
+    'ZZB',
+
+    //第三方支付
+    'QQPAY_R',
+    'JDPAY_R',
+    'WECHAT_R',
+    'ALIPAY_R',
+    'UNIONPAY_SCANPAY_R',
+    'UNIONPAY_EXPRESS_R',
+    // 轉卡支付
+    'ALIPAY_TRANSCARD_R',
+    'WECHAT_TRANSCARD_R',
+
+	//二維碼支付
+    'ALIPAY_QR'
+);
+
+@each $icon in $bank_logo {
+	.bank__icon-#{$icon} {
+		background-image: url("../image/bank_logo/#{$icon}.svg");
+		background-repeat: no-repeat;
+	}
+}
+
+input[type=checkbox]:checked + label.switch {
+	&:after {
+		transform: translateX(23px);
+	}
+}
+
+.list-blocker {
+	height: $footer_height + 20;
+	width: 100vw;
+}
+

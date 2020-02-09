@@ -1,0 +1,111 @@
+// ************************************************************
+// login
+// ************************************************************
+
+// font__size(title);
+// default : 14px,
+// large   : 16px,
+// huge    : 18px,
+// small   : 12px,
+// title   : 22px,
+
+$forget_button_height: 36px;
+
+.forget {
+    // position: relative;
+    overflow: scroll;
+    /** a bug in iOS */
+    position: absolute;
+    width: calc(100vw - #{2*$basic_gap});
+    // height: calc(100vh - #{2*$basic_gap});
+    /** a bug in iOS */
+    min-height: calc(100vh - #{2*$basic_gap});
+    .forget-tabs {
+        // height: 60px;
+        padding: $basic_gap;
+        .forget-tabs-button {
+            margin: 0 $basic_gap;
+            height: $forget_button_height;
+            line-height: $forget_button_height;
+            // .van-button__text {
+                // line-height: 0;
+            // }
+        }
+    }
+    
+    .forget-title {
+        font-size: font__size(title);
+        text-align: center;
+        margin: 0 0 $basic_gap 0;
+    }
+
+    .van-cell.van-field {
+        border-radius: 4*$basic_gap;
+        margin: 0 0 $basic_gap/2 0;
+        .van-field__button .van-button {
+            border-radius: 2*$basic_gap;
+        }
+        .van-cell__title .van-button__text {
+            white-space: nowrap;
+        }
+        &::after {
+            content: none;
+        }
+    }
+    .van-button[class*=main__submit] {
+        margin: 0 0 $basic_gap/2 0;
+    }
+    .blocker {
+        height: $footer_height;
+        margin: 0 0 $basic_gap/2 0;
+        &::after {
+            content: none;
+        }
+    }
+    // .forget-service-group {
+    [class*=forget-service-group] {
+        position: absolute;
+        right: $basic_gap;
+        bottom: 3*$footer_height + $basic_gap;
+        font-size: font__size(huge);
+        text-decoration: underline;
+        z-index: 0;
+        .forget-service-icon {
+            height: 35px;
+            margin: 0 $basic_gap/2 0 0;
+            // fill: yabo_text__color(orange);
+            fill: yabo_text__color(lazuli);
+        }
+        &[class*=-right] {
+            // position: relative;
+            bottom: 0;
+            // margin: auto 0 0 auto;
+            right: $basic_gap;
+            // top: auto;
+        }
+    }
+    .vue-tel-input {
+        margin-bottom: $basic_gap;
+    }
+}
+
+.forget-popup {
+    .van-picker__cancel, .van-picker__confirm {
+        white-space: nowrap;
+    }
+}
+
+.custom-vue-tel-input.vue-tel-input {
+    border-radius: 2*$basic_gap;
+    // background-color: rgba(255, 255, 255, 0.5);
+    border-style: none;
+    height: 40px;
+    .vti__input {
+        // font-size: font__size(title);
+        font-size: font__size(huge);
+    }
+    .vti__dropdown:hover {
+        border-top-left-radius: 2*$basic_gap;
+        border-bottom-left-radius: 2*$basic_gap;
+    }
+}

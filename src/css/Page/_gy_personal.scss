@@ -1,0 +1,175 @@
+// ************************************************************
+// gy_personal
+// ************************************************************
+
+/*personal*/
+
+// js_text__color(base);
+// base             : $color__base,
+// base_invert      : $color__base__invert,
+// title            : lighten($color__base, 15%),
+// body             : lighten($color__base, 15%),
+// accent           : $color__primary, 
+// modify           : $color__hover, 
+// modifys          : $color__modify 
+
+// font__size(title);
+// default : 14px,
+// large   : 16px,
+// huge    : 18px,
+// small   : 12px,
+// title   : 22px,
+
+.gy_personal {
+    // height: calc(100vh - #{$footer_height} - #{$header_height});
+    // margin-top: $header_height;
+    // margin-bottom: $footer_height;
+    // width: 100vw;
+    // position: relative;
+    padding: $basic_gap;
+    .gy_bankCard__question {
+        // border-width: 0;
+    }
+
+    .forget {
+        .gy_personal__container {
+            width: 100vw;
+            height: 100vh;
+        }
+    }
+
+    .gy_personal__container {
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        position: relative;
+        // padding: $basic_gap;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        padding-bottom: 10*$basic_gap;
+
+        .transition {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .avatar__container {
+            width: 100%;
+            position: relative;
+            margin: $basic_gap 0;
+            .avatar__img {
+                display: block;
+                margin: auto;
+                width: calc(100%/3);
+                // position: absolute;
+            }
+            .text {
+                position: absolute;
+                font-size: font__size(large);
+                left: 50%;
+                bottom: 11px;
+                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+                transform: translateX(-50%);
+            }
+        }
+
+        .gy_personal__table {
+            padding: $basic_gap;
+            border-radius: 5px;
+            .gy_personal__term {
+                // margin: 0 $basic_gap;
+                padding: $basic_gap;
+                font-size: font__size(default);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                &:not(:last-of-type) {
+                    border-bottom-style: solid;
+                    border-width: 1px;
+                }
+                .gy_personal__modi {
+                    padding: 0 $basic_gap;
+                    border-radius: $basic_gap/2;
+                    border-style: solid;
+                    border-width: 2px;
+                }
+                :first-child {
+                    min-width: 30%;
+                }
+                :nth-child(2) {
+                    flex: 1;
+                }
+                // display: flex;
+                // .gy_bankCard__input {
+                //     flex: 1;
+                //     // margin: 0 auto;
+                //     text-align: right;
+                //     &::placeholder {
+                //         color: $yabo_orange
+                //     }
+                // }
+                .van-button {
+                    white-space: nowrap;
+                }
+                .van-cell.van-field {
+                    border-radius: 2*$basic_gap;
+                    margin-right: 3px;
+                }
+            }
+        }
+    }
+    .gy_personal__nickname {
+        padding: $basic_gap;
+        // padding: 0;
+        border-radius: $basic_gap;
+        // font-size: font__size(large);
+        // border-width: 1px;
+        // border-style: solid;
+        .van-cell.van-cell--large.van-field {
+            padding: 0;
+            .van-cell__value.van-cell__value--alone {
+                .van-field__body {
+                    .van-field__control {
+                        font-size: font__size(large);
+                    }
+                }
+            }
+        }
+    }
+    .gy_bankCard__submit {
+        &:not(.van-button) {
+            font-size: font__size(large);
+        }
+    }
+}
+
+.portrait__container {
+    width: calc(100vw - 2*#{$basic_gap});
+    min-height: 430px;
+    padding: $basic_gap $basic_gap 5*$basic_gap $basic_gap;
+    border-radius: $basic_gap;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    .portrait__content {
+        width: calc(100% / 4 - #{$basic_gap/2});
+        // float: left;
+        margin: $basic_gap/4;
+        .portrait__img {
+            // border-width: 3px;
+            // border-style: solid;
+            filter: brightness(80%);
+            &.actived {
+                filter: drop-shadow(0 0 10px #029ffe);
+            }
+        }
+    }
+    .portrait__submit {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

@@ -1,0 +1,205 @@
+// ************************************************************
+// 站內信
+// ************************************************************
+$font_color: #7d7d7d;
+
+.gy_envelope__detail .gy_list-search {
+    border: none;
+}
+
+
+// 列表
+.gy_envelope__unread--icon {
+	display: inline-block;
+	vertical-align: middle;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #cecece;
+	&.unread {
+		background-color: background__color(unread);
+	}
+}
+
+.gy_envelope__option-box {
+	align-self: flex-start;
+	margin-top: 15px;
+}
+.gy_envelope__list__item {
+	display: flex;
+    width: calc(100% - 45px);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gy_msg-list__title {
+    max-width: 220px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} // 列表主題
+.gy_msg__subject {
+	white-space: initial;
+    word-break: break-all;
+    height: inherit;
+} // 查詢頁主題
+.gy_textarea--result {
+    word-break: break-all;
+    white-space: initial;
+} // 發件箱內容
+
+.gy_envelope__inner {
+	padding-bottom: 165px;
+	.gy_envelope__content {
+		padding: 20px 30px 10px 30px;
+	}
+}
+// .gy_envelope__input {
+// 	padding: 2px 10px;
+// 	border: 1px solid darken(border__color(weak), 10%);
+// 	margin-bottom: 10px;
+// 	textarea {
+// 		display: block;
+// 		width: 100%;
+// 		height: 24px;
+// 		line-height: 20px;
+// 		color: $font_color;
+// 		// overflow-y: auto;
+// 		resize: none;
+// 	}
+// }
+
+.gy_envelope__content {
+	@mixin text-content {
+		position: relative;
+		padding: 10px;
+		border-radius: 6px;
+		max-width: 100%;
+		word-wrap: break-word;
+		color: $font_color;
+		.gy_msg_name {
+			border-bottom: 1px solid #ccc;
+		}
+		.gy_msg_content {
+			letter-spacing: 2px;
+			a {
+				color: darken(#a0bbe2, 20%);
+				text-decoration: underline;
+				&:hover {
+					color: darken(#a0bbe2, 30%);
+				}
+			}
+		}
+		.gy_msg__time {
+			text-align: right;
+			padding-top: 10px;
+			.gy_msg__time--icon {
+				width: 16px;
+				fill: rgba($font_color, .5);
+				vertical-align: middle;
+			}
+			span {
+				display: inline-block;
+				vertical-align: middle;
+				color: rgba($font_color, .5);
+			}
+		}
+	}
+	.gy_msg__object {
+		float: left;
+		background-color: #f7ffac;
+		@include text-content;
+		.gy_envelope__horn {
+			position: absolute;
+			width: 10px;
+			top: 16px;
+			left: -9px;
+			fill: #f7ffac;
+		}
+	}
+	.gy_msg__user {
+		float: right;
+		background-color: #ace2ff;
+		@include text-content;
+		> .gy_msg_name {
+			text-align: right;
+		}
+		.gy_envelope__horn {
+			position: absolute;
+			width: 10px;
+			transform: rotate(180deg);
+			bottom: 16px;
+			right: -9px;
+			fill: #ace2ff;
+		}
+	}
+}
+
+
+
+// 选择收件人icon
+.gy_icon--edit {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	fill: background__color(weak);
+}
+
+
+// 新增信息
+.gy_recipient__input {
+	border-bottom: 1px solid border__color(weak);
+	span {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+.gy_envelope__textarea {
+	padding: 5px 0 5px 10px ;
+	border-radius: 4px;
+	border: 1px solid border__color(weak);
+	word-break: break-all;
+	a {
+        text-decoration: underline;
+    }
+	& > div {
+		height: 45vh;
+		overflow: auto;
+	}
+}
+.gy_envelope__field {
+	padding-top: 15px;
+	input, p {
+		padding: 5px 10px;
+		border: 1px solid border__color(weak);
+		line-height: 20px;
+	}
+	textarea {
+		width: 100%;
+		height: 45vh;
+		resize: none;
+		line-height: 24px;
+	}
+}
+
+.gy_envelope__select__header {
+	width: calc(100% - 20px);
+	padding-bottom: 15px;
+	background-color: background__color(base_invert);
+}
+.gy_envelope__select {
+	padding-top: 5px;
+	display: flex;
+    justify-content: space-between;
+	input {
+		width: calc(100% - 100px);
+		height: 34px;
+		vertical-align: middle;
+	}
+}
+
+.gy_recipient__input .gy_msg__users {
+	width: calc(100vw - 110px);
+    @include singleline_ellipsis;
+} // 發件箱查詢收件人

@@ -1,0 +1,196 @@
+// ************************************************************
+// utilities
+// ************************************************************
+
+
+
+// usage => .u_inline-field > div
+.u_inline-field {
+    font-size: 0;
+
+    &>div {
+        display: inline-block;
+        font-size: font__size(default);
+        margin-right: 20px;
+        vertical-align: middle;
+
+        & *[class*="input"],
+        & *[class*="select"] {
+            vertical-align: middle;
+        }
+
+        &>span {
+            vertical-align: middle;
+        }
+    }
+
+    &.u_fz--huge {
+        font-size: 0;
+
+        &>div {
+            font-size: font__size(huge);
+        }
+    }
+
+    &.u_fz--large {
+        font-size: 0;
+
+        &>div {
+            font-size: font__size(large);
+        }
+    }
+
+    &.u_fz--small {
+        font-size: 0;
+
+        &>div {
+            font-size: font__size(small);
+        }
+    }
+}
+
+.u_fz--huge {
+    font-size: font__size(huge);
+}
+
+.u_fz--large {
+    font-size: font__size(large);
+}
+
+.u_fz--small {
+    font-size: font__size(small);
+}
+
+
+
+// usage => .u_c--auto
+$cursor: (auto,
+    default,
+    pointer,
+    text,
+    not-allowed);
+@include generate(cursor, $cursor);
+
+
+
+// usage => .u_t--center
+$text-align: (center,
+    right,
+    left);
+@include generate(text-align, $text-align);
+
+
+// usage => .u_v--middle
+$vertical-align: (top,
+    middle,
+    bottom);
+@include generate(vertical-align, $vertical-align);
+
+
+// usage => .u_f--right
+$float: (right,
+    left,
+    none);
+@include generate(float, $float);
+
+
+
+// usage => .u_o--09
+$opacity: (0.9,
+    0.7,
+    0.5,
+    0.2);
+@include generate(opacity, $opacity);
+
+
+
+// usage => .u_w--right
+$float: (right,
+    left,
+    none);
+@include generate(float, $float);
+
+
+// usage => .u_d--block
+$display: (inline,
+    inline-block,
+    block,
+    table);
+@include generate(display, $display);
+
+
+// usage => .u_p--relative
+$position: (relative,
+    absolute);
+@include generate(position, $position);
+
+
+
+// usage => .u_"w"argin + -- + "10"~"100" + unit
+// ex. .u_w--100p, .u_h--20vw
+@include generate_length(width, 10, '%');
+@include generate_length(width, 10, vw);
+@include generate_length(height, 10, '%');
+@include generate_length(height, 10, vh);
+
+
+
+// usage => .u_"m"argin + -- + direction("t"op, "r"ight, "b"ottom, "l"eft) + "5"~"50"
+// ex. .u_m--t20, .u_m--r10
+@include generate_trbl(margin, 5, 30);
+// usage => .u_"p"adding + -- + direction("t"op, "r"ight, "b"ottom, "l"eft) + "5"~"50"
+// ex. .u_p--l5, .u_p--b20
+@include generate_trbl(padding, 5, 30);
+
+
+@include generate_position(1, 20);
+
+
+.u_underline {
+    text-decoration: underline;
+}
+
+.u_t--hover {
+    &:hover {
+        color: text__color(primary);
+    }
+}
+
+
+.u_clearfix {
+    &::after {
+        clear: both;
+        content: "";
+        display: block;
+        height: 0;
+        visibility: hidden;
+    }
+}
+
+
+
+// usage => .u_bg--primary
+// @each $name,
+// $colour in $background__color {
+//     .u_bg--#{$name} {
+//         background: $colour;
+//     }
+// }
+
+// usage => .u_br--base
+// @each $name,
+// $colour in $border__color {
+//     .u_br--#{$name} {
+//         border-color: $colour;
+//     }
+// }
+
+// usage => .u_txt--base_invert
+// @each $name,
+// $colour in $text__color {
+//     .u_txt--#{$name} {
+//         color: $colour;
+//     }
+// }
+
+

@@ -1,0 +1,179 @@
+// ************************************************************
+// mixin
+// ************************************************************
+
+// 設置寬高
+@mixin size($width, $height: $width) {
+    height: $height;
+    width: $width;
+}
+
+// 設置寬高
+@mixin circle($width, $height: $width) {
+    border-radius: border_radius(rounded);
+    height: $height;
+    width: $width;
+}
+
+// 偽元素
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+// 三角形
+@mixin triangle($colour, $direction, $size: 6px, $position: absolute) {
+    @include pseudo($pos: $position);
+    height: 0;
+    width: 0;
+    @if $direction == down {
+        border-top: $size solid $colour;
+        border-right: $size solid transparent;
+        border-left: $size solid transparent;
+        margin-top: 0 - round($size / 2.5);
+    } @else if $direction == up {
+        border-right: $size solid transparent;
+        border-bottom: $size solid $colour;
+        border-left: $size solid transparent;
+        margin-bottom: 0 - round($size / 2.5);
+    } @else if $direction == right {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid $colour;
+        margin-right: -$size;
+    } @else if  $direction == left {
+        border-top: $size solid transparent;
+        border-right: $size solid $colour;
+        border-bottom: $size solid transparent;
+        margin-left: -$size;
+    }
+}
+
+// 單行截斷加 "..."
+@mixin singleline_ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// 動畫
+@mixin animate($name, $duration, $count: 1, $mode: both, $delay: 0s) {
+    animation-iteration-count: $count;
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-fill-mode: $mode;
+    animation-name: $name;
+}
+
+// 陰影
+@mixin box_shadow($shadow1, $shadow2: false, $shadow3: false) {
+    $params: $shadow1;
+    @if $shadow3 != false {
+        $params: $shadow1, $shadow2, $shadow3;
+    } @else if $shadow2 != false {
+        $params: $shadow1, $shadow2;
+    }
+    box-shadow: $params;
+}
+
+// 框线 - 搭配 js hook 使用
+@mixin j_br($dir: false, $style: solid, $width: 1px) {
+    @if $dir != false {
+        border-#{$dir}-style: $style;
+        border-#{$dir}-width: $width;
+    } @else {
+        border-style: $style;
+        border-width: $width;
+    }
+}
+
+
+
+
+
+// ************************************************************
+// generate class
+// ************************************************************
+
+@mixin background_image($imgpath, $position: center center, $repeat: no-repeat) {
+    background: {
+        image: url($imgpath);
+        position: $position;
+        repeat: $repeat;
+    }
+}
+
+@mixin generate_button($name, $background) {
+    &[class*="#{$name}"] {
+        background: $background;
+    }
+}
+
+@mixin generate_icon($name, $filename_extension, $width, $height: $width) {
+    .icon_#{$name} {
+        @include background_image("~@I/icon/icon_#{$name}.#{$filename_extension}");
+        @include size($width, $height);
+        display: inline-block;
+    }
+}
+
+@mixin generate_trbl($name, $value, $max: 4) {
+	$short_name: str_slice($name, 1, 1);
+	$direction: top, right, bottom, left;
+
+	@each $dir in $direction {
+		@for $i from 1 through $max {
+			.u_#{$short_name}--#{str_slice($dir, 1, 1)}#{$value * $i} {
+				#{$name}-#{$dir}: $value * $i * 1px;
+			}
+		}
+	}
+}
+
+@mixin generate_position($value, $max: 4) {
+    $direction: top, right, bottom, left;
+    @each $dir in $direction {
+        @for $i from 1 through $max {
+            .u_#{str_slice($dir, 1, 1)}--#{$value * $i} {
+                #{$dir}: $value * $i * 1px;
+            }
+        }
+    }
+}
+
+@mixin generate_length($name, $value, $unit: '%', $max: 10) {
+	$short_name: str_slice($name, 1, 1);
+
+    @for $i from 1 through $max {
+        @if $unit == '%' {
+            .u_#{$short_name}--#{$value * $i}p {
+                #{$name}: percentage($value * $i / 100);
+            }
+        } @else {
+            .u_#{$short_name}--#{$value * $i}#{$unit} {
+                #{$name}: $value * $i + $unit;
+            }
+        }
+    }
+}
+
+@mixin generate($name, $value) {
+    $short_name: str_slice($name, 1, 1);
+    $total_value: $value;
+    @for $i from 1 through length($total_value) {
+        $value: nth($total_value, $i);
+        @if $name == 'opacity' {
+            .u_#{$short_name}--0#{$value*10} {
+                #{$name}: $value;
+            }
+        } @else {
+            .u_#{$short_name}--#{$value} {
+                #{$name}: $value;
+            }
+        }
+    }
+}
+
+
+

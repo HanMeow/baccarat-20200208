@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+        />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <!-- <app-meta name="version" content="1.330.0"></app-meta>
+        <app-meta name="platform" content="UUU001"></app-meta> -->
+        <!--    <link rel="stylesheet" href="./static/css/reset.css">-->
+        <!--<link rel="stylesheet" href="./static/css/layout.css">-->
+        <!--<link rel="stylesheet" href="./static/css/style.css">-->
+        <!--    <link rel="stylesheet" href="./static/css/flipTimer.min.css">-->
+        <!--    <link rel="stylesheet" href="./static/css/font-awesome.min.css">-->
+        <title>加載中...</title>
+        <!-- <script src="/static/locale.js"></script> -->
+        <script class="per-script">
+            var fromApp = {}
+            document.querySelectorAll('app-meta').forEach(function(item) {
+                const content = item.getAttribute('content')
+                const name = item.getAttribute('name')
+                fromApp[name] = content
+            })
+            var CDN = 'cdntest.mvkbnb.com'
+            // var downloadLink = 'http://www.google.com'
+            var frontJson = {
+                ui_dir_reg_recommended_id_web: '3',
+                ui_member_reg: '0',
+                ui_add_agent: '0',
+                ui_try_free: 1,
+                ui_dir_reg_recommended_id_mobile: '3',
+                ui_cd_sys: '{"type":0,"url":""}',
+                ui_withdraw_time: '{"start_time":"07:00","end_time":"05:00"}',
+                ui_registration_contact_info:
+                    '{"member":{"email":6,"phone_number":6,"qq":6,"wechat":6},"agent":{"email":3,"phone_number":3,"qq":3,"wechat":3}}',
+                btn_help: '5',
+                ui_contact_cs: '5',
+                ui_wap_page_guide_download_app_cover_page: '7',
+                ui_login_page: '1',
+            }
+            var LANGLIST = [
+                {
+                    text: '簡體中文',
+                    key: 'zh_cn',
+                },
+                {
+                    text: 'ENGLISH',
+                    key: 'en_us',
+                },
+                {
+                    text: 'Tiếng Việt',
+                    key: 'vn',
+                },
+                {
+                    text: 'ภาษาไทย',
+                    key: 'th_th',
+                },
+            ]
+        </script>
+        <!--[if IE 9]>
+            <script src="//cdn.rawgit.com/jpillora/xdomain/0.7.4/dist/xdomain.min.js"></script>
+            <script>
+                xdomain.slaves({
+                    'http://gameclient.b2bdev.com': '/proxy.php',
+                    'http://www001.100piv.tech': '/proxy.php',
+                })
+            </script>
+        <![endif]-->
+        <style>
+            @charset "UTF-8";
+            body,
+            div {
+                margin: 0;
+                padding: 0;
+                font-weight: normal;
+                font-family: arial, 'Microsoft JhengHei', 'Microsoft Yahei', tahoma, Srial, helvetica, sans-serif;
+                border: none;
+            }
+            .loader__container {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                /*display: flex;*/
+                /*align-items: center;*/
+                /*justify-content: center;*/
+                background: url(/static/img/page_bg_default.png) no-repeat;
+                background-size: cover;
+            }
+
+            .loader__container .sku-container {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%, -50%, 0) scale(1.5);
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .loader__container .sku-container .post {
+                width: 220px;
+                height: 80px;
+            }
+            .loader__container .sku-container .post .avatar {
+                float: left;
+                width: 52px;
+                height: 52px;
+                background-color: #ccc;
+                border-radius: 50%;
+                margin: 8px;
+                background-image: linear-gradient(90deg, #ddd 0px, #e8e8e8 40px, #ddd 80px);
+                background-size: 600px;
+                -webkit-animation: shine-avatar 0.6s infinite linear;
+                animation: shine-avatar 0.6s infinite linear;
+            }
+            .loader__container .sku-container .post .line {
+                float: left;
+                width: 140px;
+                height: 16px;
+                margin-top: 12px;
+                border-radius: 7px;
+                background-image: linear-gradient(90deg, #ddd 0px, #e8e8e8 40px, #ddd 80px);
+                background-size: 600px;
+                -webkit-animation: shine-lines 0.6s infinite linear;
+                animation: shine-lines 0.6s infinite linear;
+            }
+            .loader__container .sku-container .post .avatar + .line {
+                margin-top: 11px;
+                width: 100px;
+            }
+            .loader__container .sku-container .post .line ~ .line {
+                background-color: #ddd;
+            }
+
+            @keyframes shine-lines {
+                0% {
+                    background-position: -100px;
+                }
+                40%,
+                100% {
+                    background-position: 140px;
+                }
+            }
+            @keyframes shine-avatar {
+                0% {
+                    background-position: -32px;
+                }
+                40%,
+                100% {
+                    background-position: 208px;
+                }
+            }
+
+            @-webkit-keyframes shine-lines {
+                0% {
+                    background-position: -100px;
+                }
+                40%,
+                100% {
+                    background-position: 140px;
+                }
+            }
+            @-webkit-keyframes shine-avatar {
+                0% {
+                    background-position: -32px;
+                }
+                40%,
+                100% {
+                    background-position: 208px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="splash-container">
+            <!-- <h1 class="title">天空城娛樂</h1> -->
+            <div class="loader__container">
+                <div class="sku-container">
+                    <div class="post">
+                        <div class="avatar"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="post">
+                        <div class="avatar"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="post">
+                        <div class="avatar"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <!-- <svg class="loader" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="external-circle" cx="60" cy="60" r="50"></circle>
+                </svg> -->
+            </div>
+        </div>
+        <div id="app"></div>
+        <!-- built files will be auto injected -->
+        <style id="style"></style>
+        <style id="lottery"></style>
+        <style></style>
+    </body>
+</html>

@@ -1,0 +1,275 @@
+// ************************************************************
+// gy_yabo_main
+// ************************************************************
+
+[class^=j_flex] {
+    display: flex;
+    &[class*=-column] {
+        flex-direction: column;
+    }
+    &[class*=-baseline] {
+        align-items: baseline;
+    }
+    &[class*=-center] {
+        align-items: center;
+    }
+    &[class*=-end] {
+        align-items: flex-end;
+    }
+    &[class*=-around] {
+        justify-content: space-around;
+    }
+    &[class*=-between] {
+        justify-content: space-between;
+    }
+    &[class*=-wrap] {
+        flex-wrap: wrap;
+    }
+}
+
+// [attribute]	[target]	Selects all elements with a target attribute
+// [attribute=value]	[target=_blank]	Selects all elements with target="_blank"
+// [attribute~=value]	[title~=flower]	Selects all elements with a title attribute containing the word "flower"
+// [attribute|=value]	[lang|=en]	Selects all elements with a lang attribute value starting with "en"
+// [attribute^=value]	a[href^="https"]	Selects every <a> element whose href attribute value begins with "https"
+// [attribute$=value]	a[href$=".pdf"]	Selects every <a> element whose href attribute value ends with ".pdf"
+// [attribute*=value]	a[href*="w3schools"]	Selects every <a> element whose href attribute value contains the substring "w3schools"
+
+$notch_debug: 58px;
+// $debugging: true;
+$debugging: false;
+
+/** 主容器 */
+[class*=main__container] {
+    height: calc(100vh - #{$footer_height} - #{$header_height} - constant(safe-area-inset-top));
+    height: calc(100vh - #{$footer_height} - #{$header_height} - env(safe-area-inset-top));
+    width: 100vw;
+    position: relative;
+    margin-top: calc(#{$header_height} + env(safe-area-inset-top));
+    margin-bottom: $footer_height;
+    // height: 100%;
+    /** 瀏海 debug */
+    @if $debugging {
+        height: calc(100vh - #{$footer_height} - #{$header_height} - #{$notch_debug});
+        margin-top: $header_height + $notch_debug;
+    }
+    /** 瀏海 debug */
+    &:not(.gy_promotion) {
+        overflow-y: scroll;
+    }
+    &[class*=-no_footer] {
+        height: calc(100vh - #{$header_height} - constant(safe-area-inset-top));
+        height: calc(100vh - #{$header_height} - env(safe-area-inset-top));
+        /** 瀏海 debug */
+        @if $debugging {
+            height: calc(100vh - #{$header_height} - #{$notch_debug});
+        }
+        /** 瀏海 debug */
+        margin-bottom: 0;
+    }
+    &[class*=-no_header] {
+        height: calc(100vh - #{$footer_height} - constant(safe-area-inset-top));
+        height: calc(100vh - #{$footer_height} - env(safe-area-inset-top));
+        margin-top: env(safe-area-inset-top);
+        /** 瀏海 debug */
+        @if $debugging {
+            height: calc(100vh - #{$header_height} - #{$notch_debug});
+            margin-top: $notch_debug;
+        }
+        /** 瀏海 debug */
+    }
+    &[class*=-no_header][class*=-no_footer] {
+        height: calc(100vh - constant(safe-area-inset-top));
+        height: calc(100vh - env(safe-area-inset-top));
+        /** 瀏海 debug */
+        @if $debugging {
+            height: calc(100vh - #{$notch_debug});
+        }
+        /** 瀏海 debug */
+    }
+    &[class*=-padding] {
+        padding-top: $basic_gap;
+    }
+}
+
+/** safari */
+.wrapper {
+    // padding-top: constant(safe-area-inset-top);
+    // padding-top: env(safe-area-inset-top);
+    // /** 瀏海 debug */
+    // @if $debugging {
+    //     padding-top: $notch_debug;
+    // }
+    // /** 瀏海 debug */
+    .gy_header {
+        height: calc(#{$header_height} + constant(safe-area-inset-top));
+        height: calc(#{$header_height} + env(safe-area-inset-top));
+        /** 瀏海 debug */
+        @if $debugging {
+            height: calc(#{$header_height} + #{$notch_debug});
+        }
+        /** 瀏海 debug */
+        .van-nav-bar__title {
+            padding-top: constant(safe-area-inset-top);
+            padding-top: env(safe-area-inset-top);
+            /** 瀏海 debug */
+            @if $debugging {
+                padding-top: $notch_debug;
+            }
+            /** 瀏海 debug */
+        }
+        
+    }
+}
+
+/** 主要按鈕位置 */
+[class*=main__submit] {
+    // position: absolute;
+    position: fixed;
+    width: calc(100% - 2*#{$basic_gap});
+    // width: 100%;
+    left: $basic_gap;
+    // left: 0;
+    bottom: $basic_gap + $footer_height;
+    z-index: 1;
+    // bottom: - (8*$basic_gap + 20 + font__size(title));
+    &:not(.van-button) {
+        bottom: - (6*$basic_gap + 20 + font__size(title));
+        height: 20 + font__size(title);
+        padding: $basic_gap 2*$basic_gap;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 2*$basic_gap;
+        text-align: center;
+        font-size: font__size(huge);
+        &.subbutton {
+            // bottom: 2*$basic_gap + 20 + font__size(title);
+            bottom: - 5*$basic_gap;
+        }
+    }
+    &.subbutton {
+        bottom: 5*$basic_gap + font__size(title) + $footer_height;
+        // bottom: - 6*$basic_gap;
+    }
+    &[class*=-no_footer]:not([class*=-relative]) {
+    // &[class*=main__submit-no_footer] {
+        bottom: $basic_gap ;
+        &.subbutton {
+            bottom: 5*$basic_gap + font__size(title);
+            // bottom: - 6*$basic_gap;
+        }
+    }
+    &[class*=-relative] {
+        position: relative;
+        width: 100%;
+        left: auto;
+        bottom: auto;
+    }
+}
+
+/** 轉頁效果 時間 */
+$yabo_transition: .3s;
+
+/** 轉頁效果 及 修正轉頁時按鈕位置 */
+.slide-leave-active,
+.slide-enter-active {
+    transition: $yabo_transition;
+    [class*=main__submit]:not([class*=-relative]) {
+        bottom: $basic_gap;
+        &.subbutton {
+            bottom: 5*$basic_gap + font__size(title);
+        }
+    }
+    .van-sticky--fixed {
+        // top: 0 !important;
+        // 忘記用到這行的頁面，先註解掉，因為有其他頁面會被影響
+    }
+}
+.slide-enter {
+    transform: translate(105%, 0);
+}
+.slide-leave-to {
+    transform: translate(-105%, 0);
+}
+
+/** 轉頁效果 header footer */
+.header-leave-active,
+.header-enter-active {
+    transition: $yabo_transition;
+    .gy_header {
+        transition: $yabo_transition;
+        // transform: translateY(0);
+    }
+}
+.header-enter,
+.header-leave-to {
+    // opacity: 0;
+    &.gy_header, .gy_header {
+        // transition: $yabo_transition;
+        transform: translateY(-100%);
+    }
+}
+.footer-leave-active,
+.footer-enter-active {
+    transition: $yabo_transition;
+    .gy_footer {
+        transition: $yabo_transition;
+        // transform: translateY(0);
+    }
+}
+.footer-enter,
+.footer-leave-to {
+    // opacity: 0;
+    .gy_footer {
+        // transition: $yabo_transition;
+        transform: translateY(100%);
+    }
+}
+
+// 信箱刪除復原效果
+.van-slide-left-leave-active {
+    &.van-cell {
+        transition: $yabo_transition;
+        max-height: 200px;
+        &.van-slide-left-leave-to {
+            max-height: 0;
+        }
+    }
+}
+.van-slide-left-enter-active {
+    &.van-cell {
+        transition: $yabo_transition;
+        max-height: 0;
+        &.van-slide-left-enter-to {
+            max-height: 200px;
+        }
+    }
+}
+  
+@keyframes skeleton {
+    from {
+        width: 50px;
+        opacity: 1;
+    }
+
+    to {
+        width: 100%;
+        opacity: 0.2;
+    }
+}
+
+.van-skeleton--animate {
+    opacity: 0.8;
+    .van-skeleton__content {
+        transition: $yabo_transition;
+        // animation: skeleton 0.8s ease-in-out infinite;
+        [class*=van-skeleton]:not(.van-skeleton__avatar) {
+            // width: 20px;
+            transition: $yabo_transition;
+            border-radius: 10px;
+        }
+    }
+}
