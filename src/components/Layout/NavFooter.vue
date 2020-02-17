@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import { NavFooter } from '@mixins/Home/NavFooter'
+import { NavFooter } from '@mixins/Layout/NavFooter'
 // import languageSelector from '@C/Language/languageSelector'
 import globeSvg from '@C/svgIcons/globe'
 // import '@IMGT/fonts/footer_icons/css/footer.css'

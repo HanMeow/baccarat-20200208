@@ -117,12 +117,12 @@
 
 <script>
 import { Button, Field, Icon, Image } from 'vant'
-// import register from '@mixins/security/register'
+import register from '@mixins/register'
 
 export default {
     name: 'register',
     components: { Icon, Field, Button, vanImage: Image },
-    // mixins: [register],
+    mixins: [register],
 }
 </script>
 

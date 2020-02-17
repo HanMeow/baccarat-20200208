@@ -35,7 +35,7 @@ const getParams = async () => {
 const getName = async (to, params) => {
     let name = {}
     if (to.name === 'Login' || to.name === 'registerId') {
-        document.body.className = to.name !== 'ChatView' ? 'gy_bg_login j_text--body' : 'gy_bg_base j_text--body'
+        document.body.className = to.name !== 'ChatView' ? 'gy_bg_base gy_bg_login j_text--body' : 'gy_bg_base j_text--body'
         // await store.dispatch('Config/READ', { ...params, isClear: true }).catch(e => e)
     } else {
         document.body.className = 'gy_bg_base j_text--body'

@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import { NavHeader } from '@mixins/Home/NavHeader'
+import { NavHeader } from '@mixins/Layout/NavHeader'
 // import globeSvg from '@C/svgIcons/globe'
 // import languageSelector from '@C/Language/languageSelector'
 import vanNavBar from 'vant/lib/nav-bar'

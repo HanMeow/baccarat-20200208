@@ -4,8 +4,8 @@
 import { mapGetters } from 'vuex'
 export const App = {
     beforeMount() {
-        this.$root.$on('setStore', this.setStore)
-        this.$root.$on('unSetStore', this.unSetStore)
+        // this.$root.$on('setStore', this.setStore)
+        // this.$root.$on('unSetStore', this.unSetStore)
     },
     mounted() {
         // this.$root.$on('openApp', ({ gameScheme, gameHost }) => {

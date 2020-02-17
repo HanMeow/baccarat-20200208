@@ -14,8 +14,8 @@
 </template>
 
 <script>
-const NavHeader = () => import('@C/Home/NavHeader')
-const NavFooter = () => import('@C/Home/NavFooter')
+const NavHeader = () => import('@C/Layout/NavHeader')
+const NavFooter = () => import('@C/Layout/NavFooter')
 import { index } from '@mixins/view/index'
 import loadingMask from '@C/loading'
 

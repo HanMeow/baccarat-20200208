@@ -76,9 +76,9 @@
                 <span class="link" v-if="showForgot" @click="enterForget" v-text="$t('ui_forgot_account_or_password')"/>
                 <span class="link" @click="enterHome" v-text="$t('ui_guest_login')"/>
             </div>
-            <Button class="gy_btn" size="small" round type="default" @click="checkRule">
+            <van-button class="gy_btn" size="small" round type="default" @click="checkRule">
                 {{ $t('btn_login') }}
-            </Button>
+            </van-button>
         </div>
     </div>
 </template>
@@ -86,57 +86,11 @@
 <script>
 import Login from '@M/Login/login'
 import { createNamespacedHelpers, mapGetters, mapMutations } from 'vuex'
-import {
-    Button,
-    // Field,
-    Image
-} from 'vant'
 const LoginStore = createNamespacedHelpers('Login/')
-// import login from '@mixins/security/login'
+import login from '@mixins/login'
 export default {
     name: 'login',
-    components: {
-        // Field,
-        Button,
-        vanImage: Image
-    },
-    // mixins: [login],
-    props: {
-        actived: {
-            type: Boolean,
-            default: false,
-        },
-        src: {
-            type: String,
-            // default: require(`@Static/image/default/no-image.png`),
-        },
-    },
-    beforeMount() {
-        this.$root.$emit('setStore', { Login })
-    },
-    methods: {
-        ...LoginStore.mapActions({
-            createAccount: _M.CREATED,
-        }),
-        ...mapMutations('Common', {
-            setLoading: 'loading',
-            setError: 'error',
-        }),
-        enterHome() {
-            this.$router.push({
-                name: 'Home',
-            })
-        },
-        enterForget() {
-            this.$router.push({
-                name: 'forget',
-            })
-        },
-    },
-    computed: {
-        ...mapGetters('Common', ['error']),
-        ...mapGetters('Config', ['baseUrl', 'userConfig']),
-    },
+    mixins: [login],
 }
 </script>
 

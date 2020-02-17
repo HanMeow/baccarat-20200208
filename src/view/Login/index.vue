@@ -74,7 +74,7 @@ export default {
     },
     computed: {
         // ...mapGetters('Config', ['userInfo', 'baseUrl']),
-        // ...mapGetters('Common', ['loading']),
+        ...mapGetters('Common', ['loading']),
         src() {
             return ''
         },
