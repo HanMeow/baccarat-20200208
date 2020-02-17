@@ -14,14 +14,18 @@
 </template>
 
 <script>
-const NavHeader = () => import('@C/Home/NavHeader/index')
+const NavHeader = () => import('@C/Home/NavHeader')
 const NavFooter = () => import('@C/Home/NavFooter')
 import { index } from '@mixins/view/index'
 import loadingMask from '@C/loading'
 
 export default {
     name: 'index',
-    components: { NavHeader, NavFooter, loadingMask },
+    components: {
+        NavHeader,
+        NavFooter,
+        loadingMask
+    },
     mixins: [index]
 }
 </script>

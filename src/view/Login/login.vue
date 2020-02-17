@@ -92,7 +92,7 @@ import {
     Image
 } from 'vant'
 const LoginStore = createNamespacedHelpers('Login/')
-import login from '@mixins/security/login'
+// import login from '@mixins/security/login'
 export default {
     name: 'login',
     components: {
@@ -100,7 +100,7 @@ export default {
         Button,
         vanImage: Image
     },
-    mixins: [login],
+    // mixins: [login],
     props: {
         actived: {
             type: Boolean,
@@ -108,7 +108,7 @@ export default {
         },
         src: {
             type: String,
-            default: require(`@Static/image/default/no-image.png`),
+            // default: require(`@Static/image/default/no-image.png`),
         },
     },
     beforeMount() {

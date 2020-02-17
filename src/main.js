@@ -2,7 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 /*eslint camelcase: ["error", {properties: "never"}]*/
 import 'babel-polyfill'
-import '@UTIL/tools'
+// import '@UTIL/tools'
 
 import Vue from 'vue'
 // import Vuelidate from 'vuelidate'
@@ -51,11 +51,11 @@ Vue.use(Field)
 
 /**  改駝峰 */
 import changeCase from '@/plugins/changeCase'
-import customOpen from '@/plugins/customOpen'
+// import customOpen from '@/plugins/customOpen'
 import getQueryParams from '@/plugins/getQueryParams'
 import getDevice from '@/plugins/getDevice'
 Vue.use(changeCase)
-    .use(customOpen)
+    // .use(customOpen)
     .use(getQueryParams)
     .use(getDevice)
 
@@ -66,15 +66,16 @@ export const vue$ = new Vue({
     store,
     i18n,
     template: '<App/>',
+    // template: '<div/>',
     components: {
         App,
     },
 })
 
-export const getters = vue$.$store.getters
-export const router$ = vue$.$router
-export const vue = vue$
-export default {
-    getters,
-    router$,
-}
+// export const getters = vue$.$store.getters
+// export const router$ = vue$.$router
+// export const vue = vue$
+// export default {
+//     getters,
+//     router$,
+// }

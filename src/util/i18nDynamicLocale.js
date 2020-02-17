@@ -20,46 +20,46 @@ export const i18n = new VueI18n({
 })
 
 export const getTransfer = key => {
-    return (i18n.messages[i18n.locale] || {})[key] || key
+    // return (i18n.messages[i18n.locale] || {})[key] || key
 }
 
 const setI18nLanguage = lang => {
-    i18n.locale = lang
-    // axios.defaults.headers.common['Accept-Language'] = lang
-    document.querySelector('html').setAttribute('lang', lang)
-    return lang
+    // i18n.locale = lang
+    // // axios.defaults.headers.common['Accept-Language'] = lang
+    // document.querySelector('html').setAttribute('lang', lang)
+    // return lang
 }
 
 export const loadLanguageAsync = lang => {
-    if (i18n.locale !== lang) {
-        if (!loadedLanguages.includes(lang)) {
-            // const fileName = process.env.NODE_ENV === 'production' ? `//${window.CDN}/fusionlotterywap/locale.${lang.replace(/_/g, '-')}` : `../../static/locale.${lang.replace(/_/g, '-')}`
-            if (process.env.NODE_ENV === 'production') {
-                return instance
-                    .get(`//${window.CDN}/fusionlotterywap/locale.${lang.replace(/_/g, '-')}.json`)
-                    .then(msgs => {
-                        i18n.setLocaleMessage(lang, msgs.data)
-                        loadedLanguages.push(lang)
-                        return setI18nLanguage(lang)
-                    })
-                    .catch(err => {
-                        console.error(err, 'err')
-                    })
-            } else {
-                return import(
-                    /* webpackChunkName: "lang-[request]" */ `../../static/locale.${lang.replace(/_/g, '-')}.json`
-                )
-                    .then(msgs => {
-                        i18n.setLocaleMessage(lang, msgs)
-                        loadedLanguages.push(lang)
-                        return setI18nLanguage(lang)
-                    })
-                    .catch(err => {
-                        console.error(err, 'err')
-                    })
-            }
-        }
-        return Promise.resolve(setI18nLanguage(lang))
-    }
-    return Promise.resolve(lang)
+    // if (i18n.locale !== lang) {
+    //     if (!loadedLanguages.includes(lang)) {
+    //         // const fileName = process.env.NODE_ENV === 'production' ? `//${window.CDN}/fusionlotterywap/locale.${lang.replace(/_/g, '-')}` : `../../static/locale.${lang.replace(/_/g, '-')}`
+    //         if (process.env.NODE_ENV === 'production') {
+    //             return instance
+    //                 .get(`//${window.CDN}/fusionlotterywap/locale.${lang.replace(/_/g, '-')}.json`)
+    //                 .then(msgs => {
+    //                     i18n.setLocaleMessage(lang, msgs.data)
+    //                     loadedLanguages.push(lang)
+    //                     return setI18nLanguage(lang)
+    //                 })
+    //                 .catch(err => {
+    //                     console.error(err, 'err')
+    //                 })
+    //         } else {
+    //             return import(
+    //                 /* webpackChunkName: "lang-[request]" */ `../../static/locale.${lang.replace(/_/g, '-')}.json`
+    //             )
+    //                 .then(msgs => {
+    //                     i18n.setLocaleMessage(lang, msgs)
+    //                     loadedLanguages.push(lang)
+    //                     return setI18nLanguage(lang)
+    //                 })
+    //                 .catch(err => {
+    //                     console.error(err, 'err')
+    //                 })
+    //         }
+    //     }
+    //     return Promise.resolve(setI18nLanguage(lang))
+    // }
+    // return Promise.resolve(lang)
 }

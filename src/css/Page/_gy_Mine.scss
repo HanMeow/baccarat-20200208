@@ -21,23 +21,23 @@
 // title   : 22px,
 
 //我的 分類icon
-$center_icons: ('information',
-    'bank',
-    'report',
-    'record',
-    'manager',
-    'download',
-    'setting',
-    'share',
-    'report-alpha',
-    'report-beta'
-);
+// $center_icons: ('information',
+//     'bank',
+//     'report',
+//     'record',
+//     'manager',
+//     'download',
+//     'setting',
+//     'share',
+//     'report-alpha',
+//     'report-beta'
+// );
 
-@each $icon in $center_icons {
-    .Mine__icon-#{$icon} {
-        background-image: url("../image/personal_center/center-group_icon_#{$icon}.svg");
-    }
-}
+// @each $icon in $center_icons {
+//     .Mine__icon-#{$icon} {
+//         background-image: url("../image/personal_center/center-group_icon_#{$icon}.svg");
+//     }
+// }
 
 $gy_Mine__info__height: 180px;
 // padding & margin

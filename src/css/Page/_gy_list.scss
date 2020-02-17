@@ -107,25 +107,25 @@
 }
 
 //icon圖示
-$personal_center_icon: (
-	user: 		'name',
-	money: 		'balance',
-	recharge: 	'recharge',
-	takecash:	'withdraw',
-	amount:		'chart',
-	// detail:		'detail'
-	refresh:	'refresh'
-);
+// $personal_center_icon: (
+// 	user: 		'name',
+// 	money: 		'balance',
+// 	recharge: 	'recharge',
+// 	takecash:	'withdraw',
+// 	amount:		'chart',
+// 	// detail:		'detail'
+// 	refresh:	'refresh'
+// );
 
-@each $key, $value in $personal_center_icon {
-	.gy__icon--#{$key} {
-		background-image: url("../image/personal_center/gy_icon_#{$value}.svg");
-	}
-}
+// @each $key, $value in $personal_center_icon {
+// 	.gy__icon--#{$key} {
+// 		background-image: url("../image/personal_center/gy_icon_#{$value}.svg");
+// 	}
+// }
 
-.gy__icon--detail {
-	background-image: url(../image/gy_icon/gy_icon_detail.svg);
-}
+// .gy__icon--detail {
+// 	background-image: url(../image/gy_icon/gy_icon_detail.svg);
+// }
 
 //活动主区块
 .gy_list-main {
@@ -239,27 +239,27 @@ $personal_center_icon: (
 // }
 
 // 個人報表icon圖示
-$personal_category: (
-	"profit",		//總盈利
-	"bet",			//總投注
-	"bonus",		//總中獎
-	"recharge",		//總充值
-	"withdraw",		//總提現
-	"point",		//總返點
-	"active",		//總活動獎勵
-	"retreat",		//總退水
-	"refund"		//總退傭
-);
-@for $i from 1 through length($personal_category) {
-	$value: nth($personal_category, $i); // 返回 $personal_category 中第 $i 列表项值。
-	$size: 50px;
-	.personal_#{$value} {
-		width: $size;
-		height: $size;
-		background: url(../image/personal/personal_#{$value}.svg) center no-repeat;
-		background-size: 45px;
-	}
-}
+// $personal_category: (
+// 	"profit",		//總盈利
+// 	"bet",			//總投注
+// 	"bonus",		//總中獎
+// 	"recharge",		//總充值
+// 	"withdraw",		//總提現
+// 	"point",		//總返點
+// 	"active",		//總活動獎勵
+// 	"retreat",		//總退水
+// 	"refund"		//總退傭
+// );
+// @for $i from 1 through length($personal_category) {
+// 	$value: nth($personal_category, $i); // 返回 $personal_category 中第 $i 列表项值。
+// 	$size: 50px;
+// 	.personal_#{$value} {
+// 		width: $size;
+// 		height: $size;
+// 		background: url(../image/personal/personal_#{$value}.svg) center no-repeat;
+// 		background-size: 45px;
+// 	}
+// }
 
 //個人資訊icon
 .gy_list__icon {
@@ -270,86 +270,52 @@ $personal_category: (
 }
 
 //個人中心 分類icon
-$center_icons: (
-	'report',
-	'record',
-	'lobby',
-	'bank',
-	'password',
-	'security',
-	'intro',
-	'manager',
-	'information',
-	'message',
-	'activity',
-	'chat',
-	'trand',
-	'transfer',
-	'download'
-);
+// $center_icons: (
+// 	'report',
+// 	'record',
+// 	'lobby',
+// 	'bank',
+// 	'password',
+// 	'security',
+// 	'intro',
+// 	'manager',
+// 	'information',
+// 	'message',
+// 	'activity',
+// 	'chat',
+// 	'trand',
+// 	'transfer',
+// 	'download'
+// );
 
-@each $icon in $center_icons {
-	.center_icon--#{$icon} {
-		background-image: url("../image/personal_center/center-group_icon_#{$icon}.svg");
-	}
-}
+// @each $icon in $center_icons {
+// 	.center_icon--#{$icon} {
+// 		background-image: url("../image/personal_center/center-group_icon_#{$icon}.svg");
+// 	}
+// }
 
 //團隊管理 icon
-$team_icons: (
-	'team_overview',
-	'UserList',
-	'SetRefund',
-	'SetRetreat',
-	'CreateUser',
-	'LinkedUser',
-	// 'DayWagesSetting',
-	// 'DayWagesList',
-	// 'DayShareSetting',
-	// 'DaySharesList'
-);
+// $team_icons: (
+// 	'team_overview',
+// 	'UserList',
+// 	'SetRefund',
+// 	'SetRetreat',
+// 	'CreateUser',
+// 	'LinkedUser',
+// 	// 'DayWagesSetting',
+// 	// 'DayWagesList',
+// 	// 'DayShareSetting',
+// 	// 'DaySharesList'
+// );
 
-@each $icon in $team_icons {
-	.team__icon-#{$icon} {
-		background-image: url("../image/team/team_#{$icon}.svg");
-	}
-}
+// @each $icon in $team_icons {
+// 	.team__icon-#{$icon} {
+// 		background-image: url("../image/team/team_#{$icon}.svg");
+// 	}
+// }
 
 //銀行LOGO icon
 $bank_logo: (
-	'ABC',
-    'BCOM',
-    'BOB',
-    'BOC',
-    'BOCD',
-    'BOD',
-    'CCB',
-    'CEB',
-    'CIB',
-    'CITIC',
-    'CMB',
-    'CMBC',
-    'CZB',
-    'GDB',
-    'GLB',
-    'GRCB',
-    'GRCC',
-    'GZCB',
-    'HXB',
-    'HZB',
-    'ICBC',
-    'JLB',
-    'JSB',
-    'NBCB',
-    'NJCB',
-    'PAB',
-    'PSBC',
-    'RCC',
-    'SHB',
-    'SPDB',
-    'SRCB',
-    'TCCB',
-    'WZB',
-    'ZZB',
 
     //第三方支付
     'QQPAY_R',
@@ -366,12 +332,12 @@ $bank_logo: (
     'ALIPAY_QR'
 );
 
-@each $icon in $bank_logo {
-	.bank__icon-#{$icon} {
-		background-image: url("../image/bank_logo/#{$icon}.svg");
-		background-repeat: no-repeat;
-	}
-}
+// @each $icon in $bank_logo {
+// 	.bank__icon-#{$icon} {
+// 		background-image: url("../image/bank_logo/#{$icon}.svg");
+// 		background-repeat: no-repeat;
+// 	}
+// }
 
 input[type=checkbox]:checked + label.switch {
 	&:after {

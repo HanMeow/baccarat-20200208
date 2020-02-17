@@ -167,12 +167,12 @@
 				transition: max-width .3s linear;
 				justify-content: space-around;
 
-                @for $i from 2 through 10 {
-                    .icon-#{$i} {
-                        // background-image: url("~@IMGT/icon/lottery#{$i}_active.png.webp");
-                        background-image: url("~@IMGT/icon/lottery#{$i}_active.png");
-                    }
-                }
+                // @for $i from 2 through 10 {
+                //     .icon-#{$i} {
+                //         // background-image: url("~@IMGT/icon/lottery#{$i}_active.png.webp");
+                //         background-image: url("~@IMGT/icon/lottery#{$i}_active.png");
+                //     }
+                // }
 			}
 			
 			&:not(.is-active) {
@@ -197,12 +197,12 @@
                 background-size: auto 80%;
             }
 
-            @for $i from 2 through 10 {
-                .icon-#{$i} {
-                    // background-image: url("~@IMGT/icon/lottery#{$i}.png.webp");
-                    background-image: url("~@IMGT/icon/lottery#{$i}.png");
-                }
-            }
+            // @for $i from 2 through 10 {
+            //     .icon-#{$i} {
+            //         // background-image: url("~@IMGT/icon/lottery#{$i}.png.webp");
+            //         background-image: url("~@IMGT/icon/lottery#{$i}.png");
+            //     }
+            // }
         }
     }
 

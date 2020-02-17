@@ -19,11 +19,12 @@ export default {
             path: '/failure',
             name: 'failure',
             component: r => require.ensure([], () => r(require('@P/failure')), 'failure'),
+            // component: { template: '<div></div>' },
         },
         {
             path: '/',
             component: index,
-            redirect: store.getters['Config/userInfo'].token ? { name: 'Home' } : { name: 'Login' },
+            redirect: (store.getters['Config/userInfo'] || {}).token ? { name: 'Home' } : { name: 'Login' },
             children: [
                 {
                     path: 'login',
@@ -31,7 +32,8 @@ export default {
                     meta: {
                         hasFoot: false,
                     },
-                    component: { template: '<div></div>' },
+                    component: r => require.ensure([], () => r(require('@P/Login')), 'Login'),
+                    // component: { template: '<div></div>' },
                     // beforeEnter: (to, from, next) => {
                     // },
                     // redirect: {
@@ -44,7 +46,8 @@ export default {
                     meta: {
                         hasFoot: false,
                     },
-                    component: { template: '<div></div>' },
+                    component: r => require.ensure([], () => r(require('@P/Login')), 'Login'),
+                    // component: { template: '<div></div>' },
                     // path: 'register/:id',
                     // redirect: to => {
                     //     return {
@@ -64,7 +67,7 @@ export default {
                         },
                     },
                     // component: r => require.ensure([], () => r(require('@P/Home')), 'HomeContent'),
-                    component: { template: '<div</div' },
+                    component: { template: '<div></div>' },
                 },
                 {
                     path: 'Transfer',

@@ -29,13 +29,13 @@
 </template>
 
 <script>
-import mobile from '@M/mobile'
+// import mobile from '@M/mobile'
 import { getApi } from '@API/api'
 import { Icon } from 'vant'
 import loadingMask from '@C/loading'
 import register from '@V/Login/register'
 import login from '@V/Login/login'
-import { jwtEncode } from '@UTIL'
+// import { jwtEncode } from '@UTIL'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -73,31 +73,10 @@ export default {
         },
     },
     computed: {
-        ...mapGetters('Config', ['userInfo', 'baseUrl']),
-        ...mapGetters('Common', ['loading']),
-        src: {
-            get() {
-                if (!this.width || !this.height) {
-                    return ''
-                }
-                const data = {
-                    // img_height: 50,
-                    // img_width: 100,
-                    img_height: this.height,
-                    img_width: this.width,
-                    font_size: 24,
-                }
-                return this.baseUrl && this.baseUrl.mainServer
-                    ? `//${this.baseUrl.mainServer}${getApi('login/code').created.path}?data=${jwtEncode(data)}&v=${
-                          this.time
-                      }`
-                    : require(`@Static/image/default/no-image.png`)
-            },
-            set({height, width}) {
-                this.height = height
-                this.width = width
-                this.time = +new Date()
-            },
+        // ...mapGetters('Config', ['userInfo', 'baseUrl']),
+        // ...mapGetters('Common', ['loading']),
+        src() {
+            return ''
         },
     },
 }

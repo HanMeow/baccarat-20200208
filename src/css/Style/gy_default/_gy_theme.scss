@@ -162,17 +162,17 @@ input[type=checkbox]:checked+label.switch {
             background-position: center;
         }
 
-        .icon_ck {
-            background-image: url("~@IMGT/icon/ck.png");
-        }
+        // .icon_ck {
+        //     background-image: url("~@IMGT/icon/ck.png");
+        // }
 
-        .icon_hl {
-            background-image: url("~@IMGT/icon/hl.png");
-        }
+        // .icon_hl {
+        //     background-image: url("~@IMGT/icon/hl.png");
+        // }
 
-        .icon_zz {
-            background-image: url("~@IMGT/icon/zz.png");
-        }
+        // .icon_zz {
+        //     background-image: url("~@IMGT/icon/zz.png");
+        // }
     }
 
     .item-flex {
@@ -690,7 +690,7 @@ input[type=checkbox]:checked+label.switch {
         right: 0;
         top: 0;
         bottom: 0;
-        background: url("~@IMGT/page_bg_default.png") no-repeat;
+        // background: url("~@IMGT/page_bg_default.png") no-repeat;
         background-size: cover;
         position: fixed;
         z-index: -1;

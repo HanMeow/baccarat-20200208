@@ -194,26 +194,26 @@ $scale: 0.392; // banner 宽高比
 }
 
 // 快速連結圖示 svg
-$issue_icon: (
-	'default','Recharge','freePlay','register','TakeCash','Activity','chat','addProxy','announcement','transfer'
-);
+// $issue_icon: (
+// 	'default','Recharge','freePlay','register','TakeCash','Activity','chat','addProxy','announcement','transfer'
+// );
 
-@each $i in $issue_icon {
-	.gy_icon--#{$i} {
-		background-image: url("../image/gy_icon/gy_icon_platform-#{$i}.svg");
-	}
-}
+// @each $i in $issue_icon {
+// 	.gy_icon--#{$i} {
+// 		background-image: url("../image/gy_icon/gy_icon_platform-#{$i}.svg");
+// 	}
+// }
 
 // 快速連結圖示 png
-$issue_icon_png: (
-	'home_transfer', 'deposit', 'widthdraw'
-);
+// $issue_icon_png: (
+// 	'home_transfer', 'deposit', 'widthdraw'
+// );
 
-@each $i in $issue_icon_png {
-	.gy_icon--#{$i} {
-		background-image: url("../image/gy_icon/gy_icon_platform-#{$i}.png");
-	}
-}
+// @each $i in $issue_icon_png {
+// 	.gy_icon--#{$i} {
+// 		background-image: url("../image/gy_icon/gy_icon_platform-#{$i}.png");
+// 	}
+// }
 
 
 // 彩票区
@@ -245,9 +245,9 @@ $issue_icon_png: (
     right: -15px;
 	z-index: 9;
 }
-.lottery_ribbon--hot {
-	background: url("../image/gy_icon/gy_icon_hot.svg") no-repeat center center;
-}
+// .lottery_ribbon--hot {
+// 	background: url("../image/gy_icon/gy_icon_hot.svg") no-repeat center center;
+// }
 
 // 最新彩種icon
 .lottery_ribbon--new {

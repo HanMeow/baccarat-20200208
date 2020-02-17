@@ -1,7 +1,7 @@
 <template>
     <div class="gy_failure">
         <div class="gy_failure--inner">
-            <img src="~@I/failure_bg.png" alt="">
+            <!-- <img src="~@I/failure_bg.png" alt=""> -->
             <div class="gy_failure--content j_text--main">
                 <p>
                     链结网址失效
