@@ -13,7 +13,7 @@ import store from '@store'
 // import VueI18n from 'vue-i18n'
 import { i18n } from '@UTIL/i18nDynamicLocale'
 
-import '@CSS/reset.css'
+// import '@CSS/reset.css'
 
 /**vant 樣式 */
 import 'vant/lib/index.css'
@@ -53,12 +53,10 @@ Vue.use(Field)
 import changeCase from '@/plugins/changeCase'
 import customOpen from '@/plugins/customOpen'
 import getQueryParams from '@/plugins/getQueryParams'
-import fromApp from '@/plugins/getFromApp'
 import getDevice from '@/plugins/getDevice'
 Vue.use(changeCase)
     .use(customOpen)
     .use(getQueryParams)
-    .use(fromApp)
     .use(getDevice)
 
 /* eslint-disable no-new */

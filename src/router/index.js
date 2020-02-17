@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import route from './route'
 import store from '@store'
 
-import { checkToken, checkPermission, redirectFun, check3rdPartyChat, checkActivity } from './methods'
 import { loadLanguageAsync } from '@UTIL/i18nDynamicLocale'
 import { handleJson, getCookie } from '@UTIL'
 import { Locals } from '@UTIL/vantLocal'
