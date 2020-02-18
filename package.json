@@ -6,10 +6,8 @@
     "private": true,
     "scripts": {
         "dev": "node build/dev-server.js",
-        "start": "node build/dev-server.js",
-        "build": "gulp i18n && node build/build.js",
-        "lint": "eslint --ext .js,.vue src",
-        "getKeys": "node build/getLanguageKeys"
+        "build": "node build/build.js",
+        "lint": "eslint --ext .js,.vue src"
     },
     "dependencies": {
         "@vant/touch-emulator": "^1.1.0",

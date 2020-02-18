@@ -7,11 +7,11 @@ var style = argvs[argvs.length - 1] || 'default'
 module.exports = {
     build: {
         env: require('./prod.env'),
-        index: path.resolve(__dirname, '../dist/fusionlotterywap/index.html'),
+        index: path.resolve(__dirname, '../dist/crown-baccarat/index.html'),
         assetsRoot: path.resolve(__dirname, '../dist'),
         // assetsSubDirectory: argv === 'lala' ? (isPrew() ? `${argv}_${prew}/${style}` : `${argv}/${style}`) : (isPrew() ? `${argv}_${prew}` : `${argv}`) ,
-        assetsSubDirectory: `fusionlotterywap/gy_default`,
-        assetsOtherDirectory: 'fusionlotterywap',
+        assetsSubDirectory: `crown-baccarat/default`,
+        assetsOtherDirectory: 'crown-baccarat',
         assetsPublicPath: '/',
         productionSourceMap: false,
         // Gzip off by default as many popular static hosts such as

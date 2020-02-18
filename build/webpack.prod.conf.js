@@ -24,7 +24,8 @@ var webpackConfig = merge(baseWebpackConfig, {
     devtool: config.build.productionSourceMap ? '#source-map' : false,
     mode: 'production',
     output: {
-        publicPath: '//CDN/',
+        // publicPath: '//CDN/',
+        publicPath: '/crown-baccarat/',
         path: `${config.build.assetsRoot}`,
         filename: utils.assetsPath('js/[name].js'),
         chunkFilename: utils.assetsPath('js/[name].js'),
@@ -111,7 +112,7 @@ var webpackConfig = merge(baseWebpackConfig, {
         new WorkboxPlugin.GenerateSW({
             // these options encourage the ServiceWorkers to get in there fast
             // and not allow any straggling "old" SWs to hang around
-            importsDirectory: 'fusionlotterywap',
+            importsDirectory: 'worker',
             importWorkboxFrom: 'local',
             clientsClaim: true,
             skipWaiting: true,
