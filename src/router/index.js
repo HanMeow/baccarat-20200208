@@ -34,7 +34,7 @@ const getParams = async () => {
 
 const getName = async (to, params) => {
     let name = {}
-    if (to.name === 'Login' || to.name === 'registerId') {
+    if (to.name === 'Login' || to.name === 'Register') {
         document.body.className = to.name !== 'ChatView' ? 'crown_bg_base crown_bg_login j_text--body' : 'crown_bg_base j_text--body'
         // await store.dispatch('Config/READ', { ...params, isClear: true }).catch(e => e)
     } else {
@@ -44,14 +44,14 @@ const getName = async (to, params) => {
         // handleJson(localStorage.getItem('userInfo'))['token'] === (store.getters['Config/userInfo'] || {}).token
         if (!(store.getters['Config/userInfo'] || {}).token && !noPremiss.includes(to.name)) {
             name = {
-                name: 'registerId',
+                name: 'Register',
                 params: {
                     linkId: '',
                 },
             }
         }
 
-        if ((store.getters['Config/userInfo'] || {}).token && ['registerId', 'Login'].includes(to.name)) {
+        if ((store.getters['Config/userInfo'] || {}).token && ['Register', 'Login'].includes(to.name)) {
             name = {
                 name: 'Home',
             }
@@ -61,7 +61,7 @@ const getName = async (to, params) => {
 }
 
 const webview = (name, to, from, next) => {
-    const checkingList = ['Home', 'Login', 'registerId']
+    const checkingList = ['Home', 'Login', 'Register']
     if (
         sessionStorage.getItem('device') === 'webview' &&
         sessionStorage.getItem('isWebview') === 'true' &&

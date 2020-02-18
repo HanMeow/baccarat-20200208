@@ -34,6 +34,12 @@ $forget_button_height: 36px;
         min-width: 40vw;
         border-radius: 10px;
         background-image: linear-gradient(#e47659, #9e161b);
+        &:hover {
+            background-image: linear-gradient(#9e161b, #e47659);
+            .van-cell__value {
+                background-image: linear-gradient(#e47659, #9e161b);
+            }
+        }
         padding: 3px;
         .van-cell__value {
             border-radius: 10px;
@@ -53,6 +59,11 @@ $forget_button_height: 36px;
             }
         }
     }
+    .login-link {
+        &:hover {
+            color: #fdf29f;
+        }
+    }
     .login-button {
         position: relative;
         text-align: center;
@@ -60,6 +71,13 @@ $forget_button_height: 36px;
         height: 40px;
         width: 60%;
         background-image: linear-gradient(#feec4c, #ca571c);
+        user-select: none;
+        &:active {
+            background-image: linear-gradient(#ca571c, #feec4c);
+            &::before {
+                background-image: linear-gradient(#feec4c, #ca571c);
+            }
+        }
         &::before {
             content: ' ';
             position: absolute;
@@ -77,6 +95,10 @@ $forget_button_height: 36px;
     }
     .login-service-icon {
         width: 50px;
+    }
+    .login-back {
+        color: rgb(255, 101, 30);
+        transform: scaleX(-1);
     }
 }
 

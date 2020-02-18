@@ -4,8 +4,8 @@ import store from '@store'
 const hideFooter = () => sessionStorage.getItem('footer') === 'hide'
 
 export default {
-    mode: 'history',
-    base: '/m',
+    // mode: 'history',
+    base: '/crown-baccarat',
     scrollBehavior() {
         // 控制導頁預設起始位置
         // console.log({ to, from, savedPosition })
@@ -46,12 +46,12 @@ export default {
                     meta: {
                         hasFoot: false,
                     },
-                    component: r => require.ensure([], () => r(require('@P/Login')), 'Login'),
+                    component: r => require.ensure([], () => r(require('@P/Register')), 'Login'),
                     // component: { template: '<div></div>' },
                     // path: 'register/:id',
                     // redirect: to => {
                     //     return {
-                    //         name: 'registerId',
+                    //         name: 'Register',
                     //         params: {
                     //             linkId: to.params.id,
                     //         },

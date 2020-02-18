@@ -27,7 +27,7 @@ Vue.config.productionTip = false
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker
-            .register('/service-worker.js')
+            .register('/crown-baccarat/service-worker.js')
             .then(registration => {
                 console.log('SW registered: ', registration)
             })

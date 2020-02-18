@@ -94,6 +94,7 @@ $debugging: false;
 
 /** safari */
 .wrapper {
+    height: 100%;
     // padding-top: constant(safe-area-inset-top);
     // padding-top: env(safe-area-inset-top);
     // /** 瀏海 debug */
@@ -171,12 +172,12 @@ $debugging: false;
 }
 
 /** 轉頁效果 時間 */
-$yabo_transition: .3s;
+$crown_transition: .3s;
 
 /** 轉頁效果 及 修正轉頁時按鈕位置 */
 .slide-leave-active,
 .slide-enter-active {
-    transition: $yabo_transition;
+    transition: $crown_transition;
     [class*=main__submit]:not([class*=-relative]) {
         bottom: $basic_gap;
         &.subbutton {
@@ -198,9 +199,9 @@ $yabo_transition: .3s;
 /** 轉頁效果 header footer */
 .header-leave-active,
 .header-enter-active {
-    transition: $yabo_transition;
+    transition: $crown_transition;
     .gy_header {
-        transition: $yabo_transition;
+        transition: $crown_transition;
         // transform: translateY(0);
     }
 }
@@ -208,15 +209,15 @@ $yabo_transition: .3s;
 .header-leave-to {
     // opacity: 0;
     &.gy_header, .gy_header {
-        // transition: $yabo_transition;
+        // transition: $crown_transition;
         transform: translateY(-100%);
     }
 }
 .footer-leave-active,
 .footer-enter-active {
-    transition: $yabo_transition;
+    transition: $crown_transition;
     .gy_footer {
-        transition: $yabo_transition;
+        transition: $crown_transition;
         // transform: translateY(0);
     }
 }
@@ -224,7 +225,7 @@ $yabo_transition: .3s;
 .footer-leave-to {
     // opacity: 0;
     .gy_footer {
-        // transition: $yabo_transition;
+        // transition: $crown_transition;
         transform: translateY(100%);
     }
 }
@@ -232,7 +233,7 @@ $yabo_transition: .3s;
 // 信箱刪除復原效果
 .van-slide-left-leave-active {
     &.van-cell {
-        transition: $yabo_transition;
+        transition: $crown_transition;
         max-height: 200px;
         &.van-slide-left-leave-to {
             max-height: 0;
@@ -241,7 +242,7 @@ $yabo_transition: .3s;
 }
 .van-slide-left-enter-active {
     &.van-cell {
-        transition: $yabo_transition;
+        transition: $crown_transition;
         max-height: 0;
         &.van-slide-left-enter-to {
             max-height: 200px;
@@ -264,11 +265,11 @@ $yabo_transition: .3s;
 .van-skeleton--animate {
     opacity: 0.8;
     .van-skeleton__content {
-        transition: $yabo_transition;
+        transition: $crown_transition;
         // animation: skeleton 0.8s ease-in-out infinite;
         [class*=van-skeleton]:not(.van-skeleton__avatar) {
             // width: 20px;
-            transition: $yabo_transition;
+            transition: $crown_transition;
             border-radius: 10px;
         }
     }

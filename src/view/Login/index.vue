@@ -36,8 +36,10 @@
                 <!-- 忘記密碼/忘記帳號 -->
                 <div class="login-field-line j_flex-center-between">
                     <div class="blocker" />
-                    <span class="j_text--day" v-text="'忘記密碼'"/>
-                    <span class="j_text--day" v-text="'忘記帳號'"/>
+                    <router-link :to="{ name: 'Register' }">
+                        <span class="login-link j_text--day" v-text="'註冊'"/>
+                    </router-link>
+                    <span class="login-link j_text--day" v-text="'忘記帳號'"/>
                 </div>
                 <!-- 忘記密碼/忘記帳號 -->
 
