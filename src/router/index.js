@@ -35,10 +35,10 @@ const getParams = async () => {
 const getName = async (to, params) => {
     let name = {}
     if (to.name === 'Login' || to.name === 'registerId') {
-        document.body.className = to.name !== 'ChatView' ? 'gy_bg_base gy_bg_login j_text--body' : 'gy_bg_base j_text--body'
+        document.body.className = to.name !== 'ChatView' ? 'crown_bg_base crown_bg_login j_text--body' : 'crown_bg_base j_text--body'
         // await store.dispatch('Config/READ', { ...params, isClear: true }).catch(e => e)
     } else {
-        document.body.className = 'gy_bg_base j_text--body'
+        document.body.className = 'crown_bg_base j_text--body'
         const noPremiss = ['Home', 'failure', 'ChatView', 'forget', 'forgetPassword', 'forgetAccount']
         // const sameUser =
         // handleJson(localStorage.getItem('userInfo'))['token'] === (store.getters['Config/userInfo'] || {}).token

@@ -11,87 +11,72 @@
 
 $forget_button_height: 36px;
 
-.forget {
-    // position: relative;
-    overflow: scroll;
-    /** a bug in iOS */
-    position: absolute;
-    width: calc(100vw - #{2*$basic_gap});
-    // height: calc(100vh - #{2*$basic_gap});
-    /** a bug in iOS */
-    min-height: calc(100vh - #{2*$basic_gap});
-    .forget-tabs {
-        // height: 60px;
-        padding: $basic_gap;
-        .forget-tabs-button {
-            margin: 0 $basic_gap;
-            height: $forget_button_height;
-            line-height: $forget_button_height;
-            // .van-button__text {
-                // line-height: 0;
-            // }
-        }
-    }
-    
-    .forget-title {
-        font-size: font__size(title);
-        text-align: center;
-        margin: 0 0 $basic_gap 0;
-    }
 
-    .van-cell.van-field {
-        border-radius: 4*$basic_gap;
-        margin: 0 0 $basic_gap/2 0;
-        .van-field__button .van-button {
-            border-radius: 2*$basic_gap;
-        }
-        .van-cell__title .van-button__text {
-            white-space: nowrap;
-        }
-        &::after {
-            content: none;
-        }
-    }
-    .van-button[class*=main__submit] {
-        margin: 0 0 $basic_gap/2 0;
-    }
-    .blocker {
-        height: $footer_height;
-        margin: 0 0 $basic_gap/2 0;
-        &::after {
-            content: none;
-        }
-    }
-    // .forget-service-group {
-    [class*=forget-service-group] {
+.login {
+    height: 100%;
+    .login-box {
         position: absolute;
-        right: $basic_gap;
-        bottom: 3*$footer_height + $basic_gap;
-        font-size: font__size(huge);
-        text-decoration: underline;
-        z-index: 0;
-        .forget-service-icon {
-            height: 35px;
-            margin: 0 $basic_gap/2 0 0;
-            // fill: yabo_text__color(orange);
-            fill: yabo_text__color(lazuli);
+        left: 50%;
+        height: 100%;
+        transform: translateX(-50%);
+    }
+    .login-logo {
+        max-width: 40vw;
+    }
+    .login-field-line {
+        margin-bottom: 20px;
+    }
+    .login-field-icon {
+        width: 50px;
+        margin-right: 20px;
+    }
+    .van-cell.van-field {
+        min-width: 40vw;
+        border-radius: 10px;
+        background-image: linear-gradient(#e47659, #9e161b);
+        padding: 3px;
+        .van-cell__value {
+            border-radius: 10px;
+            height: 25px;
+            padding: 3px;
+            background-image: linear-gradient(#9e161b, #e47659);
+            .van-field__body {
+                height: stretch;
+                padding: 0 15px;
+            }
         }
-        &[class*=-right] {
-            // position: relative;
-            bottom: 0;
-            // margin: auto 0 0 auto;
-            right: $basic_gap;
-            // top: auto;
+        .van-field__control {
+            letter-spacing: 2px;
+            color: white;
+            &::placeholder {
+                color: white;
+            }
         }
     }
-    .vue-tel-input {
-        margin-bottom: $basic_gap;
+    .login-button {
+        position: relative;
+        text-align: center;
+        border-radius: 10px;
+        height: 40px;
+        width: 60%;
+        background-image: linear-gradient(#feec4c, #ca571c);
+        &::before {
+            content: ' ';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            height: calc(100% - 6px);
+            width: calc(100% - 6px);
+            border-radius: 7px;
+            background-image: linear-gradient(#ca571c, #feec4c);
+        }
     }
-}
-
-.forget-popup {
-    .van-picker__cancel, .van-picker__confirm {
-        white-space: nowrap;
+    .login-button-text {
+        position: relative;
+        font-size: font__size(title);
+    }
+    .login-service-icon {
+        width: 50px;
     }
 }
 

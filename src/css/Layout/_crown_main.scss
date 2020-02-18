@@ -2,7 +2,7 @@
 // gy_yabo_main
 // ************************************************************
 
-[class^=j_flex] {
+[class*=j_flex] {
     display: flex;
     &[class*=-column] {
         flex-direction: column;
