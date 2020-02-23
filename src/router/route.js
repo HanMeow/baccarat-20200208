@@ -63,9 +63,10 @@ export default {
                     name: 'Home',
                     meta: {
                         hasNav: true,
-                        get hasFoot() {
-                            return true && !hideFooter()
-                        },
+                        hasFoot: false,
+                        // get hasFoot() {
+                        //     return true && !hideFooter()
+                        // },
                     },
                     // component: r => require.ensure([], () => r(require('@P/Home')), 'HomeContent'),
                     component: { template: '<div></div>' },

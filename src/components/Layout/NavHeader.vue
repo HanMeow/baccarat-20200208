@@ -1,9 +1,4 @@
 <template>
-    <!-- <div>
-		<div
-			:class="`j_flex-end gy_header`"
-			v-show="$route.path !== '/login'
-		"> -->
     <van-nav-bar
         v-show="$route.path !== '/login'"
         :class="`j_text--day force gy_header ${background}`"
@@ -24,8 +19,6 @@
         </template>
         <!-- 右 詳細按鈕/編輯按鈕 -->
     </van-nav-bar>
-    <!-- </div>
-	</div> -->
 </template>
 
 <script>

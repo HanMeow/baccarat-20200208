@@ -26,7 +26,6 @@ const addClass = (classes, el = null) => {
     if (!classList) return;
     if (!Array.isArray(classes)) classes = [classes]
     for (const str of classes) {
-        console.log(`debug: addClass -> str`, str)
         if (!classList.contains[str])
             classList.add(str)
     }
