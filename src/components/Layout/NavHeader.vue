@@ -10,7 +10,7 @@
         :zIndex="3000"
         :title="$t(title)"
         :left-text="left ? $t(leftText) : ''"
-        fixed
+        :fixed="false"
         :left-arrow="left"
         @click-left="leftClick"
         @click-right="rightClick"

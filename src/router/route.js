@@ -62,6 +62,7 @@ export default {
                     path: 'Home',
                     name: 'Home',
                     meta: {
+                        hasNav: true,
                         get hasFoot() {
                             return true && !hideFooter()
                         },

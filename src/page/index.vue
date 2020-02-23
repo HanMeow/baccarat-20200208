@@ -5,7 +5,7 @@
             <NavHeader v-if="$route.meta.hasNav"></NavHeader>
         </transition>
         <transition name="slide" mode="out-in">
-            <router-view></router-view>
+            <router-view class="main__container"></router-view>
         </transition>
         <transition name="footer" mode="out-in" ref="footer">
             <NavFooter v-if="$route.meta.hasFoot"></NavFooter>

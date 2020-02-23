@@ -7,30 +7,41 @@
             <van-image class="login-logo" :src="logo" />
             <div class="login-field j_flex-column-between">
 
-                <!-- 手機號碼 -->
-                <div class="login-field-line j_flex-center-between">
-                    <van-image
-                        class="login-field-icon"
-                        :src="people"
-                    />
-                    <van-field
-                        v-model="account"
-                        placeholder="請輸入手機號碼"
-                    />
-                </div>
-                <!-- 手機號碼 -->
+                <!-- 手機號碼 / 輸入密碼 -->
+                <template v-for="(item, key) in inputs">
+                    <div
+                        class="login-field-line j_flex-center-between"
+                        :key="key"
+                    >
+                        <van-image
+                            class="login-field-icon"
+                            :src="item.src"
+                        />
+                        <van-field
+                            v-model="item.value"
+                            :error-message="item.errorMsg"
+                            :type="item.type"
+                            @input="item.errorMsg = ''"
+                            @focus="item.errorMsg = ''"
+                            :placeholder="item.placeholder"
+                        />
+                    </div>
+                </template>
+                <!-- 手機號碼 / 輸入密碼 -->
 
                 <!-- 輸入密碼 -->
-                <div class="login-field-line j_flex-center-between">
+                <!-- <div class="login-field-line j_flex-center-between">
                     <van-image
                         class="login-field-icon"
                         :src="lock"
                     />
                     <van-field
-                        v-model="password"
+                        v-model="inputs.password.value"
+                        :error-message="inputs.password.errorMsg"
+                        type="password"
                         placeholder="請輸入密碼"
                     />
-                </div>
+                </div> -->
                 <!-- 輸入密碼 -->
 
                 <!-- 忘記密碼/忘記帳號 -->
@@ -46,13 +57,19 @@
                 <!-- PLAY -->
                 <div class="login-field-line j_flex-center-around">
                     <div class="blocker" />
-                    <div class="login-button j_flex-column-around">
-                        <span class="login-button-text j_text--day" v-text="'PLAY'" />
+                    <div
+                        class="login-button j_flex-column-around"
+                        @click="onPlay"
+                    >
+                        <span
+                            class="login-button-text j_text--day"
+                            v-text="'PLAY'"
+                        />
                     </div>
                 </div>
                 <!-- PLAY -->
 
-                <div class="blocker" :style="{height: '60px'}"/>
+                <div class="blocker" :style="{ height: '60px', }"/>
 
                 <!-- 聯絡客服 -->
                 <div class="login-field-line j_flex-column-center-around">
@@ -78,38 +95,15 @@ import vanImage from 'vant/lib/image';
 import loadingMask from '@C/loading'
 // import { jwtEncode } from '@UTIL'
 import { mapGetters } from 'vuex'
+import LoginContent from "@mixins/login"
+
 
 export default {
-    name: 'LoginContent',
+    name: 'Login',
     components: {
         loadingMask,
         vanImage,
     },
-    data() {
-        return {
-            account: '',
-            password: '',
-        }
-    },
-    async mounted() {
-    },
-    methods: {
-    },
-    computed: {
-        // ...mapGetters('Config', ['userInfo', 'baseUrl']),
-        ...mapGetters('Common', ['loading']),
-        logo() {
-            return require('@IMGT/sign-logo.png')
-        },
-        people() {
-            return require('@IMGT/sign-people.png')
-        },
-        lock() {
-            return require('@IMGT/sign-lock.png')
-        },
-        service() {
-            return require('@IMGT/sign-service.png')
-        },
-    },
+    mixins: [ LoginContent, ],
 }
 </script>

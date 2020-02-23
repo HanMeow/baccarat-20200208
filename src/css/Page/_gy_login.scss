@@ -34,6 +34,7 @@ $forget_button_height: 36px;
         min-width: 40vw;
         border-radius: 10px;
         background-image: linear-gradient(#e47659, #9e161b);
+        overflow: visible;
         &:hover {
             background-image: linear-gradient(#9e161b, #e47659);
             .van-cell__value {
@@ -46,16 +47,31 @@ $forget_button_height: 36px;
             height: 25px;
             padding: 3px;
             background-image: linear-gradient(#9e161b, #e47659);
+            overflow: visible;
             .van-field__body {
                 height: stretch;
                 padding: 0 15px;
             }
+            .van-field__error-message {
+                font-size: inherit;
+                text-align: center;
+                color: rgb(255, 94, 0);
+                background-color: rgba(92, 92, 92, 0.6);
+                border-radius: 5px;
+                border: 1px solid rgb(122, 122, 122);
+                transform: translate(10%, 0);
+            }
         }
         .van-field__control {
-            letter-spacing: 2px;
             color: white;
             &::placeholder {
+                letter-spacing: 2px;
                 color: white;
+            }
+            &:hover {
+                &::placeholder {
+                    opacity: .5;
+                }
             }
         }
     }

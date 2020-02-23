@@ -1,5 +1,5 @@
 <template>
-    <router-view class="wrapper"></router-view>
+    <router-view class="wrapper j_flex-column"></router-view>
     <!-- <div></div> -->
 </template>
 

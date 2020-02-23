@@ -40,57 +40,61 @@ $notch_debug: 58px;
 $debugging: false;
 
 /** 主容器 */
-[class*=main__container] {
-    height: calc(100vh - #{$footer_height} - #{$header_height} - constant(safe-area-inset-top));
-    height: calc(100vh - #{$footer_height} - #{$header_height} - env(safe-area-inset-top));
-    width: 100vw;
-    position: relative;
-    margin-top: calc(#{$header_height} + env(safe-area-inset-top));
-    margin-bottom: $footer_height;
-    // height: 100%;
-    /** 瀏海 debug */
-    @if $debugging {
-        height: calc(100vh - #{$footer_height} - #{$header_height} - #{$notch_debug});
-        margin-top: $header_height + $notch_debug;
-    }
-    /** 瀏海 debug */
-    &:not(.gy_promotion) {
-        overflow-y: scroll;
-    }
-    &[class*=-no_footer] {
-        height: calc(100vh - #{$header_height} - constant(safe-area-inset-top));
-        height: calc(100vh - #{$header_height} - env(safe-area-inset-top));
-        /** 瀏海 debug */
-        @if $debugging {
-            height: calc(100vh - #{$header_height} - #{$notch_debug});
-        }
-        /** 瀏海 debug */
-        margin-bottom: 0;
-    }
-    &[class*=-no_header] {
-        height: calc(100vh - #{$footer_height} - constant(safe-area-inset-top));
-        height: calc(100vh - #{$footer_height} - env(safe-area-inset-top));
-        margin-top: env(safe-area-inset-top);
-        /** 瀏海 debug */
-        @if $debugging {
-            height: calc(100vh - #{$header_height} - #{$notch_debug});
-            margin-top: $notch_debug;
-        }
-        /** 瀏海 debug */
-    }
-    &[class*=-no_header][class*=-no_footer] {
-        height: calc(100vh - constant(safe-area-inset-top));
-        height: calc(100vh - env(safe-area-inset-top));
-        /** 瀏海 debug */
-        @if $debugging {
-            height: calc(100vh - #{$notch_debug});
-        }
-        /** 瀏海 debug */
-    }
-    &[class*=-padding] {
-        padding-top: $basic_gap;
-    }
+.main__container {
+    flex: 1;
+    overflow: scroll;
 }
+// [class*=main__container] {
+//     height: calc(100vh - #{$footer_height} - #{$header_height} - constant(safe-area-inset-top));
+//     height: calc(100vh - #{$footer_height} - #{$header_height} - env(safe-area-inset-top));
+//     width: 100vw;
+//     position: relative;
+//     margin-top: calc(#{$header_height} + env(safe-area-inset-top));
+//     margin-bottom: $footer_height;
+//     // height: 100%;
+//     /** 瀏海 debug */
+//     @if $debugging {
+//         height: calc(100vh - #{$footer_height} - #{$header_height} - #{$notch_debug});
+//         margin-top: $header_height + $notch_debug;
+//     }
+//     /** 瀏海 debug */
+//     &:not(.gy_promotion) {
+//         overflow-y: scroll;
+//     }
+//     &[class*=-no_footer] {
+//         height: calc(100vh - #{$header_height} - constant(safe-area-inset-top));
+//         height: calc(100vh - #{$header_height} - env(safe-area-inset-top));
+//         /** 瀏海 debug */
+//         @if $debugging {
+//             height: calc(100vh - #{$header_height} - #{$notch_debug});
+//         }
+//         /** 瀏海 debug */
+//         margin-bottom: 0;
+//     }
+//     &[class*=-no_header] {
+//         height: calc(100vh - #{$footer_height} - constant(safe-area-inset-top));
+//         height: calc(100vh - #{$footer_height} - env(safe-area-inset-top));
+//         margin-top: env(safe-area-inset-top);
+//         /** 瀏海 debug */
+//         @if $debugging {
+//             height: calc(100vh - #{$header_height} - #{$notch_debug});
+//             margin-top: $notch_debug;
+//         }
+//         /** 瀏海 debug */
+//     }
+//     &[class*=-no_header][class*=-no_footer] {
+//         height: calc(100vh - constant(safe-area-inset-top));
+//         height: calc(100vh - env(safe-area-inset-top));
+//         /** 瀏海 debug */
+//         @if $debugging {
+//             height: calc(100vh - #{$notch_debug});
+//         }
+//         /** 瀏海 debug */
+//     }
+//     &[class*=-padding] {
+//         padding-top: $basic_gap;
+//     }
+// }
 
 /** safari */
 .wrapper {
