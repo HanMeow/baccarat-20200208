@@ -1,21 +1,18 @@
 <template>
     <van-nav-bar
-        v-show="$route.path !== '/login'"
-        :class="`j_text--day force gy_header ${background}`"
+        :class="[
+            'gy_header',
+            logo
+        ]"
         :zIndex="3000"
-        :title="$t(title)"
-        :left-text="left ? $t(leftText) : ''"
+        :title="title"
+        :left-text="''"
         :fixed="false"
-        :left-arrow="left"
-        @click-left="leftClick"
-        @click-right="rightClick"
+        :left-arrow="false"
+        :hairline="false"
     >
         <!-- 右 詳細按鈕/編輯按鈕 -->
         <template v-if="type !== 0" slot="right">
-            <div class="gy_game--header__detail">
-                <span class="j_text--day" v-text="$t(rightText)"></span>
-                <van-icon :name="['', 'filter-o', 'edit'][type]" color="#FFF"></van-icon>
-            </div>
         </template>
         <!-- 右 詳細按鈕/編輯按鈕 -->
     </van-nav-bar>

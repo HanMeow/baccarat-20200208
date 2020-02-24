@@ -4,7 +4,7 @@ import store from '@store'
 const hideFooter = () => sessionStorage.getItem('footer') === 'hide'
 
 export default {
-    // mode: 'history',
+    mode: process.env.NODE_ENV === 'production' ? 'hash' : 'history',
     base: '/crown-baccarat',
     scrollBehavior() {
         // 控制導頁預設起始位置

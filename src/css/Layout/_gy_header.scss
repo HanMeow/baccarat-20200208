@@ -59,22 +59,50 @@
 }
 
 .gy_header {
+	&::before {
+		content: ' ';
+		position: absolute;
+		top: auto;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border: 0;
+		transform: scale(1);
+		height: 6px;
+		border-width: 1px;
+		border-color: #a8622b;
+		border-style: solid none;
+		background-image: radial-gradient(circle at center, #fffdfa, #f4c855, #d27a21, #d27a21);
+	}
 	&::after {
-		content: none;
+		// content: none;
+		top: 100% * 10 / 60;
+		left: -100%;
+		bottom: auto;
+		right: auto;
+		border: 0;
+		transform: rotate(-5deg);
+		width: 85px;
+		height: 75px;
+		background-image: url('~@IMGT/sign-logo.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		transition: all .3s linear;
+	}
+	&.left::after {
+		left: 100% * 15 / 360;
+	}
+	&.right::after {
+		left: calc(#{100% * 345 / 360} - 85px);
 	}
 	.van-nav-bar__left {
-		// &:active {
-		// }
 		.van-nav-bar__text:active {
 			background-color: rgba(255, 255, 255, 0.15);
-			// border-radius: 2*$basic_gap;
 		}
 	}
-	// @include size(100vw, $header_height);
-	// position: fixed;
-	// top: 0;
-	// left: 0;
-	// z-index: 3000;
+	background: none;
+	overflow: visible;
 }
 
 .gy_game--header__detail {

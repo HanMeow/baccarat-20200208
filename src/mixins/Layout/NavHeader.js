@@ -4,66 +4,27 @@ import { mapActions, mapGetters } from 'vuex'
 export const NavHeader = {
     name: 'NavHeader',
     methods: {
-        ...mapActions('Config', {
-            getMenuList: 'getMenuList'
+        ...mapActions('layout/header', {
+            changeTitle: _M.UPDATED,
         }),
-        changeLang() {
-            this.getMenuList()
-        },
-        direct(path) {
-            path && this.$router.push(path)
-        },
-        leftClick() {
-            // console.log('debug: leftClick -> typeof backFunction', typeof this.backFunction)
-            return typeof this.backFunction === 'function' ? this.backFunction() : this.$router.back()
-        },
-        rightClick() {
-            // console.log(`debug: rightClick -> typeof this.rightFunction`, typeof this.rightFunction)
-            return typeof this.rightFunction === 'function' ? this.rightFunction() : false
-        },
     },
     computed: {
-        ...mapGetters('Config', [
-            'baseUrl',
-            'userInfo',
-            'list',
-            'mailNumber',
-            'EnvelopeMenu',
-        ]),
         ...mapGetters('layout/header', [
-            'title',
-            'right',
-            'rightText',
-            'rightFunction',
-            'left',
-            'leftText',
-            'backFunction',
-            'backgroundType',
-            'type',
+            'state',
         ]),
-        logoUrl() {
-            let url = '../../image/logo.png'
-            if (this.baseUrl.CDN) {
-                url = `//${this.baseUrl.CDN}/${this.baseUrl.platformCode}/logo.png`
-            }
-            return url
+        title() {
+            return this.state.title
         },
-        background() {
-            switch (this.backgroundType) {
-                case 1:
-                    return 'j_background--main';
-                    break;
-                case 0:
-                default:
-                    return 'j_background--header';
-                    break;
-            }
+        type() {
+            return this.state.type
         },
-        isShowEnvelope() {
-            return this.EnvelopeMenu.length !== 0 && !!this.userInfo.token
-        },
-        mailCount() {
-            return this.mailNumber > 99 ? '99+' : this.mailNumber
-        },
+        logo() {
+            return {
+                '1': 'left',
+                '2': 'right',
+                'left': 'left',
+                'right': 'right',
+            }[this.state.logoPosition] || 0
+        }
     }
 }
