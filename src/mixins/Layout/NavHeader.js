@@ -12,6 +12,12 @@ export const NavHeader = {
         ...mapGetters('layout/header', [
             'state',
         ]),
+        goaway() {
+            return require('@IMGT/header-goaway.png')
+        },
+        setup() {
+            return require('@IMGT/header-setup.png')
+        },
         title() {
             return this.state.title
         },
@@ -25,6 +31,6 @@ export const NavHeader = {
                 'left': 'left',
                 'right': 'right',
             }[this.state.logoPosition] || 0
-        }
+        },
     }
 }

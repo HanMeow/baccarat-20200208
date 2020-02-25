@@ -68,8 +68,8 @@ export default {
                         //     return true && !hideFooter()
                         // },
                     },
-                    // component: r => require.ensure([], () => r(require('@P/Home')), 'HomeContent'),
-                    component: { template: '<div></div>' },
+                    component: r => require.ensure([], () => r(require('@P/Home')), 'HomeContent'),
+                    // component: { template: '<div></div>' },
                 },
                 {
                     path: 'Transfer',
