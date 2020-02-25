@@ -1,6 +1,13 @@
 <template>
-    <div class="login">
-
+    <div class="home">
+        <div class="home-banners j_flex-column-center-around">
+            <van-image
+                v-for="({ src, }, index) in images"
+                :key="index"
+                :class="['home-banner', `banner-${index}`]"
+                :src="src"
+            />
+        </div>
     </div>
 </template>
 

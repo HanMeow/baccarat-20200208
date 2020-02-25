@@ -23,8 +23,17 @@ export default {
             headerState: 'state',
         }),
         // ...mapGetters('Config', ['userInfo', 'baseUrl']),
-        // lock() {
-        //     return require('@IMGT/sign-lock.png')
-        // },
+        images() {
+            return [{
+                    src: require('@IMGT/home/Baccarat-01.png')
+                },
+                {
+                    src: require('@IMGT/home/Baccarat-02.png')
+                },
+                {
+                    src: require('@IMGT/home/Baccarat-03.png')
+                },
+            ]
+        },
     },
 }
