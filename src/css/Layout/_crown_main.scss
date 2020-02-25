@@ -42,12 +42,16 @@ $debugging: false;
 /** 主容器 */
 .main__container {
     flex: 1;
-    overflow: scroll;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 /** safari */
 .wrapper {
     height: 100%;
+    overflow: hidden;
     // padding-top: constant(safe-area-inset-top);
     // padding-top: env(safe-area-inset-top);
     /** 瀏海 debug */
