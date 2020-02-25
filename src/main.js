@@ -15,8 +15,6 @@ import { i18n } from '@UTIL/i18nDynamicLocale'
 
 // import '@CSS/reset.css'
 
-/**vant 樣式 */
-import 'vant/lib/index.css'
 /**模擬桌面mouse事件 */
 import '@vant/touch-emulator'
 
