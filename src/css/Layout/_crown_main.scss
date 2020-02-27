@@ -59,7 +59,7 @@ $debugging: false;
     //     padding-top: $notch_debug;
     // }
     /** 瀏海 debug */
-    .gy_header {
+    .crown_header {
         height: calc(#{$header_height} + constant(safe-area-inset-top));
         height: calc(#{$header_height} + env(safe-area-inset-top));
         /** 瀏海 debug */
@@ -157,7 +157,7 @@ $crown_transition: .3s;
 .header-leave-active,
 .header-enter-active {
     transition: $crown_transition;
-    .gy_header {
+    .crown_header {
         transition: $crown_transition;
         // transform: translateY(0);
     }
@@ -165,7 +165,7 @@ $crown_transition: .3s;
 .header-enter,
 .header-leave-to {
     // opacity: 0;
-    &.gy_header, .gy_header {
+    &.crown_header, .crown_header {
         // transition: $crown_transition;
         transform: translateY(-100%);
     }

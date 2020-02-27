@@ -72,7 +72,7 @@ export const vue$ = new Vue({
 
 // export const getters = vue$.$store.getters
 // export const router$ = vue$.$router
-// export const vue = vue$
+export const vue = vue$
 // export default {
 //     getters,
 //     router$,

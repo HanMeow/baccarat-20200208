@@ -1,0 +1,28 @@
+// ************************************************************
+// variable.color
+// ************************************************************
+
+/** 固定常數 **/
+// $footer_height      :   42px;
+$footer_height      :   45px;
+$header_height      :   60px;
+$basic_gap          :   10px;
+/** 固定常數 **/
+
+
+$icon__color: (
+    /********** WAP USAGE ************/
+    // weak             : darken($color__base__invert, 30%),
+    /******** WAP USAGE END **********/
+
+    // primary          : $icon__color__primary,            // #eb6b4b
+    // secondary        : $icon__color__secondary,          // #788085
+    // accent           : $icon__color__accent,             // #b460bf
+    // info             : $icon__color__info,               // #5ac48e
+    // warning          : $icon__color__warning,            // #ffb940
+    // base_invert      : $icon__color__base__invert,       // #ffffff
+    // base             : $icon__color__base                // #000000
+);
+@function icon__color($name) {
+    @return map-get($icon__color, $name);
+}

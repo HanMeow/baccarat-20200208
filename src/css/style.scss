@@ -5,19 +5,19 @@
 /**vant 樣式 */
 @import '~vant/lib/index.css';
 
-@import 'Variable/gy_variable.scss';        // 变数设定（不含颜色）
+@import 'Variable/crown_variable.scss';        // 变数设定（不含颜色）
 
 @import 'gy_mixin.scss';                    // mixin
 @import 'gy_base.scss';                     // tag 基本设定
 // @import 'gy_animate';                       // 動畫效果
 
 // 样式
-@import '~@Style/_gy_variable.scss';        // 预设样式 - 颜色变数
-@import '~@Style/_gy_theme.scss';           // 预设样式 - 版面配色
-// @import '~@Style/_gy_module.scss';       // 预设样式 - 版面配色 (完全沒用到)
+@import '~@Style/_crown_variable.scss';        // 预设样式 - 颜色变数
+@import '~@Style/_crown_theme.scss';           // 预设样式 - 版面配色
+// @import '~@Style/_crown_module.scss';       // 预设样式 - 版面配色 (完全沒用到)
 
 // 2019.11.11
-@import '~@Style/_gy_yabo__color.scss';     // 顏色管理
+@import '~@Style/_crown__color.scss';     // 顏色管理
 
 // 共用元件
 // @import 'gy_utilities.scss';
@@ -39,8 +39,8 @@
 
 
 // 框架
-@import 'Layout/gy_layout.scss';
-@import 'Layout/gy_header.scss';
+@import 'Layout/crown_layout.scss';
+@import 'Layout/crown_header.scss';
 @import 'Layout/gy_footer.scss';
 
 // 特定页面

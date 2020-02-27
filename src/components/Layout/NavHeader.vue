@@ -1,7 +1,7 @@
 <template>
     <van-nav-bar
         :class="[
-            'gy_header',
+            'crown_header',
             logo
         ]"
         :zIndex="3000"
