@@ -16,6 +16,7 @@
 }
 
 .crown_bg_base {
+    background-image: radial-gradient(circle at center, #be3e36, #902124, #461316);
     &::before {
         content: '';
         left: 0;
