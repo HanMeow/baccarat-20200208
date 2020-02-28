@@ -41,6 +41,9 @@
 		transition: all $crown_transition ease-in-out;
 	}
 	.header-right {
+		position: absolute;
+		right: 0;
+		bottom: 0;
 		height: $header_height;
 		min-width: 80px;
 		line-height: 10px;
