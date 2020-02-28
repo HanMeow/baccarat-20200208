@@ -4,11 +4,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baccarat-20200208/default/css/9.css"
   },
   {
-    "revision": "57b25e05edfa8c068b3d",
+    "revision": "0e7924092db22220bccc",
     "url": "/baccarat-20200208/default/css/app.css"
   },
   {
-    "revision": "3c096139623eb6cbdb35",
+    "revision": "ec4fdc6eac20a17a5fd0",
     "url": "/baccarat-20200208/default/css/vendor.css"
   },
   {
@@ -52,6 +52,30 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baccarat-20200208/default/img/room-D.png"
   },
   {
+    "revision": "442a651f1c1d788d794045efc86f38d1",
+    "url": "/baccarat-20200208/default/img/setup-amount.png"
+  },
+  {
+    "revision": "2cdce3786435682f926d18a0b9c3fd2b",
+    "url": "/baccarat-20200208/default/img/setup-card.png"
+  },
+  {
+    "revision": "8870b962d3c28dd95495d9e200ca7237",
+    "url": "/baccarat-20200208/default/img/setup-character.png"
+  },
+  {
+    "revision": "f1af3a1b47dcd8fab2295e7acfe054bf",
+    "url": "/baccarat-20200208/default/img/setup-history.png"
+  },
+  {
+    "revision": "00a0ed6603002535effefe0b06fc80f7",
+    "url": "/baccarat-20200208/default/img/setup-money.png"
+  },
+  {
+    "revision": "a017f576e9b9bc377ae6671a97f4a707",
+    "url": "/baccarat-20200208/default/img/setup-rule.png"
+  },
+  {
     "revision": "f7434444fdefcf0100e9e0a94ef9917f",
     "url": "/baccarat-20200208/default/img/sign-background.png"
   },
@@ -72,7 +96,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baccarat-20200208/default/img/sign-service.png"
   },
   {
-    "revision": "3b07c8f63178b8b74348",
+    "revision": "e0e498a541755217c795",
     "url": "/baccarat-20200208/default/js/10.js"
   },
   {
@@ -80,7 +104,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baccarat-20200208/default/js/9.js"
   },
   {
-    "revision": "f8b8d8f72eecaa113ad6",
+    "revision": "fa6ea5d781056a88b2a9",
     "url": "/baccarat-20200208/default/js/HomeContent.js"
   },
   {
@@ -92,15 +116,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baccarat-20200208/default/js/Login.js"
   },
   {
-    "revision": "437d249fd360ddd1a8d4",
+    "revision": "48dda38ff84a5aa7c23d",
     "url": "/baccarat-20200208/default/js/SettingContent.js"
   },
   {
-    "revision": "57b25e05edfa8c068b3d",
+    "revision": "0e7924092db22220bccc",
     "url": "/baccarat-20200208/default/js/app.js"
   },
   {
-    "revision": "b7a761f6074783322080",
+    "revision": "3f885c9636675ee303e8",
     "url": "/baccarat-20200208/default/js/async-vendors.js"
   },
   {
@@ -112,7 +136,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baccarat-20200208/default/js/manifest.js"
   },
   {
-    "revision": "3c096139623eb6cbdb35",
+    "revision": "ec4fdc6eac20a17a5fd0",
     "url": "/baccarat-20200208/default/js/vendor.js"
   },
   {
