@@ -1,0 +1,32 @@
+.crown_bg_login {
+    &:after {
+        content: '';
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        // background: url("~@IMGT/login_bg.jpg") no-repeat center;
+        // background: url("~@IMGT/wap_background.jpg") no-repeat center;
+        // background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("~@IMGT/wap_background.jpg");
+        background-position: center top;
+        background-size: cover;
+        position: fixed;
+        z-index: -1;
+    }
+}
+
+.crown_bg_base {
+    background-image: radial-gradient(circle at center, #be3e36, #902124, #461316);
+    &::before {
+        content: '';
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background: url("~@IMGT/sign-background.png") no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        position: absolute;
+        // z-index: -1;
+    }
+}

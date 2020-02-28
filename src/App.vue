@@ -1,7 +1,6 @@
 <template>
-    <div class="wrapper">
-        <router-view></router-view>
-    </div>
+    <router-view class="wrapper j_flex-column"></router-view>
+    <!-- <div></div> -->
 </template>
 
 <script>

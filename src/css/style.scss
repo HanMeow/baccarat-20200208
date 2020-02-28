@@ -2,67 +2,32 @@
 // style
 // ************************************************************
 
-@import 'Variable/gy_variable.scss';        // 变数设定（不含颜色）
+
+@import 'Variable/crown_variable.scss';        // 变数设定（不含颜色）
 
 @import 'gy_mixin.scss';                    // mixin
 @import 'gy_base.scss';                     // tag 基本设定
-@import 'gy_animate';                       // 動畫效果
+// @import 'gy_animate';                       // 動畫效果
 
 // 样式
-@import '~@Style/_gy_variable.scss';        // 预设样式 - 颜色变数
-@import '~@Style/_gy_theme.scss';           // 预设样式 - 版面配色
-// @import '~@Style/_gy_module.scss';       // 预设样式 - 版面配色 (完全沒用到)
+@import '~@Style/_crown_variable.scss';        // 预设样式 - 颜色变数
+@import '~@Style/_crown_theme.scss';           // 预设样式 - 版面配色
+// @import '~@Style/_crown_module.scss';       // 预设样式 - 版面配色 (完全沒用到)
 
 // 2019.11.11
-@import '~@Style/_gy_yabo__color.scss';     // 顏色管理
-
-// 共用元件
-@import 'gy_utilities.scss';
-
-// 共用组件
-@import 'Module/c_button.scss';             // 按钮
-@import 'Module/c_dialog.scss';             // 弹窗
-@import 'Module/c_dropdown.scss';           // 下拉选单
-@import 'Module/c_input.scss';              // input
-@import 'Module/c_pagination.scss';         // 分页页码
-@import 'Module/c_table.scss';              // 表格
-@import 'Module/c_tooltip.scss';            // 文字提示框
-@import 'Module/c_corner-ribbon.scss';      // 色带
-
-// @import 'Module/el-collapse.scss';          // 折叠面板
-// @import 'Module/el-elementui.scss';         // Form
-// @import 'Module/el-tabs.scss';              // tabs
-// @import 'Module/el-messagebox.scss';        // 外层弹窗
+@import '~@Style/_crown__color.scss';     // 顏色管理
 
 
 // 框架
-@import 'Layout/gy_layout.scss';
-@import 'Layout/gy_header.scss';
+@import 'Layout/crown_layout.scss';
+@import 'Layout/crown_header.scss';
 @import 'Layout/gy_footer.scss';
 
 // 特定页面
-@import 'Page/gy_login.scss';               // 登入页&注册页
-@import 'Page/gy_index.scss';               // 首页
-@import 'Page/gy_list.scss';                // 列表页
-@import 'Page/gy_chat.scss';                // 聊天室
-@import 'Page/gy_failure.scss';             // 鏈結失效页
-@import 'Page/gy_envelope.scss';            // 站内信
-@import 'Page/gy_download.scss';            // 下载APP
-// 2019.11.08
-@import 'Page/gy_Mine.scss';                // 「我的」頁面
-@import 'Page/gy_bankCard.scss';            // 「銀行卡」頁面
-// 2019.11.14
-@import 'Page/gy_recharge.scss';            // 「存款」頁面
-// 2019.11.19 
-@import 'Page/gy_personal.scss';            // 「个人中心」頁面
-// 2019.11.26 
-@import 'Page/gy_promotion.scss';           // 「优惠活动」頁面
-// 2019.12.20 
-@import 'Page/gy_message.scss';             // 「消息中心」頁面
-// 2020.01.06 
-@import 'Page/gy_game.scss';                // 「游戏」頁面
+@import 'Page/crown_login.scss';               // 登入页&注册页
+@import 'Page/crown_home.scss';               // 首页
 
 // 常用樣式
 // 2019.12.06
-@import 'Layout/gy_yabo_main.scss';              // 「主要轉場、flex、button」用
+@import 'Layout/crown_main.scss';              // 「主要轉場、flex、button」用
 

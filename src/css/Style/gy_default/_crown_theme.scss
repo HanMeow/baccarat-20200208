@@ -1,0 +1,23 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+// 圖片讀檔顏色
+.van-loading__circular circle {
+    stroke: burlywood;
+}
+
+// 圖片 失敗/讀檔 背景
+.van-image__error, .van-image__loading {
+    background: none;
+    border-radius: 15px;
+}
+
+// 讀檔圈
+.van-loading {
+    text-align: center;
+    .van-loading__spinner {
+        margin-top: 15%;
+    }
+}

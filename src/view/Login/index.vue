@@ -1,0 +1,109 @@
+<template>
+    <div class="login">
+        <loadingMask :loading="loading"></loadingMask>
+
+        <div class="login-box j_flex-column-center-between">
+            <div class="blocker" />
+            <van-image class="login-logo" :src="logo" />
+            <div class="login-field j_flex-column-between">
+
+                <!-- 手機號碼 / 輸入密碼 -->
+                <template v-for="(item, key) in inputs">
+                    <div
+                        class="login-field-line j_flex-center-between"
+                        :key="key"
+                    >
+                        <van-image
+                            class="login-field-icon"
+                            :src="item.src"
+                        />
+                        <van-field
+                            v-model="item.value"
+                            :error-message="item.errorMsg"
+                            :type="item.type"
+                            @input="item.errorMsg = ''"
+                            @focus="item.errorMsg = ''"
+                            :placeholder="item.placeholder"
+                        />
+                    </div>
+                </template>
+                <!-- 手機號碼 / 輸入密碼 -->
+
+                <!-- 輸入密碼 -->
+                <!-- <div class="login-field-line j_flex-center-between">
+                    <van-image
+                        class="login-field-icon"
+                        :src="lock"
+                    />
+                    <van-field
+                        v-model="inputs.password.value"
+                        :error-message="inputs.password.errorMsg"
+                        type="password"
+                        placeholder="請輸入密碼"
+                    />
+                </div> -->
+                <!-- 輸入密碼 -->
+
+                <!-- 忘記密碼/忘記帳號 -->
+                <div class="login-field-line j_flex-center-between">
+                    <div class="blocker" />
+                    <router-link :to="{ name: 'Register' }">
+                        <span class="login-link j_text--day" v-text="'註冊'"/>
+                    </router-link>
+                    <span class="login-link j_text--day" v-text="'忘記帳號'"/>
+                </div>
+                <!-- 忘記密碼/忘記帳號 -->
+
+                <!-- PLAY -->
+                <div class="login-field-line j_flex-center-around">
+                    <div class="blocker" />
+                    <div
+                        class="login-button j_flex-column-around"
+                        @click="onPlay"
+                    >
+                        <span
+                            class="login-button-text j_text--day"
+                            v-text="'PLAY'"
+                        />
+                    </div>
+                </div>
+                <!-- PLAY -->
+
+                <div class="blocker" :style="{ height: '60px', }"/>
+
+                <!-- 聯絡客服 -->
+                <div class="login-field-line j_flex-column-center-around">
+                    <van-image
+                        class="login-service-icon"
+                        :src="service"
+                    />
+                    <span class="j_text--day" v-text="'聯絡客服'" />
+                </div>
+                <!-- 聯絡客服 -->
+
+            </div>
+            <div class="blocker" />
+        </div>
+
+    </div>
+</template>
+
+<script>
+// import mobile from '@M/mobile'
+import { getApi } from '@API/api'
+import vanImage from 'vant/lib/image';
+import loadingMask from '@C/loading'
+// import { jwtEncode } from '@UTIL'
+import { mapGetters } from 'vuex'
+import LoginContent from "@mixins/login"
+
+
+export default {
+    name: 'Login',
+    components: {
+        loadingMask,
+        vanImage,
+    },
+    mixins: [ LoginContent, ],
+}
+</script>

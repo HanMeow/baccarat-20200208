@@ -1,6 +1,6 @@
-# tingzhu-main
+# main
 
-> A Vue.js project for B2B & B2C platform about boyi website front end
+> A Vue.js project
 
 ## Build Setup
 

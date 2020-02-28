@@ -4,6 +4,7 @@ var config = require('../config')
 if (!process.env.NODE_ENV) {
     process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
 }
+console.log(`debug: process.env.NODE_ENV`, process.env.NODE_ENV)
 
 var opn = require('opn')
 var path = require('path')
@@ -42,13 +43,13 @@ compiler.plugin('compilation', function(compilation) {
 })
 
 // proxy api requests
-Object.keys(proxyTable).forEach(function(context) {
-    var options = proxyTable[context]
-    if (typeof options === 'string') {
-        options = { target: options }
-    }
-    app.use(proxyMiddleware(options.filter || context, options))
-})
+// Object.keys(proxyTable).forEach(function(context) {
+//     var options = proxyTable[context]
+//     if (typeof options === 'string') {
+//         options = { target: options }
+//     }
+//     app.use(proxyMiddleware(options.filter || context, options))
+// })
 
 // handle fallback for HTML5 history API
 app.use(require('connect-history-api-fallback')())

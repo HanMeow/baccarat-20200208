@@ -5,7 +5,7 @@
             <NavHeader v-if="$route.meta.hasNav"></NavHeader>
         </transition>
         <transition name="slide" mode="out-in">
-            <router-view></router-view>
+            <router-view class="main__container"></router-view>
         </transition>
         <transition name="footer" mode="out-in" ref="footer">
             <NavFooter v-if="$route.meta.hasFoot"></NavFooter>
@@ -14,14 +14,18 @@
 </template>
 
 <script>
-const NavHeader = () => import('@C/Home/NavHeader/index')
-const NavFooter = () => import('@C/Home/NavFooter')
+const NavHeader = () => import('@C/Layout/NavHeader')
+const NavFooter = () => import('@C/Layout/NavFooter')
 import { index } from '@mixins/view/index'
 import loadingMask from '@C/loading'
 
 export default {
     name: 'index',
-    components: { NavHeader, NavFooter, loadingMask },
+    components: {
+        NavHeader,
+        NavFooter,
+        loadingMask
+    },
     mixins: [index]
 }
 </script>

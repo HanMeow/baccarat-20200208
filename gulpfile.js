@@ -108,15 +108,23 @@ const clear = function(cb) {
     rimraf('./dist/**/localeDefault.js', cb)
 }
 const replaceString = () => {
+    // return gulp
+    //     .src(['./dist/**/*.js', './dist/**/*.css'])
+    //     .pipe(replace('//CDN', '//"+CDN+"'))
+    //     .pipe(replace('//cdn', ''))
+    //     .pipe(replace('"./"+window.CDN+"', '"//"+window.CDN+"'))
+    //     .pipe(gulp.dest('dist/'))
     return gulp
-        .src(['./dist/**/*.js', './dist/**/*.css'])
-        .pipe(replace('//CDN', '//"+CDN+"'))
-        .pipe(replace('//cdn', ''))
-        .pipe(replace('"./"+window.CDN+"', '"//"+window.CDN+"'))
+        .src(['./dist/index.html'])
+        .pipe(replace('/default/css/vendor.css', '/default/css/vendor1.css'))
+        .pipe(replace('/default/css/app.css', '/default/css/vendor.css'))
+        .pipe(replace('/default/css/vendor1.css', '/default/css/app.css'))
         .pipe(gulp.dest('dist/'))
+        
 }
 
-const release = gulp.series(clear, gulp.parallel(addMark, replaceString))
+// const release = gulp.series(clear, gulp.parallel(addMark, replaceString))
+const release = gulp.series(replaceString)
 
 exports.i18n = gulp.series(i18n)
 

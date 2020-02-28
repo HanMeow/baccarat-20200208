@@ -1,0 +1,139 @@
+// ************************************************************
+// gy_background__color
+// ************************************************************
+
+
+$crown_blue  : #029ffe;
+$crown_indigo: #377bed;
+$crown_lazuli: #3c3cff;
+$crown_orange: #ed7d31;
+$crown_bg 	: #b2a8a6;
+$crown_bg2   : #788085;
+$crown_bg3   : #d5d5d5;
+$crown_bg4   : #999395;
+$crown_bg5   : #1bdb6b;
+$grass      : #00a745;
+$green      : #348034;
+// $tomato     : #e94335;
+$tomato     : #fa2828;
+$red        : #b4231e;
+$day        : #ffffff;
+$body       : #262626;
+$night      : #000000;
+$brown      : #9d745a;
+
+
+$crown_background__color: (
+	main: 		$crown_bg,
+    secondary: 	$crown_bg2,
+    button: 	$crown_bg3,
+    // button2: 	lighten($crown_bg2, 11%),
+    button2: 	$crown_bg4,
+    lighten: 	lighten($crown_bg3, 10%),
+	header: 	$crown_blue,
+    day:		$day,
+    blue:       $crown_blue, // #029ffe
+    green:      $crown_bg5,
+    cyan-blue:  lighten($crown_blue, 25%),
+    // indigo:     darken($crown_blue, 10%)
+    indigo:     $crown_indigo,
+    tomato:     $tomato,
+    night:      $night,
+    none:       transparent,
+);
+@function crown_background__color($name) {
+    @return map-get($crown_background__color, $name);
+}
+
+$crown_border__color: (
+    base:       $crown_bg,
+    secondary:  $crown_bg2,
+    default: 	$crown_bg3,
+    button: 	darken($crown_bg3, 15%),
+    button2:    $crown_bg4,
+    button3: 	lighten($crown_bg3, 5%),
+    blue:       $crown_blue, // #029ffe
+    green:      $crown_bg5,
+    cyan-blue:  lighten($crown_blue, 30%),
+    night:      $night,
+    day:		$day,
+    none:       transparent,
+);
+@function crown_border__color($name) {
+    @return map-get($crown_border__color, $name);
+}
+
+$crown_text__color: (
+    main: 		$crown_bg,
+    secondary: 	$crown_bg2,
+    day:		$day,
+    blue:       $crown_blue, // #029ffe
+    green:      $crown_bg5,
+    cyan-blue:  lighten($crown_blue, 25%),
+    indigo:     $crown_indigo,
+    lazuli:     $crown_lazuli,
+    orange:     $crown_orange,
+    grass:      $grass,
+    success:    $green,
+    tomato:     $tomato,
+    red:        $red,
+    lemon:      lighten($crown_orange, 20%),
+    night:      $night,
+    body:       $body,
+    brown:      $brown,
+);
+@function crown_text__color($name) {
+    @return map-get($crown_text__color, $name);
+}
+
+@each $key, $value in $crown_background__color {
+	.j_background--#{$key} {
+        &,&.force {
+            background-color: $value;
+        }
+    };
+    @for $i from 1 through 9 {
+        .j_background--#{$key}-t#{$i} {
+            &,&.force {
+                background-color: transparentize($value, 0.1*$i);
+            }
+        };
+    }
+};
+
+.j_background--header {
+    &,&.force {
+        background: linear-gradient(to right, rgb(0, 213, 253), rgb(2, 136, 254)) 100% / 100%;
+        // background: linear-gradient(to right, #00d5fd, #0288fe) 100%/100%;
+    };
+}
+
+@each $key, $value in $crown_border__color {
+	.j_border--#{$key} {
+        &,&.force {
+            border-color: $value;
+        }
+    };
+    @for $i from 1 through 9 {
+        .j_border--#{$key}-t#{$i} {
+            &,&.force {
+                border-color: transparentize($value, $i*0.1);
+            }
+        };
+    }
+};
+
+@each $key, $value in $crown_text__color {
+	.j_text--#{$key} {
+        &,&.force {
+            color: $value;
+        }
+	};
+};
+
+// 強制改 nav-bar 套件顏色
+.j_text--day.force {
+    & .van-nav-bar__text, & .van-nav-bar__title, & .van-icon.van-icon-arrow-left.van-nav-bar__arrow {
+        color: crown_text__color(day);
+    }
+}

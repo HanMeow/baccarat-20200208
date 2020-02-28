@@ -1,0 +1,134 @@
+// ************************************************************
+// login
+// ************************************************************
+
+// font__size(title);
+// default : 14px,
+// large   : 16px,
+// huge    : 18px,
+// small   : 12px,
+// title   : 22px,
+
+$forget_button_height: 36px;
+
+
+.login {
+    height: 100%;
+    .login-box {
+        position: absolute;
+        left: 50%;
+        height: 100%;
+        transform: translateX(-50%);
+    }
+    .login-logo {
+        max-width: 40vw;
+    }
+    .login-field-line {
+        margin-bottom: 20px;
+    }
+    .login-field-icon {
+        width: 50px;
+        margin-right: 20px;
+    }
+    .van-cell.van-field {
+        min-width: 40vw;
+        border-radius: 10px;
+        background-image: linear-gradient(#e47659, #9e161b);
+        overflow: visible;
+        &:hover {
+            background-image: linear-gradient(#9e161b, #e47659);
+            .van-cell__value {
+                background-image: linear-gradient(#e47659, #9e161b);
+            }
+        }
+        padding: 3px;
+        .van-cell__value {
+            border-radius: 10px;
+            height: 25px;
+            padding: 3px;
+            background-image: linear-gradient(#9e161b, #e47659);
+            overflow: visible;
+            .van-field__body {
+                height: stretch;
+                padding: 0 15px;
+            }
+            .van-field__error-message {
+                font-size: inherit;
+                text-align: center;
+                color: rgb(255, 94, 0);
+                background-color: rgba(92, 92, 92, 0.6);
+                border-radius: 5px;
+                border: 1px solid rgb(122, 122, 122);
+                transform: translate(10%, 0);
+            }
+        }
+        .van-field__control {
+            color: white;
+            &::placeholder {
+                letter-spacing: 2px;
+                color: white;
+            }
+            &:hover {
+                &::placeholder {
+                    opacity: .5;
+                }
+            }
+        }
+    }
+    .login-link {
+        &:hover {
+            color: #fdf29f;
+        }
+    }
+    .login-button {
+        position: relative;
+        text-align: center;
+        border-radius: 10px;
+        height: 40px;
+        width: 60%;
+        background-image: linear-gradient(#feec4c, #ca571c);
+        user-select: none;
+        &:active {
+            background-image: linear-gradient(#ca571c, #feec4c);
+            &::before {
+                background-image: linear-gradient(#feec4c, #ca571c);
+            }
+        }
+        &::before {
+            content: ' ';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            height: calc(100% - 6px);
+            width: calc(100% - 6px);
+            border-radius: 7px;
+            background-image: linear-gradient(#ca571c, #feec4c);
+        }
+    }
+    .login-button-text {
+        position: relative;
+        font-size: font__size(title);
+    }
+    .login-service-icon {
+        width: 50px;
+    }
+    .login-back {
+        color: rgb(255, 101, 30);
+        transform: scaleX(-1);
+    }
+}
+
+.custom-vue-tel-input.vue-tel-input {
+    border-radius: 2*$basic_gap;
+    // background-color: rgba(255, 255, 255, 0.5);
+    border-style: none;
+    height: 40px;
+    .vti__input {
+        // font-size: font__size(title);
+        font-size: font__size(huge);
+    }
+    .vti__dropdown:hover {
+        border-top-left-radius: 2*$basic_gap;
+        border-bottom-left-radius: 2*$basic_gap;
+    }
+}

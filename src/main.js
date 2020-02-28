@@ -2,7 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 /*eslint camelcase: ["error", {properties: "never"}]*/
 import 'babel-polyfill'
-import '@UTIL/tools'
+// import '@UTIL/tools'
 
 import Vue from 'vue'
 // import Vuelidate from 'vuelidate'
@@ -13,10 +13,11 @@ import store from '@store'
 // import VueI18n from 'vue-i18n'
 import { i18n } from '@UTIL/i18nDynamicLocale'
 
-import '@CSS/reset.css'
+// import '@CSS/reset.css'
 
 /**vant 樣式 */
 import 'vant/lib/index.css'
+
 /**模擬桌面mouse事件 */
 import '@vant/touch-emulator'
 
@@ -27,7 +28,7 @@ Vue.config.productionTip = false
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker
-            .register('/service-worker.js')
+            .register('/crown-baccarat/service-worker.js')
             .then(registration => {
                 console.log('SW registered: ', registration)
             })
@@ -51,14 +52,12 @@ Vue.use(Field)
 
 /**  改駝峰 */
 import changeCase from '@/plugins/changeCase'
-import customOpen from '@/plugins/customOpen'
+// import customOpen from '@/plugins/customOpen'
 import getQueryParams from '@/plugins/getQueryParams'
-import fromApp from '@/plugins/getFromApp'
 import getDevice from '@/plugins/getDevice'
 Vue.use(changeCase)
-    .use(customOpen)
+    // .use(customOpen)
     .use(getQueryParams)
-    .use(fromApp)
     .use(getDevice)
 
 /* eslint-disable no-new */
@@ -68,15 +67,16 @@ export const vue$ = new Vue({
     store,
     i18n,
     template: '<App/>',
+    // template: '<div/>',
     components: {
         App,
     },
 })
 
-export const getters = vue$.$store.getters
-export const router$ = vue$.$router
+// export const getters = vue$.$store.getters
+// export const router$ = vue$.$router
 export const vue = vue$
-export default {
-    getters,
-    router$,
-}
+// export default {
+//     getters,
+//     router$,
+// }

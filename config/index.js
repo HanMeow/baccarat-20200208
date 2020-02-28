@@ -7,11 +7,11 @@ var style = argvs[argvs.length - 1] || 'default'
 module.exports = {
     build: {
         env: require('./prod.env'),
-        index: path.resolve(__dirname, '../dist/fusionlotterywap/index.html'),
+        index: path.resolve(__dirname, '../dist/index.html'),
         assetsRoot: path.resolve(__dirname, '../dist'),
         // assetsSubDirectory: argv === 'lala' ? (isPrew() ? `${argv}_${prew}/${style}` : `${argv}/${style}`) : (isPrew() ? `${argv}_${prew}` : `${argv}`) ,
-        assetsSubDirectory: `fusionlotterywap/gy_default`,
-        assetsOtherDirectory: 'fusionlotterywap',
+        assetsSubDirectory: `default`,
+        assetsOtherDirectory: '',
         assetsPublicPath: '/',
         productionSourceMap: false,
         // Gzip off by default as many popular static hosts such as
@@ -33,17 +33,17 @@ module.exports = {
         autoOpenBrowser: true,
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
-        proxyTable: {
-            '/api': {
-                target: {
-                    host: 'urt008.100piv.tech',
-                    protocol: 'http:',
-                    port: 80,
-                },
-                changeOrigin: true,
-                secure: false,
-            },
-        },
+        // proxyTable: {
+        //     '/api': {
+        //         target: {
+        //             host: 'urt008.100piv.tech',
+        //             protocol: 'http:',
+        //             port: 80,
+        //         },
+        //         changeOrigin: true,
+        //         secure: false,
+        //     },
+        // },
         // CSS Sourcemaps off by default because relative paths are "buggy"
         // with this option, according to the CSS-Loader README
         // (https://github.com/webpack/css-loader#sourcemaps)

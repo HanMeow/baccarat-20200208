@@ -1,0 +1,48 @@
+<template>
+    <div class="home">
+        <div class="lobby-banners j_flex-column-center-around">
+            <template v-for="({ src, name }, index) in images">
+                <router-link
+                    class="link"
+                    :to="{name: 'Home'}"
+                    replace 
+                    :key="index"
+                >
+                    <van-image
+                        :class="['lobby-banner', ``]"
+                        :src="src"
+                        :error-icon="'question-o'"
+                    >
+                        <van-loading
+                            slot="loading"
+                            type="circular"
+                            size="50%"
+                        />
+                    </van-image>
+                </router-link>
+            </template>
+        </div>
+    </div>
+</template>
+
+<script>
+// import mobile from '@M/mobile'
+import { getApi } from '@API/api'
+import vanImage from 'vant/lib/image';
+import vanLoading from 'vant/lib/loading';
+import loadingMask from '@C/loading'
+// import { jwtEncode } from '@UTIL'
+import { mapGetters } from 'vuex'
+import LobbyContent from "@mixins/Home/lobby"
+
+
+export default {
+    name: 'lobby',
+    components: {
+        loadingMask,
+        vanImage,
+        vanLoading,
+    },
+    mixins: [ LobbyContent, ],
+}
+</script>

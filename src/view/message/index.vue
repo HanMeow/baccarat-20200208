@@ -126,7 +126,7 @@
 
         <Sticky v-if="!$route.params.id" :offset-top="45">
             <!-- 公告類型選單 -->
-            <Row class="gy_header_btn j_background--day-t5" type="flex" justify="space-around">
+            <Row class="crown_header_btn j_background--day-t5" type="flex" justify="space-around">
                 <van-col span="7" v-for="({title}, i) in messageTabs" :key="i">
                     <van-button
                         class="gy_btn"

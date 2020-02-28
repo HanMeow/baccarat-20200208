@@ -6,10 +6,9 @@
     "private": true,
     "scripts": {
         "dev": "node build/dev-server.js",
-        "start": "node build/dev-server.js",
-        "build": "gulp i18n && node build/build.js",
-        "lint": "eslint --ext .js,.vue src",
-        "getKeys": "node build/getLanguageKeys"
+        "build": "node build/build.js && gulp release",
+        "deploy": "cd dist && git init && git add -A && git commit -m 'deploy' && git push -f https://github.com/HanMeow/baccarat-20200208.git master:gh-pages && cd ..",
+        "lint": "eslint --ext .js,.vue src"
     },
     "dependencies": {
         "@vant/touch-emulator": "^1.1.0",
@@ -18,7 +17,7 @@
         "moment": "^2.18.1",
         "qrcode.vue": "^1.7.0",
         "salted-md5": "^4.0.2",
-        "vant": "2.2.12",
+        "vant": "2.4.2",
         "vue": "2.6.10",
         "vue-color": "^2.4.1",
         "vue-count-to": "^1.0.13",
@@ -102,13 +101,13 @@
         "sinon": "^1.17.7",
         "sinon-chai": "^2.11.0",
         "throttle-debounce": "^1.0.1",
-        "vue-tel-input": "^4.1.1",
         "url-loader": "1.0.1",
         "vue-clipboards": "^1.3.0",
         "vue-i18n": "^7.0.5",
         "vue-loader": "^15.0.0",
         "vue-router": "^2.3.1",
         "vue-style-loader": "4.1.0",
+        "vue-tel-input": "^4.1.1",
         "vue-template-compiler": "2.6.10",
         "vuex": "^2.3.1",
         "webpack": "^4.8.3",
