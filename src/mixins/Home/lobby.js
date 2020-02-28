@@ -26,15 +26,14 @@ export default {
         // ...mapGetters('Config', ['userInfo', 'baseUrl']),
         images() {
             return [{
-                    src: require('@IMGT/home/Baccarat-01.png')
-                },
-                {
-                    src: require('@IMGT/home/Baccarat-02.png')
-                },
-                {
-                    src: require('@IMGT/home/Baccarat-03.png')
-                },
-            ]
+                src: require('@IMGT/home/room-A.png'),
+            }, {
+                src: require('@IMGT/home/room-B.png'),
+            }, {
+                src: require('@IMGT/home/room-C.png'),
+            }, {
+                src: require('@IMGT/home/room-D.png'),
+            }, ]
         },
     },
 }

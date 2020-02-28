@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <div class="home-banners j_flex-column-center-around">
+        <div class="lobby-banners j_flex-column-center-around">
             <template v-for="({ src, name }, index) in images">
                 <router-link
                     class="link"
@@ -9,7 +9,7 @@
                     :key="index"
                 >
                     <van-image
-                        :class="['home-banner', `banner-${index}`]"
+                        :class="['lobby-banner', ``]"
                         :src="src"
                         :error-icon="'question-o'"
                     >
