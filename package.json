@@ -56,7 +56,7 @@
         "css-loader": "0.28.10",
         "deepmerge": "^1.4.4",
         "es6-promise": "^4.1.1",
-        "eslint": "^3.19.0",
+        "eslint": "^4.19.1",
         "eslint-config-standard": "^6.2.1",
         "eslint-friendly-formatter": "^2.0.7",
         "eslint-loader": "^1.7.1",
