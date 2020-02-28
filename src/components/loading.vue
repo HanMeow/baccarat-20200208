@@ -77,7 +77,4 @@ export default {
 .van-popup--center {
     transform: translate3d(-50%, -50%, 0);
 }
-.van-loading__circular circle {
-    stroke: burlywood;
-}
 </style>

@@ -6,7 +6,7 @@
     "private": true,
     "scripts": {
         "dev": "node build/dev-server.js",
-        "build": "node build/build.js",
+        "build": "node build/build.js && gulp release",
         "lint": "eslint --ext .js,.vue src"
     },
     "dependencies": {
@@ -16,7 +16,7 @@
         "moment": "^2.18.1",
         "qrcode.vue": "^1.7.0",
         "salted-md5": "^4.0.2",
-        "vant": "2.2.12",
+        "vant": "2.4.2",
         "vue": "2.6.10",
         "vue-color": "^2.4.1",
         "vue-count-to": "^1.0.13",

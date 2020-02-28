@@ -128,13 +128,10 @@ $debugging: false;
     }
 }
 
-/** 轉頁效果 時間 */
-$crown_transition: .3s;
-
 /** 轉頁效果 及 修正轉頁時按鈕位置 */
 .slide-leave-active,
 .slide-enter-active {
-    transition: $crown_transition;
+    transition: all $crown_transition cubic-bezier(0.44,-0.25, 0.2, 1);
     [class*=main__submit]:not([class*=-relative]) {
         bottom: $basic_gap;
         &.subbutton {
@@ -156,9 +153,9 @@ $crown_transition: .3s;
 /** 轉頁效果 header footer */
 .header-leave-active,
 .header-enter-active {
-    transition: $crown_transition;
+    transition: all $crown_transition cubic-bezier(0.44,-0.25, 0.2, 1);
     .crown_header {
-        transition: $crown_transition;
+        transition: all $crown_transition cubic-bezier(0.44,-0.25, 0.2, 1);
         // transform: translateY(0);
     }
 }
@@ -166,15 +163,15 @@ $crown_transition: .3s;
 .header-leave-to {
     // opacity: 0;
     &.crown_header, .crown_header {
-        // transition: $crown_transition;
+        // transition: all $crown_transition cubic-bezier(0.44,-0.25, 0.2, 1);
         transform: translateY(-100%);
     }
 }
 .footer-leave-active,
 .footer-enter-active {
-    transition: $crown_transition;
+    transition: all $crown_transition cubic-bezier(0.44,-0.25, 0.2, 1);
     .gy_footer {
-        transition: $crown_transition;
+        transition: all $crown_transition cubic-bezier(0.44,-0.25, 0.2, 1);
         // transform: translateY(0);
     }
 }
@@ -182,7 +179,7 @@ $crown_transition: .3s;
 .footer-leave-to {
     // opacity: 0;
     .gy_footer {
-        // transition: $crown_transition;
+        // transition: all $crown_transition cubic-bezier(0.44,-0.25, 0.2, 1);
         transform: translateY(100%);
     }
 }
@@ -190,7 +187,7 @@ $crown_transition: .3s;
 // 信箱刪除復原效果
 .van-slide-left-leave-active {
     &.van-cell {
-        transition: $crown_transition;
+        transition: all $crown_transition cubic-bezier(0.44,-0.25, 0.2, 1);
         max-height: 200px;
         &.van-slide-left-leave-to {
             max-height: 0;
@@ -199,7 +196,7 @@ $crown_transition: .3s;
 }
 .van-slide-left-enter-active {
     &.van-cell {
-        transition: $crown_transition;
+        transition: all $crown_transition cubic-bezier(0.44,-0.25, 0.2, 1);
         max-height: 0;
         &.van-slide-left-enter-to {
             max-height: 200px;
@@ -222,11 +219,11 @@ $crown_transition: .3s;
 .van-skeleton--animate {
     opacity: 0.8;
     .van-skeleton__content {
-        transition: $crown_transition;
-        // animation: skeleton 0.8s ease-in-out infinite;
+        transition: all $crown_transition cubic-bezier(0.44,-0.25, 0.2, 1);
+        // animation: skeleton 0.8s cubic-bezier(0.44,-0.25, 0.2, 1) infinite;
         [class*=van-skeleton]:not(.van-skeleton__avatar) {
             // width: 20px;
-            transition: $crown_transition;
+            transition: all $crown_transition cubic-bezier(0.44,-0.25, 0.2, 1);
             border-radius: 10px;
         }
     }

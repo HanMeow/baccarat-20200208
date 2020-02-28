@@ -8,6 +8,9 @@ export const NavHeader = {
             changeTitle: _M.UPDATED,
         }),
     },
+    mounted() {
+        window.hh = this
+    },
     computed: {
         ...mapGetters('layout/header', [
             'state',
@@ -18,11 +21,22 @@ export const NavHeader = {
         setup() {
             return require('@IMGT/header-setup.png')
         },
+        people() {
+            return require('@IMGT/header-people.png')
+        },
+        money() {
+            return require('@IMGT/header-money.png')
+        },
         title() {
             return this.state.title
         },
         type() {
-            return this.state.type
+            return {
+                '1': 'button',
+                '2': 'info',
+                'button': 'button',
+                'info': 'info',
+            }[this.state.type] || ''
         },
         logo() {
             return {
@@ -30,7 +44,7 @@ export const NavHeader = {
                 '2': 'right',
                 'left': 'left',
                 'right': 'right',
-            }[this.state.logoPosition] || 0
+            }[this.state.logoPosition] || ''
         },
     }
 }

@@ -7,8 +7,8 @@ export default {
     },
     async mounted() {
         this.changeTitle({
-            logoPosition: 'left',
-            type: 'button',
+            logoPosition: 'right',
+            type: 'info',
         })
     },
     methods: {
@@ -26,16 +26,13 @@ export default {
         // ...mapGetters('Config', ['userInfo', 'baseUrl']),
         images() {
             return [{
-                    src: require('@IMGT/home/Baccarat-01.png'),
-                    name: 'HomeLobby',
+                    src: require('@IMGT/home/Baccarat-01.png')
                 },
                 {
-                    src: require('@IMGT/home/Baccarat-02.png'),
-                    // route: 'HomeLobby',
+                    src: require('@IMGT/home/Baccarat-02.png')
                 },
                 {
-                    src: require('@IMGT/home/Baccarat-03.png'),
-                    // route: 'HomeLobby',
+                    src: require('@IMGT/home/Baccarat-03.png')
                 },
             ]
         },

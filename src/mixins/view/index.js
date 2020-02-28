@@ -25,11 +25,11 @@ export const index = {
     computed: {
         ...mapGetters('Common', {
             loading: 'loading',
-            nowLang: 'nowLang',
+            // nowLang: 'nowLang',
         }),
-        ...mapGetters('Config', {
-            baseUrl: 'baseUrl',
-        }),
+        // ...mapGetters('Config', {
+        //     baseUrl: 'baseUrl',
+        // }),
         platformCode() {
             return this.baseUrl.platformCode
         },

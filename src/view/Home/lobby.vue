@@ -4,7 +4,8 @@
             <template v-for="({ src, name }, index) in images">
                 <router-link
                     class="link"
-                    :to="{name}"
+                    :to="{name: 'Home'}"
+                    replace 
                     :key="index"
                 >
                     <van-image
@@ -32,16 +33,16 @@ import vanLoading from 'vant/lib/loading';
 import loadingMask from '@C/loading'
 // import { jwtEncode } from '@UTIL'
 import { mapGetters } from 'vuex'
-import HomeContent from "@mixins/Home"
+import LobbyContent from "@mixins/Home/lobby"
 
 
 export default {
-    name: 'Home',
+    name: 'lobby',
     components: {
         loadingMask,
         vanImage,
         vanLoading,
     },
-    mixins: [ HomeContent, ],
+    mixins: [ LobbyContent, ],
 }
 </script>

@@ -10,6 +10,9 @@ $basic_gap          :   10px;
 /** 固定常數 **/
 
 
+/** 轉頁效果 時間 */
+$crown_transition: .5s;
+
 $icon__color: (
     /********** WAP USAGE ************/
     // weak             : darken($color__base__invert, 30%),

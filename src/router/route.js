@@ -24,7 +24,9 @@ export default {
         {
             path: '/',
             component: index,
-            redirect: (store.getters['Config/userInfo'] || {}).token ? { name: 'Home' } : { name: 'Login' },
+            redirect: to => {
+                return (store.getters['Config/userInfo'] || {}).token ? { name: 'Home' } : { name: 'Login' }
+            },
             children: [
                 {
                     path: 'login',
@@ -64,12 +66,16 @@ export default {
                     meta: {
                         hasNav: true,
                         hasFoot: false,
-                        // get hasFoot() {
-                        //     return true && !hideFooter()
-                        // },
                     },
                     component: r => require.ensure([], () => r(require('@P/Home')), 'HomeContent'),
-                    // component: { template: '<div></div>' },
+                }, {
+                    path: 'Home/lobby',
+                    name: 'HomeLobby',
+                    meta: {
+                        hasNav: true,
+                        hasFoot: false,
+                    },
+                    component: r => require.ensure([], () => r(require('@P/Home/lobby')), 'LobbyContent'),
                 },
                 {
                     path: 'Transfer',
