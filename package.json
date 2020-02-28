@@ -7,6 +7,7 @@
     "scripts": {
         "dev": "node build/dev-server.js",
         "build": "node build/build.js && gulp release",
+        "deploy": "cd dist && git init && git add -A && git commit -m 'deploy' && git push -f https://github.com/HanMeow/baccarat-20200208.git master:gh-pages && cd ..",
         "lint": "eslint --ext .js,.vue src"
     },
     "dependencies": {

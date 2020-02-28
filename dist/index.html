@@ -52,18 +52,21 @@
                 margin: 0;
                 padding: 0;
                 font-weight: normal;
-                font-family: arial, 'Microsoft JhengHei', 'Microsoft Yahei', tahoma, Srial, helvetica, sans-serif;
+                font-family: monospace, arial, 'Microsoft JhengHei', 'Microsoft Yahei', tahoma, Srial, helvetica, sans-serif;
                 border: none;
             }
+
             .loader__container {
                 height: 100%;
                 width: 100%;
                 position: absolute;
-                /*display: flex;*/
-                /*align-items: center;*/
-                /*justify-content: center;*/
-                background: url(/static/img/page_bg_default.png) no-repeat;
+                background-image: -webkit-radial-gradient(circle at center, #be3e36, #902124, #461316);
+                background-image: -moz-radial-gradient(circle at center, #be3e36, #902124, #461316);
+                background-image: -o-radial-gradient(circle at center, #be3e36, #902124, #461316);
+                background-image: radial-gradient(circle at center, #be3e36, #902124, #461316);
+                background-repeat: no-repeat;
                 background-size: cover;
+                overflow: hidden;
             }
 
             .loader__container .sku-container {
@@ -78,75 +81,50 @@
                 align-items: center;
             }
 
+            .loader__container::before {
+                content: ' ';
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                background-size: cover;
+                background-position-x: center;
+            }
+
+            .loader__container .sku-container {
+                transform: translate3d(-50%, -50%, 0);
+                height: 50vw;
+                width: 50vw;
+                display: block;
+            }
+
             .loader__container .sku-container .post {
-                width: 220px;
-                height: 80px;
-            }
-            .loader__container .sku-container .post .avatar {
-                float: left;
-                width: 52px;
-                height: 52px;
-                background-color: #ccc;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                /* border-color: white; */
+                border-width: 10px;
+                border-style: solid;
                 border-radius: 50%;
-                margin: 8px;
-                background-image: linear-gradient(90deg, #ddd 0px, #e8e8e8 40px, #ddd 80px);
-                background-size: 600px;
-                -webkit-animation: shine-avatar 0.6s infinite linear;
-                animation: shine-avatar 0.6s infinite linear;
-            }
-            .loader__container .sku-container .post .line {
-                float: left;
-                width: 140px;
-                height: 16px;
-                margin-top: 12px;
-                border-radius: 7px;
-                background-image: linear-gradient(90deg, #ddd 0px, #e8e8e8 40px, #ddd 80px);
-                background-size: 600px;
-                -webkit-animation: shine-lines 0.6s infinite linear;
-                animation: shine-lines 0.6s infinite linear;
-            }
-            .loader__container .sku-container .post .avatar + .line {
-                margin-top: 11px;
-                width: 100px;
-            }
-            .loader__container .sku-container .post .line ~ .line {
-                background-color: #ddd;
+                animation: loader-spin-1 1s ease-in-out infinite;
+                -webkit-animation: loader-spin-1 1s ease-in-out infinite;
+                border-color: burlywood transparent transparent transparent;
             }
 
-            @keyframes shine-lines {
-                0% {
-                    background-position: -100px;
-                }
-                40%,
-                100% {
-                    background-position: 140px;
-                }
-            }
-            @keyframes shine-avatar {
-                0% {
-                    background-position: -32px;
-                }
-                40%,
-                100% {
-                    background-position: 208px;
-                }
+            .loader__container .sku-container .post:nth-of-type(2) {
+                animation-delay: -0.2s;
             }
 
-            @-webkit-keyframes shine-lines {
-                0% {
-                    background-position: -100px;
-                }
-                40%,
-                100% {
-                    background-position: 140px;
-                }
+            .loader__container .sku-container .post:nth-of-type(3) {
+                animation-delay: -0.1s;
             }
-            @-webkit-keyframes shine-avatar {
+
+            @keyframes loader-spin-1 {
                 0% {
-                    background-position: -32px;
+                    transform: rotate(0);
                 }
-                40%,
                 100% {
-                    background-position: 208px;
+                    transform: rotate(360deg);
                 }
-            }</style><link href=/crown-baccarat/default/css/app.css rel=stylesheet><link href=/crown-baccarat/default/css/vendor.css rel=stylesheet></head><body><div id=splash-container><div class=loader__container><div class=sku-container><div class=post><div class=avatar></div><div class=line></div><div class=line></div></div><div class=post><div class=avatar></div><div class=line></div><div class=line></div></div><div class=post><div class=avatar></div><div class=line></div><div class=line></div></div></div></div></div><div id=app></div><style id=style></style><style id=lottery></style><style></style><script type=text/javascript src=/crown-baccarat/default/js/app.js></script><script type=text/javascript src=/crown-baccarat/default/js/manifest.js></script><script type=text/javascript src=/crown-baccarat/default/js/vendor.js></script></body></html>
+            }</style><link href=/crown-baccarat/default/css/vendor.css rel=stylesheet><link href=/crown-baccarat/default/css/app.css rel=stylesheet></head><body><div id=splash-container><div class=loader__container><div class=sku-container><div class=post></div><div class=post></div><div class=post></div></div></div></div><div id=app></div><style id=style></style><style id=lottery></style><style></style><script type=text/javascript src=/crown-baccarat/default/js/app.js></script><script type=text/javascript src=/crown-baccarat/default/js/manifest.js></script><script type=text/javascript src=/crown-baccarat/default/js/vendor.js></script></body></html>

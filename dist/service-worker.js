@@ -15,7 +15,7 @@ importScripts("/crown-baccarat/worker/workbox-v4.3.1/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "/crown-baccarat/worker/workbox-v4.3.1"});
 
 importScripts(
-  "/crown-baccarat/worker/precache-manifest.e5198fb8f3fbf1bebf73475b5b1798e5.js"
+  "/crown-baccarat/worker/precache-manifest.333662c07e6944c2502d182cf0c19fa7.js"
 );
 
 workbox.core.skipWaiting();
