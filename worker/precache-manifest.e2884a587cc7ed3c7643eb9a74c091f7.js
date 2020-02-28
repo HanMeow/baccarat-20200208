@@ -1,14 +1,14 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8d4353024a37ad128caa",
-    "url": "/baccarat-20200208/default/css/8.css"
+    "revision": "b8a15d5f43a534e5195c",
+    "url": "/baccarat-20200208/default/css/9.css"
   },
   {
-    "revision": "0c687f54c6ea2a2a608e",
+    "revision": "a9dd365144ba3fcb6ebc",
     "url": "/baccarat-20200208/default/css/app.css"
   },
   {
-    "revision": "138456a287b7a86d4e7a",
+    "revision": "3c096139623eb6cbdb35",
     "url": "/baccarat-20200208/default/css/vendor.css"
   },
   {
@@ -72,19 +72,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baccarat-20200208/default/img/sign-service.png"
   },
   {
-    "revision": "8d4353024a37ad128caa",
-    "url": "/baccarat-20200208/default/js/8.js"
+    "revision": "3b07c8f63178b8b74348",
+    "url": "/baccarat-20200208/default/js/10.js"
   },
   {
-    "revision": "935f7f13bca7f5f02e27",
+    "revision": "b8a15d5f43a534e5195c",
     "url": "/baccarat-20200208/default/js/9.js"
   },
   {
-    "revision": "67b031a32a1865629d0b",
+    "revision": "f8b8d8f72eecaa113ad6",
     "url": "/baccarat-20200208/default/js/HomeContent.js"
   },
   {
-    "revision": "3aa064fd2b935b8778ae",
+    "revision": "90edd0ff13a75904378d",
     "url": "/baccarat-20200208/default/js/LobbyContent.js"
   },
   {
@@ -92,23 +92,27 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baccarat-20200208/default/js/Login.js"
   },
   {
-    "revision": "0c687f54c6ea2a2a608e",
+    "revision": "437d249fd360ddd1a8d4",
+    "url": "/baccarat-20200208/default/js/SettingContent.js"
+  },
+  {
+    "revision": "a9dd365144ba3fcb6ebc",
     "url": "/baccarat-20200208/default/js/app.js"
   },
   {
-    "revision": "9c652230f0bb724fe954",
+    "revision": "b7a761f6074783322080",
     "url": "/baccarat-20200208/default/js/async-vendors.js"
   },
   {
-    "revision": "3f0decbc83bd9578d731",
+    "revision": "ec863707102242a13f1b",
     "url": "/baccarat-20200208/default/js/failure.js"
   },
   {
-    "revision": "63d6762fe9f34904ae22",
+    "revision": "38b4d4d9c0a712b3be78",
     "url": "/baccarat-20200208/default/js/manifest.js"
   },
   {
-    "revision": "138456a287b7a86d4e7a",
+    "revision": "3c096139623eb6cbdb35",
     "url": "/baccarat-20200208/default/js/vendor.js"
   },
   {
