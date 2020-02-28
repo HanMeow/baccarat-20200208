@@ -11,11 +11,11 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("/crown-baccarat/worker/workbox-v4.3.1/workbox-sw.js");
-workbox.setConfig({modulePathPrefix: "/crown-baccarat/worker/workbox-v4.3.1"});
+importScripts("/baccarat-20200208/worker/workbox-v4.3.1/workbox-sw.js");
+workbox.setConfig({modulePathPrefix: "/baccarat-20200208/worker/workbox-v4.3.1"});
 
 importScripts(
-  "/crown-baccarat/worker/precache-manifest.333662c07e6944c2502d182cf0c19fa7.js"
+  "/baccarat-20200208/worker/precache-manifest.4dece68f15ecb545ff9dec3659701213.js"
 );
 
 workbox.core.skipWaiting();
