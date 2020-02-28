@@ -108,7 +108,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baccarat-20200208/default/js/HomeContent.js"
   },
   {
-    "revision": "90edd0ff13a75904378d",
+    "revision": "5091dff1a0961e2c55b1",
     "url": "/baccarat-20200208/default/js/LobbyContent.js"
   },
   {
@@ -116,7 +116,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baccarat-20200208/default/js/Login.js"
   },
   {
-    "revision": "1fafff56ac6add7ea1a8",
+    "revision": "8aa8977bd8d8fbc63068",
     "url": "/baccarat-20200208/default/js/SettingContent.js"
   },
   {
