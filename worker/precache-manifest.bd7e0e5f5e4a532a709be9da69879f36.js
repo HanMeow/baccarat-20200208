@@ -1,14 +1,14 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8691f9ca3494ade4ad18",
-    "url": "/crown-baccarat/default/css/8.css"
+    "revision": "b8a15d5f43a534e5195c",
+    "url": "/crown-baccarat/default/css/9.css"
   },
   {
-    "revision": "d8cef0c768e82a2e310a",
+    "revision": "f3ae69e19d9689c3a54a",
     "url": "/crown-baccarat/default/css/app.css"
   },
   {
-    "revision": "5d6a9a5a4048b416b503",
+    "revision": "ec4fdc6eac20a17a5fd0",
     "url": "/crown-baccarat/default/css/vendor.css"
   },
   {
@@ -52,6 +52,30 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/crown-baccarat/default/img/room-D.png"
   },
   {
+    "revision": "442a651f1c1d788d794045efc86f38d1",
+    "url": "/crown-baccarat/default/img/setup-amount.png"
+  },
+  {
+    "revision": "2cdce3786435682f926d18a0b9c3fd2b",
+    "url": "/crown-baccarat/default/img/setup-card.png"
+  },
+  {
+    "revision": "8870b962d3c28dd95495d9e200ca7237",
+    "url": "/crown-baccarat/default/img/setup-character.png"
+  },
+  {
+    "revision": "f1af3a1b47dcd8fab2295e7acfe054bf",
+    "url": "/crown-baccarat/default/img/setup-history.png"
+  },
+  {
+    "revision": "00a0ed6603002535effefe0b06fc80f7",
+    "url": "/crown-baccarat/default/img/setup-money.png"
+  },
+  {
+    "revision": "a017f576e9b9bc377ae6671a97f4a707",
+    "url": "/crown-baccarat/default/img/setup-rule.png"
+  },
+  {
     "revision": "f7434444fdefcf0100e9e0a94ef9917f",
     "url": "/crown-baccarat/default/img/sign-background.png"
   },
@@ -72,43 +96,47 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/crown-baccarat/default/img/sign-service.png"
   },
   {
-    "revision": "8691f9ca3494ade4ad18",
-    "url": "/crown-baccarat/default/js/8.js"
+    "revision": "e0e498a541755217c795",
+    "url": "/crown-baccarat/default/js/10.js"
   },
   {
-    "revision": "db0dd6ccae0b90508553",
+    "revision": "b8a15d5f43a534e5195c",
     "url": "/crown-baccarat/default/js/9.js"
   },
   {
-    "revision": "2e42ef42a08b8b13ffc5",
+    "revision": "fa6ea5d781056a88b2a9",
     "url": "/crown-baccarat/default/js/HomeContent.js"
   },
   {
-    "revision": "8af8741544d8a1d58c6b",
+    "revision": "5091dff1a0961e2c55b1",
     "url": "/crown-baccarat/default/js/LobbyContent.js"
   },
   {
-    "revision": "75d73c2f32f814b37434",
+    "revision": "29d498853b929a7ff86d",
     "url": "/crown-baccarat/default/js/Login.js"
   },
   {
-    "revision": "d8cef0c768e82a2e310a",
+    "revision": "8aa8977bd8d8fbc63068",
+    "url": "/crown-baccarat/default/js/SettingContent.js"
+  },
+  {
+    "revision": "f3ae69e19d9689c3a54a",
     "url": "/crown-baccarat/default/js/app.js"
   },
   {
-    "revision": "d38a4254de207c1ea4c9",
+    "revision": "3f885c9636675ee303e8",
     "url": "/crown-baccarat/default/js/async-vendors.js"
   },
   {
-    "revision": "0ee5b7824b40e24d3eef",
+    "revision": "ec863707102242a13f1b",
     "url": "/crown-baccarat/default/js/failure.js"
   },
   {
-    "revision": "75e6a7e7bc319486e573",
+    "revision": "5e886bffe7da0d6c7e58",
     "url": "/crown-baccarat/default/js/manifest.js"
   },
   {
-    "revision": "5d6a9a5a4048b416b503",
+    "revision": "ec4fdc6eac20a17a5fd0",
     "url": "/crown-baccarat/default/js/vendor.js"
   },
   {
