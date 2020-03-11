@@ -15,7 +15,7 @@ importScripts("/baccarat-20200208/worker/workbox-v4.3.1/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "/baccarat-20200208/worker/workbox-v4.3.1"});
 
 importScripts(
-  "/baccarat-20200208/worker/precache-manifest.282a626d331340d3346368269ee06743.js"
+  "/baccarat-20200208/worker/precache-manifest.00c70ded4e23744e23504febd1d22917.js"
 );
 
 workbox.core.skipWaiting();
