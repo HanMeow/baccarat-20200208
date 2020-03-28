@@ -4,7 +4,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baccarat-20200208/default/css/12.css"
   },
   {
-    "revision": "f7bfce0a12f78a8c44f9",
+    "revision": "e80d00ec6ba646613740",
     "url": "/baccarat-20200208/default/css/app.css"
   },
   {
@@ -260,7 +260,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baccarat-20200208/default/js/SettingContent.js"
   },
   {
-    "revision": "f7bfce0a12f78a8c44f9",
+    "revision": "e80d00ec6ba646613740",
     "url": "/baccarat-20200208/default/js/app.js"
   },
   {
