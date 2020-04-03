@@ -1,14 +1,14 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5aa854533e820759fa45",
-    "url": "/frontend/default/css/12.css"
+    "revision": "72a02f829b93dd7cad44",
+    "url": "/frontend/default/css/13.css"
   },
   {
-    "revision": "2ec7c82f038e29147053",
+    "revision": "dacbdc00b6fca7039b02",
     "url": "/frontend/default/css/app.css"
   },
   {
-    "revision": "294942f2acfd632e3f17",
+    "revision": "6c32b76492d53f0d0d11",
     "url": "/frontend/default/css/vendor.css"
   },
   {
@@ -228,43 +228,43 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/frontend/default/img/setting/setup-rule.png"
   },
   {
-    "revision": "5aa854533e820759fa45",
-    "url": "/frontend/default/js/12.js"
-  },
-  {
-    "revision": "2cee68586e3e0243ebd5",
+    "revision": "72a02f829b93dd7cad44",
     "url": "/frontend/default/js/13.js"
   },
   {
-    "revision": "b4f68b75d84784f94801",
+    "revision": "d21370c95e761726a0f8",
+    "url": "/frontend/default/js/14.js"
+  },
+  {
+    "revision": "920d41360340869616f5",
     "url": "/frontend/default/js/GameContent.js"
   },
   {
-    "revision": "74ca7087343e24f315b3",
+    "revision": "684029799a2d2ef48398",
     "url": "/frontend/default/js/HomeContent.js"
   },
   {
-    "revision": "8edad021a4e05397ce30",
+    "revision": "a564921a1515b8519db6",
     "url": "/frontend/default/js/LobbyContent.js"
   },
   {
-    "revision": "f5b1202d732b0b70055d",
+    "revision": "64190a173a0fa3dd2316",
     "url": "/frontend/default/js/Login.js"
   },
   {
-    "revision": "3077581737bdb82ada6b",
+    "revision": "8c0990aed9697019eb77",
     "url": "/frontend/default/js/PWAContent.js"
   },
   {
-    "revision": "d8f428fddf7a10a37396",
+    "revision": "bcab5b3f7b8595545a12",
     "url": "/frontend/default/js/SettingContent.js"
   },
   {
-    "revision": "2ec7c82f038e29147053",
+    "revision": "dacbdc00b6fca7039b02",
     "url": "/frontend/default/js/app.js"
   },
   {
-    "revision": "53bab47b0e1f4a8f8c73",
+    "revision": "effe228eca3576c274bc",
     "url": "/frontend/default/js/async-vendors.js"
   },
   {
@@ -272,19 +272,35 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/frontend/default/js/failure.js"
   },
   {
-    "revision": "b54605dfc10525bf10f4",
+    "revision": "80f88902fcd4db3ff9c0",
     "url": "/frontend/default/js/manifest.js"
   },
   {
-    "revision": "294942f2acfd632e3f17",
+    "revision": "6c32b76492d53f0d0d11",
     "url": "/frontend/default/js/vendor.js"
   },
   {
-    "revision": "b51bfc33181e33c5d1d5",
+    "revision": "2f52c8aedce8d03d3d62",
+    "url": "/frontend/default/js/vendors~GameContent.js"
+  },
+  {
+    "revision": "295255af457755b2cef2",
     "url": "/frontend/default/js/vendors~SettingContent.js"
   },
   {
-    "revision": "24c7d1f4d3cbed81adba01f4318fcb3d",
+    "revision": "21a68f3905b3a128c457403d96a38d8c",
     "url": "/frontend/index.html"
+  },
+  {
+    "revision": "a703aa099e60fb47d83aa35ea290bf97",
+    "url": "/frontend/main.mp4"
+  },
+  {
+    "revision": "c29591eefb2fdd106fab09091e107254",
+    "url": "/frontend/prog_index.m3u8"
+  },
+  {
+    "revision": "e00f15dc045ae2fec53e61d9fd0c67e1",
+    "url": "/frontend/sample.m3u8"
   }
 ]);
