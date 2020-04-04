@@ -4,7 +4,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baccarat-20200208/default/css/13.css"
   },
   {
-    "revision": "b867c94f81e3fdae2816",
+    "revision": "5e6aae8561297657bb0a",
     "url": "/baccarat-20200208/default/css/app.css"
   },
   {
@@ -236,7 +236,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baccarat-20200208/default/js/14.js"
   },
   {
-    "revision": "cad900af9ef011617d2a",
+    "revision": "72188b2ad0b3b2bbe3b8",
     "url": "/baccarat-20200208/default/js/GameContent.js"
   },
   {
@@ -260,7 +260,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baccarat-20200208/default/js/SettingContent.js"
   },
   {
-    "revision": "b867c94f81e3fdae2816",
+    "revision": "5e6aae8561297657bb0a",
     "url": "/baccarat-20200208/default/js/app.js"
   },
   {
@@ -280,7 +280,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baccarat-20200208/default/js/vendor.js"
   },
   {
-    "revision": "a9d53c0cadca850e9949",
+    "revision": "df579f2f10db91fccfd5",
     "url": "/baccarat-20200208/default/js/vendors~GameContent.js"
   },
   {
