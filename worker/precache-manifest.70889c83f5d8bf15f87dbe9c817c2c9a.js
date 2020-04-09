@@ -4,7 +4,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baccarat-20200208/default/css/13.css"
   },
   {
-    "revision": "5e6aae8561297657bb0a",
+    "revision": "a5354d52c82fe01d71c9",
     "url": "/baccarat-20200208/default/css/app.css"
   },
   {
@@ -232,11 +232,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baccarat-20200208/default/js/13.js"
   },
   {
-    "revision": "d21370c95e761726a0f8",
+    "revision": "b4b5f54a6af8dd03cbf4",
     "url": "/baccarat-20200208/default/js/14.js"
   },
   {
-    "revision": "72188b2ad0b3b2bbe3b8",
+    "revision": "49a7dae6ae878097a95e",
     "url": "/baccarat-20200208/default/js/GameContent.js"
   },
   {
@@ -244,7 +244,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baccarat-20200208/default/js/HomeContent.js"
   },
   {
-    "revision": "a564921a1515b8519db6",
+    "revision": "feacfb6122fabfb80f19",
     "url": "/baccarat-20200208/default/js/LobbyContent.js"
   },
   {
@@ -256,11 +256,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baccarat-20200208/default/js/PWAContent.js"
   },
   {
-    "revision": "bcab5b3f7b8595545a12",
+    "revision": "c84964944c9caeffc22e",
     "url": "/baccarat-20200208/default/js/SettingContent.js"
   },
   {
-    "revision": "5e6aae8561297657bb0a",
+    "revision": "a5354d52c82fe01d71c9",
     "url": "/baccarat-20200208/default/js/app.js"
   },
   {
@@ -280,7 +280,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baccarat-20200208/default/js/vendor.js"
   },
   {
-    "revision": "df579f2f10db91fccfd5",
+    "revision": "59018726a2b9ca3183d8",
     "url": "/baccarat-20200208/default/js/vendors~GameContent.js"
   },
   {
@@ -288,7 +288,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baccarat-20200208/default/js/vendors~SettingContent.js"
   },
   {
-    "revision": "d387a1729d2f882c36b7a1510ee23b31",
+    "revision": "c4e33f199f0376d4d8cb6ffc0ddfac46",
     "url": "/baccarat-20200208/index.html"
   },
   {

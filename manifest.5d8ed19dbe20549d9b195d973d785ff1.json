@@ -1,47 +1,47 @@
 {
   "icons": [
     {
-      "src": "/baccarat-20200208/icon_512x512.00a40311a6a4f5689ff174be3c913a47.png",
+      "src": "/frontend/icon_512x512.00a40311a6a4f5689ff174be3c913a47.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "/baccarat-20200208/icon_384x384.659eeeb14b5bda9ed0f21f5155bc55de.png",
+      "src": "/frontend/icon_384x384.659eeeb14b5bda9ed0f21f5155bc55de.png",
       "sizes": "384x384",
       "type": "image/png"
     },
     {
-      "src": "/baccarat-20200208/icon_256x256.cec9af600161385b2a74a6bb04073fea.png",
+      "src": "/frontend/icon_256x256.cec9af600161385b2a74a6bb04073fea.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "/baccarat-20200208/icon_192x192.a0df3e4464b8deb522602829df3adac7.png",
+      "src": "/frontend/icon_192x192.a0df3e4464b8deb522602829df3adac7.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/baccarat-20200208/icon_180x180.9ea67cc0234aca818ec97b9933493d9f.png",
+      "src": "/frontend/icon_180x180.9ea67cc0234aca818ec97b9933493d9f.png",
       "sizes": "180x180",
       "type": "image/png"
     },
     {
-      "src": "/baccarat-20200208/icon_167x167.7239f2d7fb1d56c47323771ffdfc44e7.png",
+      "src": "/frontend/icon_167x167.7239f2d7fb1d56c47323771ffdfc44e7.png",
       "sizes": "167x167",
       "type": "image/png"
     },
     {
-      "src": "/baccarat-20200208/icon_152x152.0a0a68fbadc1224d352d5a7db112143c.png",
+      "src": "/frontend/icon_152x152.0a0a68fbadc1224d352d5a7db112143c.png",
       "sizes": "152x152",
       "type": "image/png"
     },
     {
-      "src": "/baccarat-20200208/icon_128x128.54a076cec02e38bb35b3960a51dfd682.png",
+      "src": "/frontend/icon_128x128.54a076cec02e38bb35b3960a51dfd682.png",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "/baccarat-20200208/icon_96x96.9090f31fd4ac199371c7f0e3b6064a57.png",
+      "src": "/frontend/icon_96x96.9090f31fd4ac199371c7f0e3b6064a57.png",
       "sizes": "96x96",
       "type": "image/png"
     }
