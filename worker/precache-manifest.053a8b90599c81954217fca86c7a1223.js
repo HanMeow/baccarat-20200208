@@ -4,7 +4,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/frontend/default/css/13.css"
   },
   {
-    "revision": "50bc09056343eb682ddb",
+    "revision": "bea3b49da9243062868f",
     "url": "/frontend/default/css/app.css"
   },
   {
@@ -232,11 +232,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/frontend/default/js/13.js"
   },
   {
-    "revision": "d21370c95e761726a0f8",
+    "revision": "b4b5f54a6af8dd03cbf4",
     "url": "/frontend/default/js/14.js"
   },
   {
-    "revision": "506c9617cb4796ea0471",
+    "revision": "b2d371a37958b048aabd",
     "url": "/frontend/default/js/GameContent.js"
   },
   {
@@ -244,11 +244,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/frontend/default/js/HomeContent.js"
   },
   {
-    "revision": "a564921a1515b8519db6",
+    "revision": "80a437cd26ae44805a07",
     "url": "/frontend/default/js/LobbyContent.js"
   },
   {
-    "revision": "69c160c3d8d71144fdd1",
+    "revision": "a961038febe7bcbba192",
     "url": "/frontend/default/js/Login.js"
   },
   {
@@ -256,11 +256,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/frontend/default/js/PWAContent.js"
   },
   {
-    "revision": "bcab5b3f7b8595545a12",
+    "revision": "c84964944c9caeffc22e",
     "url": "/frontend/default/js/SettingContent.js"
   },
   {
-    "revision": "50bc09056343eb682ddb",
+    "revision": "bea3b49da9243062868f",
     "url": "/frontend/default/js/app.js"
   },
   {
@@ -280,7 +280,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/frontend/default/js/vendor.js"
   },
   {
-    "revision": "f376e1d646c768aa0b1c",
+    "revision": "ba24f3df6155690449e9",
     "url": "/frontend/default/js/vendors~GameContent.js"
   },
   {
@@ -288,7 +288,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/frontend/default/js/vendors~SettingContent.js"
   },
   {
-    "revision": "948e0537540fa213ad51cd7081ff442f",
+    "revision": "6f5ad8b389f2c0a704fc273bf078b969",
     "url": "/frontend/index.html"
   },
   {

@@ -49,7 +49,7 @@
   "name": "Royal APP",
   "short_name": "Royal",
   "orientation": "portrait",
-  "display": "standalone",
+  "display": "fullscreen",
   "start_url": ".",
   "description": "Royal PWA APP",
   "background_color": "#75161d"
